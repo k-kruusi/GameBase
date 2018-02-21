@@ -1,2 +1,2 @@
 # GameBase
-TutorialSwiftProject
+Start your Game by branching off this project.
