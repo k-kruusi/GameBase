@@ -4,13 +4,13 @@ This game is a 2D platformer on iOs. Players will play as a rabbit warrior calle
 You must fight through a stronghold of human enemies and defeat the boss. This game is similar to
 a typical platformer game like Mario or Megaman.
 
-Players can walk and jump by tapping arrow buttons on the screen. Tapping the screen will do an attack.
-There are two types of attacks, air attacka and ground attacks.
+Players can walk and jump by tapping arrow buttons on the screen. Tapping the screen (and not the arrow buttons) will do an attack.
+There are two types of attacks, air attack and ground attacks.
 Multiple tapping of attacks will do combinations that do more damage.
-There are various enemies that you must face off against both melee and ranged enemies.
+There are various enemies that you must face off against, both melee and ranged enemies.
 
 There will be some enemies that have unique AI behaviours as well as a final boss fight.
-There is no powerups for this game as it is mainly fighting based. But you can collect health
+There are no powerups for this game. But you can collect health
 pickups that drop when you kill enemies sometimes. 
 
 This game has already been published for PC on itch.io. There is also gameplay footage available

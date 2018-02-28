@@ -7,70 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B5D58E3C20474E5E0012DBFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D58E3B20474E5E0012DBFB /* AppDelegate.swift */; };
-		B5D58E3E20474E5E0012DBFB /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B5D58E3D20474E5E0012DBFB /* GameScene.sks */; };
-		B5D58E4020474E5E0012DBFB /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = B5D58E3F20474E5E0012DBFB /* Actions.sks */; };
-		B5D58E4220474E5E0012DBFB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D58E4120474E5E0012DBFB /* GameScene.swift */; };
-		B5D58E4420474E5E0012DBFB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D58E4320474E5E0012DBFB /* GameViewController.swift */; };
-		B5D58E4720474E5E0012DBFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D58E4520474E5E0012DBFB /* Main.storyboard */; };
-		B5D58E4920474E5E0012DBFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5D58E4820474E5E0012DBFB /* Assets.xcassets */; };
-		B5D58E4C20474E5E0012DBFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D58E4A20474E5E0012DBFB /* LaunchScreen.storyboard */; };
-		B5D58E5720474E5F0012DBFB /* WarriorOfLeporiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D58E5620474E5F0012DBFB /* WarriorOfLeporiaTests.swift */; };
-		B5D58E6220474E5F0012DBFB /* WarriorOfLeporiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D58E6120474E5F0012DBFB /* WarriorOfLeporiaUITests.swift */; };
+		B5D58E7C20475D570012DBFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D58E7B20475D570012DBFB /* AppDelegate.swift */; };
+		B5D58E7E20475D570012DBFB /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B5D58E7D20475D570012DBFB /* GameScene.sks */; };
+		B5D58E8020475D570012DBFB /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = B5D58E7F20475D570012DBFB /* Actions.sks */; };
+		B5D58E8220475D570012DBFB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D58E8120475D570012DBFB /* GameScene.swift */; };
+		B5D58E8420475D570012DBFB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D58E8320475D570012DBFB /* GameViewController.swift */; };
+		B5D58E8720475D570012DBFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D58E8520475D570012DBFB /* Main.storyboard */; };
+		B5D58E8920475D570012DBFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5D58E8820475D570012DBFB /* Assets.xcassets */; };
+		B5D58E8C20475D570012DBFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D58E8A20475D570012DBFB /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		B5D58E5320474E5F0012DBFB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B5D58E3020474E5E0012DBFB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B5D58E3720474E5E0012DBFB;
-			remoteInfo = WarriorOfLeporia;
-		};
-		B5D58E5E20474E5F0012DBFB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B5D58E3020474E5E0012DBFB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B5D58E3720474E5E0012DBFB;
-			remoteInfo = WarriorOfLeporia;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		B5D58E3820474E5E0012DBFB /* WarriorOfLeporia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WarriorOfLeporia.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5D58E3B20474E5E0012DBFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B5D58E3D20474E5E0012DBFB /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		B5D58E3F20474E5E0012DBFB /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		B5D58E4120474E5E0012DBFB /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		B5D58E4320474E5E0012DBFB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		B5D58E4620474E5E0012DBFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B5D58E4820474E5E0012DBFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B5D58E4B20474E5E0012DBFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B5D58E4D20474E5E0012DBFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B5D58E5220474E5F0012DBFB /* WarriorOfLeporiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WarriorOfLeporiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5D58E5620474E5F0012DBFB /* WarriorOfLeporiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarriorOfLeporiaTests.swift; sourceTree = "<group>"; };
-		B5D58E5820474E5F0012DBFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B5D58E5D20474E5F0012DBFB /* WarriorOfLeporiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WarriorOfLeporiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5D58E6120474E5F0012DBFB /* WarriorOfLeporiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarriorOfLeporiaUITests.swift; sourceTree = "<group>"; };
-		B5D58E6320474E5F0012DBFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5D58E7820475D570012DBFB /* WarriorOfLeporia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WarriorOfLeporia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5D58E7B20475D570012DBFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B5D58E7D20475D570012DBFB /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		B5D58E7F20475D570012DBFB /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		B5D58E8120475D570012DBFB /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		B5D58E8320475D570012DBFB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		B5D58E8620475D570012DBFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B5D58E8820475D570012DBFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5D58E8B20475D570012DBFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B5D58E8D20475D570012DBFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B5D58E3520474E5E0012DBFB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B5D58E4F20474E5F0012DBFB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B5D58E5A20474E5F0012DBFB /* Frameworks */ = {
+		B5D58E7520475D570012DBFB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -80,70 +41,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B5D58E2F20474E5E0012DBFB = {
+		B5D58E6F20475D570012DBFB = {
 			isa = PBXGroup;
 			children = (
-				B5D58E3A20474E5E0012DBFB /* WarriorOfLeporia */,
-				B5D58E5520474E5F0012DBFB /* WarriorOfLeporiaTests */,
-				B5D58E6020474E5F0012DBFB /* WarriorOfLeporiaUITests */,
-				B5D58E3920474E5E0012DBFB /* Products */,
+				B5D58E7A20475D570012DBFB /* WarriorOfLeporia */,
+				B5D58E7920475D570012DBFB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B5D58E3920474E5E0012DBFB /* Products */ = {
+		B5D58E7920475D570012DBFB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B5D58E3820474E5E0012DBFB /* WarriorOfLeporia.app */,
-				B5D58E5220474E5F0012DBFB /* WarriorOfLeporiaTests.xctest */,
-				B5D58E5D20474E5F0012DBFB /* WarriorOfLeporiaUITests.xctest */,
+				B5D58E7820475D570012DBFB /* WarriorOfLeporia.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B5D58E3A20474E5E0012DBFB /* WarriorOfLeporia */ = {
+		B5D58E7A20475D570012DBFB /* WarriorOfLeporia */ = {
 			isa = PBXGroup;
 			children = (
-				B5D58E3B20474E5E0012DBFB /* AppDelegate.swift */,
-				B5D58E3D20474E5E0012DBFB /* GameScene.sks */,
-				B5D58E3F20474E5E0012DBFB /* Actions.sks */,
-				B5D58E4120474E5E0012DBFB /* GameScene.swift */,
-				B5D58E4320474E5E0012DBFB /* GameViewController.swift */,
-				B5D58E4520474E5E0012DBFB /* Main.storyboard */,
-				B5D58E4820474E5E0012DBFB /* Assets.xcassets */,
-				B5D58E4A20474E5E0012DBFB /* LaunchScreen.storyboard */,
-				B5D58E4D20474E5E0012DBFB /* Info.plist */,
+				B5D58E7B20475D570012DBFB /* AppDelegate.swift */,
+				B5D58E7D20475D570012DBFB /* GameScene.sks */,
+				B5D58E7F20475D570012DBFB /* Actions.sks */,
+				B5D58E8120475D570012DBFB /* GameScene.swift */,
+				B5D58E8320475D570012DBFB /* GameViewController.swift */,
+				B5D58E8520475D570012DBFB /* Main.storyboard */,
+				B5D58E8820475D570012DBFB /* Assets.xcassets */,
+				B5D58E8A20475D570012DBFB /* LaunchScreen.storyboard */,
+				B5D58E8D20475D570012DBFB /* Info.plist */,
 			);
 			path = WarriorOfLeporia;
-			sourceTree = "<group>";
-		};
-		B5D58E5520474E5F0012DBFB /* WarriorOfLeporiaTests */ = {
-			isa = PBXGroup;
-			children = (
-				B5D58E5620474E5F0012DBFB /* WarriorOfLeporiaTests.swift */,
-				B5D58E5820474E5F0012DBFB /* Info.plist */,
-			);
-			path = WarriorOfLeporiaTests;
-			sourceTree = "<group>";
-		};
-		B5D58E6020474E5F0012DBFB /* WarriorOfLeporiaUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B5D58E6120474E5F0012DBFB /* WarriorOfLeporiaUITests.swift */,
-				B5D58E6320474E5F0012DBFB /* Info.plist */,
-			);
-			path = WarriorOfLeporiaUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B5D58E3720474E5E0012DBFB /* WarriorOfLeporia */ = {
+		B5D58E7720475D570012DBFB /* WarriorOfLeporia */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B5D58E6620474E5F0012DBFB /* Build configuration list for PBXNativeTarget "WarriorOfLeporia" */;
+			buildConfigurationList = B5D58E9020475D570012DBFB /* Build configuration list for PBXNativeTarget "WarriorOfLeporia" */;
 			buildPhases = (
-				B5D58E3420474E5E0012DBFB /* Sources */,
-				B5D58E3520474E5E0012DBFB /* Frameworks */,
-				B5D58E3620474E5E0012DBFB /* Resources */,
+				B5D58E7420475D570012DBFB /* Sources */,
+				B5D58E7520475D570012DBFB /* Frameworks */,
+				B5D58E7620475D570012DBFB /* Resources */,
 			);
 			buildRules = (
 			);
@@ -151,72 +90,26 @@
 			);
 			name = WarriorOfLeporia;
 			productName = WarriorOfLeporia;
-			productReference = B5D58E3820474E5E0012DBFB /* WarriorOfLeporia.app */;
+			productReference = B5D58E7820475D570012DBFB /* WarriorOfLeporia.app */;
 			productType = "com.apple.product-type.application";
-		};
-		B5D58E5120474E5F0012DBFB /* WarriorOfLeporiaTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B5D58E6920474E5F0012DBFB /* Build configuration list for PBXNativeTarget "WarriorOfLeporiaTests" */;
-			buildPhases = (
-				B5D58E4E20474E5F0012DBFB /* Sources */,
-				B5D58E4F20474E5F0012DBFB /* Frameworks */,
-				B5D58E5020474E5F0012DBFB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B5D58E5420474E5F0012DBFB /* PBXTargetDependency */,
-			);
-			name = WarriorOfLeporiaTests;
-			productName = WarriorOfLeporiaTests;
-			productReference = B5D58E5220474E5F0012DBFB /* WarriorOfLeporiaTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		B5D58E5C20474E5F0012DBFB /* WarriorOfLeporiaUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B5D58E6C20474E5F0012DBFB /* Build configuration list for PBXNativeTarget "WarriorOfLeporiaUITests" */;
-			buildPhases = (
-				B5D58E5920474E5F0012DBFB /* Sources */,
-				B5D58E5A20474E5F0012DBFB /* Frameworks */,
-				B5D58E5B20474E5F0012DBFB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B5D58E5F20474E5F0012DBFB /* PBXTargetDependency */,
-			);
-			name = WarriorOfLeporiaUITests;
-			productName = WarriorOfLeporiaUITests;
-			productReference = B5D58E5D20474E5F0012DBFB /* WarriorOfLeporiaUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B5D58E3020474E5E0012DBFB /* Project object */ = {
+		B5D58E7020475D570012DBFB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Kirupa Nijastan";
 				TargetAttributes = {
-					B5D58E3720474E5E0012DBFB = {
+					B5D58E7720475D570012DBFB = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
-					};
-					B5D58E5120474E5F0012DBFB = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = B5D58E3720474E5E0012DBFB;
-					};
-					B5D58E5C20474E5F0012DBFB = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = B5D58E3720474E5E0012DBFB;
 					};
 				};
 			};
-			buildConfigurationList = B5D58E3320474E5E0012DBFB /* Build configuration list for PBXProject "WarriorOfLeporia" */;
+			buildConfigurationList = B5D58E7320475D570012DBFB /* Build configuration list for PBXProject "WarriorOfLeporia" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -224,102 +117,57 @@
 				en,
 				Base,
 			);
-			mainGroup = B5D58E2F20474E5E0012DBFB;
-			productRefGroup = B5D58E3920474E5E0012DBFB /* Products */;
+			mainGroup = B5D58E6F20475D570012DBFB;
+			productRefGroup = B5D58E7920475D570012DBFB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B5D58E3720474E5E0012DBFB /* WarriorOfLeporia */,
-				B5D58E5120474E5F0012DBFB /* WarriorOfLeporiaTests */,
-				B5D58E5C20474E5F0012DBFB /* WarriorOfLeporiaUITests */,
+				B5D58E7720475D570012DBFB /* WarriorOfLeporia */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B5D58E3620474E5E0012DBFB /* Resources */ = {
+		B5D58E7620475D570012DBFB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5D58E4720474E5E0012DBFB /* Main.storyboard in Resources */,
-				B5D58E3E20474E5E0012DBFB /* GameScene.sks in Resources */,
-				B5D58E4920474E5E0012DBFB /* Assets.xcassets in Resources */,
-				B5D58E4C20474E5E0012DBFB /* LaunchScreen.storyboard in Resources */,
-				B5D58E4020474E5E0012DBFB /* Actions.sks in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B5D58E5020474E5F0012DBFB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B5D58E5B20474E5F0012DBFB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				B5D58E8720475D570012DBFB /* Main.storyboard in Resources */,
+				B5D58E7E20475D570012DBFB /* GameScene.sks in Resources */,
+				B5D58E8920475D570012DBFB /* Assets.xcassets in Resources */,
+				B5D58E8C20475D570012DBFB /* LaunchScreen.storyboard in Resources */,
+				B5D58E8020475D570012DBFB /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B5D58E3420474E5E0012DBFB /* Sources */ = {
+		B5D58E7420475D570012DBFB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5D58E4220474E5E0012DBFB /* GameScene.swift in Sources */,
-				B5D58E4420474E5E0012DBFB /* GameViewController.swift in Sources */,
-				B5D58E3C20474E5E0012DBFB /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B5D58E4E20474E5F0012DBFB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B5D58E5720474E5F0012DBFB /* WarriorOfLeporiaTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B5D58E5920474E5F0012DBFB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B5D58E6220474E5F0012DBFB /* WarriorOfLeporiaUITests.swift in Sources */,
+				B5D58E8220475D570012DBFB /* GameScene.swift in Sources */,
+				B5D58E8420475D570012DBFB /* GameViewController.swift in Sources */,
+				B5D58E7C20475D570012DBFB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		B5D58E5420474E5F0012DBFB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B5D58E3720474E5E0012DBFB /* WarriorOfLeporia */;
-			targetProxy = B5D58E5320474E5F0012DBFB /* PBXContainerItemProxy */;
-		};
-		B5D58E5F20474E5F0012DBFB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B5D58E3720474E5E0012DBFB /* WarriorOfLeporia */;
-			targetProxy = B5D58E5E20474E5F0012DBFB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		B5D58E4520474E5E0012DBFB /* Main.storyboard */ = {
+		B5D58E8520475D570012DBFB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B5D58E4620474E5E0012DBFB /* Base */,
+				B5D58E8620475D570012DBFB /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		B5D58E4A20474E5E0012DBFB /* LaunchScreen.storyboard */ = {
+		B5D58E8A20475D570012DBFB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B5D58E4B20474E5E0012DBFB /* Base */,
+				B5D58E8B20475D570012DBFB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -327,7 +175,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B5D58E6420474E5F0012DBFB /* Debug */ = {
+		B5D58E8E20475D570012DBFB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -384,7 +232,7 @@
 			};
 			name = Debug;
 		};
-		B5D58E6520474E5F0012DBFB /* Release */ = {
+		B5D58E8F20475D570012DBFB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -434,7 +282,7 @@
 			};
 			name = Release;
 		};
-		B5D58E6720474E5F0012DBFB /* Debug */ = {
+		B5D58E9120475D570012DBFB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -448,7 +296,7 @@
 			};
 			name = Debug;
 		};
-		B5D58E6820474E5F0012DBFB /* Release */ = {
+		B5D58E9220475D570012DBFB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -459,111 +307,31 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		B5D58E6A20474E5F0012DBFB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WarriorOfLeporiaTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = NaTSaJiN.WarriorOfLeporiaTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WarriorOfLeporia.app/WarriorOfLeporia";
-			};
-			name = Debug;
-		};
-		B5D58E6B20474E5F0012DBFB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WarriorOfLeporiaTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = NaTSaJiN.WarriorOfLeporiaTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WarriorOfLeporia.app/WarriorOfLeporia";
-			};
-			name = Release;
-		};
-		B5D58E6D20474E5F0012DBFB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WarriorOfLeporiaUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = NaTSaJiN.WarriorOfLeporiaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WarriorOfLeporia;
-			};
-			name = Debug;
-		};
-		B5D58E6E20474E5F0012DBFB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WarriorOfLeporiaUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = NaTSaJiN.WarriorOfLeporiaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WarriorOfLeporia;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B5D58E3320474E5E0012DBFB /* Build configuration list for PBXProject "WarriorOfLeporia" */ = {
+		B5D58E7320475D570012DBFB /* Build configuration list for PBXProject "WarriorOfLeporia" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B5D58E6420474E5F0012DBFB /* Debug */,
-				B5D58E6520474E5F0012DBFB /* Release */,
+				B5D58E8E20475D570012DBFB /* Debug */,
+				B5D58E8F20475D570012DBFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B5D58E6620474E5F0012DBFB /* Build configuration list for PBXNativeTarget "WarriorOfLeporia" */ = {
+		B5D58E9020475D570012DBFB /* Build configuration list for PBXNativeTarget "WarriorOfLeporia" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B5D58E6720474E5F0012DBFB /* Debug */,
-				B5D58E6820474E5F0012DBFB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B5D58E6920474E5F0012DBFB /* Build configuration list for PBXNativeTarget "WarriorOfLeporiaTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B5D58E6A20474E5F0012DBFB /* Debug */,
-				B5D58E6B20474E5F0012DBFB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B5D58E6C20474E5F0012DBFB /* Build configuration list for PBXNativeTarget "WarriorOfLeporiaUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B5D58E6D20474E5F0012DBFB /* Debug */,
-				B5D58E6E20474E5F0012DBFB /* Release */,
+				B5D58E9120475D570012DBFB /* Debug */,
+				B5D58E9220475D570012DBFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B5D58E3020474E5E0012DBFB /* Project object */;
+	rootObject = B5D58E7020475D570012DBFB /* Project object */;
 }
