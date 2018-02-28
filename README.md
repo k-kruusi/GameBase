@@ -14,17 +14,17 @@ keep the zombies alive.  Each round has a requirement of keeping a certain numbe
 limit.
 
 ------------------------------------------------------------------------------------------------------------------------------
-Round 1
+Round 1|
 10 zombies to start - 3 zombies required to keep alive - 3 minute time limit
 
-Round 2
+Round 2|
 7 zombies to start  - 3 zombies required to keep alive - 3 minute time limit
 
-Round 3
+Round 3|
 5 zombies to start  - 3 zombies required to keep alive - 2 minute time limit
 
-Round 4
+Round 4|
 4 zombies to start  - 3 zombies required to keep alive - 2 minute time limit
 
-Round 5
+Round 5|
 3 zombies to start  - 3 zombies required to keep alive - 2 minute time limit
