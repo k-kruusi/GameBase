@@ -1,2 +1,3 @@
 # GameBase
-Start your Game by branching off this project.
+
+Defend the spaceX headquaters in this action side scroller! 
