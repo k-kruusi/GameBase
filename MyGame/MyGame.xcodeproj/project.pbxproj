@@ -15,8 +15,6 @@
 		BC6746C1204759C10050DEA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC6746BF204759C10050DEA5 /* Main.storyboard */; };
 		BC6746C3204759C10050DEA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC6746C2204759C10050DEA5 /* Assets.xcassets */; };
 		BC6746C6204759C10050DEA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC6746C4204759C10050DEA5 /* LaunchScreen.storyboard */; };
-		BC6746D1204759C10050DEA5 /* MyGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6746D0204759C10050DEA5 /* MyGameTests.swift */; };
-		BC6746DC204759C10050DEA5 /* MyGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6746DB204759C10050DEA5 /* MyGameUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,11 +46,7 @@
 		BC6746C5204759C10050DEA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC6746C7204759C10050DEA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC6746CC204759C10050DEA5 /* MyGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC6746D0204759C10050DEA5 /* MyGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGameTests.swift; sourceTree = "<group>"; };
-		BC6746D2204759C10050DEA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC6746D7204759C10050DEA5 /* MyGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC6746DB204759C10050DEA5 /* MyGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGameUITests.swift; sourceTree = "<group>"; };
-		BC6746DD204759C10050DEA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				BC6746B4204759C10050DEA5 /* MyGame */,
-				BC6746CF204759C10050DEA5 /* MyGameTests */,
-				BC6746DA204759C10050DEA5 /* MyGameUITests */,
 				BC6746B3204759C10050DEA5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -114,24 +106,6 @@
 				BC6746C7204759C10050DEA5 /* Info.plist */,
 			);
 			path = MyGame;
-			sourceTree = "<group>";
-		};
-		BC6746CF204759C10050DEA5 /* MyGameTests */ = {
-			isa = PBXGroup;
-			children = (
-				BC6746D0204759C10050DEA5 /* MyGameTests.swift */,
-				BC6746D2204759C10050DEA5 /* Info.plist */,
-			);
-			path = MyGameTests;
-			sourceTree = "<group>";
-		};
-		BC6746DA204759C10050DEA5 /* MyGameUITests */ = {
-			isa = PBXGroup;
-			children = (
-				BC6746DB204759C10050DEA5 /* MyGameUITests.swift */,
-				BC6746DD204759C10050DEA5 /* Info.plist */,
-			);
-			path = MyGameUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,7 +254,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC6746D1204759C10050DEA5 /* MyGameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +261,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC6746DC204759C10050DEA5 /* MyGameUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
