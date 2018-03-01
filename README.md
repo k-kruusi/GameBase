@@ -1,4 +1,5 @@
 # Game Proposal
+###### By: Stefen Matias
 ### “Roll-A-Fall”
 ###### 2D Side Scroller, Arcade Style 
 
