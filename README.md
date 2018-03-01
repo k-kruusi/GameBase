@@ -11,15 +11,28 @@ High scores will be saved on the phone, with future online leaderboards and othe
 
 **Similar Games:** Subway Surfers, Mario Bros, Temple Run
 
-###### Mechanics:
-	Block Based Level Building: The level is assembled as you play causing endless replay ability. This means every obstacle will be the same width in dimension to ensure that they are easily able to be implemented one after another. This system allows us to create multiple types of connectors which we can then randomly assemble as the player traverses through the level.
-###### Increasing Difficulty: 
-	As the player goes through the level, at certain score thresholds, more complex obstacles will be introduced to test the players skills. This will create a increasing level of difficulty that will ensure that even expert platformers are given a challenge. 
+#### Mechanics:
+
+##### Block Based Level Building:
+
+The level is assembled as you play causing endless replay ability. This means every obstacle will be the same width in dimension to ensure that they are easily able to be implemented one after another. This system allows us to create multiple types of connectors which we can then randomly assemble as the player traverses through.
+
+##### Increasing Difficulty:
+
+As the player goes through the level, at certain score thresholds, more complex obstacles will be introduced to test the players skills. This will create a increasing level of difficulty that will ensure that even expert platformers are given a challenge. 
+
 ##### Jumping: 
-	Players can tap the screen to cause their character to jump, this will allow the to jump over obstacles that may be away or jump onto platforms in order to move further in the level.
-	Slow Down or Speed Up: Two buttons will be located on the bottom left and right side of the screen, these buttons will increase or decrease the player speed. At times greater amounts of speed will be required to scale some gaps in the level.
-Input:
-###### Touch/Tap: 
-	The only input required by the user is to tap the screen for jumping and slowing down or speeding up. 
+
+Players can tap the screen to cause their character to jump, this will allow the to jump over obstacles that may be away or jump onto platforms in order to move further in the level.
+
+##### Slow Down or Speed Up:
+
+Two buttons will be located on the bottom left and right side of the screen, these buttons will increase or decrease the player speed. At times greater amounts of speed will be required to scale some gaps in the level.
+
+###### Input - Touch/Tap:
+
+The only input required by the user is to tap the screen for jumping and slowing down or speeding up. 
+
 ##### Art:
-	Simplistic: All art will be simplistic and created in photoshop, these will be block pieces, background art and player art (different sphere sprites)	
+
+Simplistic: All art will be simplistic and created in photoshop, these will be block pieces, background art and player art (different sphere sprites)	
