@@ -1,9 +1,9 @@
 //
 //  GameViewController.swift
-//  VirusConquest
+//  SwiftGame
 //
-//  Created by Ly Paul H. on 3/1/18.
-//  Copyright © 2018 Ly Paul H. All rights reserved.
+//  Created by Thompson Eric R. on 3/1/18.
+//  Copyright © 2018 Dead Battery Games. All rights reserved.
 //
 
 import UIKit
