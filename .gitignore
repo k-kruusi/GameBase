@@ -23,6 +23,11 @@ xcuserdata/
 *.xcscmblueprint
 .DS_Store
 
+## Large Files
+*.jpeg
+*.png
+*.wav
+
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
