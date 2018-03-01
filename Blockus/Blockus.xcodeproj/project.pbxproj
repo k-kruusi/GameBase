@@ -1,0 +1,569 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10F354C32048A9F70090BCE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F354C22048A9F70090BCE4 /* AppDelegate.swift */; };
+		10F354C52048A9F70090BCE4 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 10F354C42048A9F70090BCE4 /* GameScene.sks */; };
+		10F354C72048A9F70090BCE4 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 10F354C62048A9F70090BCE4 /* Actions.sks */; };
+		10F354C92048A9F70090BCE4 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F354C82048A9F70090BCE4 /* GameScene.swift */; };
+		10F354CB2048A9F70090BCE4 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F354CA2048A9F70090BCE4 /* GameViewController.swift */; };
+		10F354CE2048A9F70090BCE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10F354CC2048A9F70090BCE4 /* Main.storyboard */; };
+		10F354D02048A9F70090BCE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10F354CF2048A9F70090BCE4 /* Assets.xcassets */; };
+		10F354D32048A9F70090BCE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10F354D12048A9F70090BCE4 /* LaunchScreen.storyboard */; };
+		10F354DE2048A9F70090BCE4 /* BlockusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F354DD2048A9F70090BCE4 /* BlockusTests.swift */; };
+		10F354E92048A9F70090BCE4 /* BlockusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F354E82048A9F70090BCE4 /* BlockusUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		10F354DA2048A9F70090BCE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10F354B72048A9F70090BCE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10F354BE2048A9F70090BCE4;
+			remoteInfo = Blockus;
+		};
+		10F354E52048A9F70090BCE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10F354B72048A9F70090BCE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10F354BE2048A9F70090BCE4;
+			remoteInfo = Blockus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		10F354BF2048A9F70090BCE4 /* Blockus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blockus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		10F354C22048A9F70090BCE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		10F354C42048A9F70090BCE4 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		10F354C62048A9F70090BCE4 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		10F354C82048A9F70090BCE4 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		10F354CA2048A9F70090BCE4 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		10F354CD2048A9F70090BCE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		10F354CF2048A9F70090BCE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		10F354D22048A9F70090BCE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		10F354D42048A9F70090BCE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10F354D92048A9F70090BCE4 /* BlockusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		10F354DD2048A9F70090BCE4 /* BlockusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockusTests.swift; sourceTree = "<group>"; };
+		10F354DF2048A9F70090BCE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10F354E42048A9F70090BCE4 /* BlockusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		10F354E82048A9F70090BCE4 /* BlockusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockusUITests.swift; sourceTree = "<group>"; };
+		10F354EA2048A9F70090BCE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		10F354BC2048A9F70090BCE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10F354D62048A9F70090BCE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10F354E12048A9F70090BCE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10F354B62048A9F70090BCE4 = {
+			isa = PBXGroup;
+			children = (
+				10F354C12048A9F70090BCE4 /* Blockus */,
+				10F354DC2048A9F70090BCE4 /* BlockusTests */,
+				10F354E72048A9F70090BCE4 /* BlockusUITests */,
+				10F354C02048A9F70090BCE4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		10F354C02048A9F70090BCE4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				10F354BF2048A9F70090BCE4 /* Blockus.app */,
+				10F354D92048A9F70090BCE4 /* BlockusTests.xctest */,
+				10F354E42048A9F70090BCE4 /* BlockusUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		10F354C12048A9F70090BCE4 /* Blockus */ = {
+			isa = PBXGroup;
+			children = (
+				10F354C22048A9F70090BCE4 /* AppDelegate.swift */,
+				10F354C42048A9F70090BCE4 /* GameScene.sks */,
+				10F354C62048A9F70090BCE4 /* Actions.sks */,
+				10F354C82048A9F70090BCE4 /* GameScene.swift */,
+				10F354CA2048A9F70090BCE4 /* GameViewController.swift */,
+				10F354CC2048A9F70090BCE4 /* Main.storyboard */,
+				10F354CF2048A9F70090BCE4 /* Assets.xcassets */,
+				10F354D12048A9F70090BCE4 /* LaunchScreen.storyboard */,
+				10F354D42048A9F70090BCE4 /* Info.plist */,
+			);
+			path = Blockus;
+			sourceTree = "<group>";
+		};
+		10F354DC2048A9F70090BCE4 /* BlockusTests */ = {
+			isa = PBXGroup;
+			children = (
+				10F354DD2048A9F70090BCE4 /* BlockusTests.swift */,
+				10F354DF2048A9F70090BCE4 /* Info.plist */,
+			);
+			path = BlockusTests;
+			sourceTree = "<group>";
+		};
+		10F354E72048A9F70090BCE4 /* BlockusUITests */ = {
+			isa = PBXGroup;
+			children = (
+				10F354E82048A9F70090BCE4 /* BlockusUITests.swift */,
+				10F354EA2048A9F70090BCE4 /* Info.plist */,
+			);
+			path = BlockusUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		10F354BE2048A9F70090BCE4 /* Blockus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10F354ED2048A9F70090BCE4 /* Build configuration list for PBXNativeTarget "Blockus" */;
+			buildPhases = (
+				10F354BB2048A9F70090BCE4 /* Sources */,
+				10F354BC2048A9F70090BCE4 /* Frameworks */,
+				10F354BD2048A9F70090BCE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Blockus;
+			productName = Blockus;
+			productReference = 10F354BF2048A9F70090BCE4 /* Blockus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		10F354D82048A9F70090BCE4 /* BlockusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10F354F02048A9F70090BCE4 /* Build configuration list for PBXNativeTarget "BlockusTests" */;
+			buildPhases = (
+				10F354D52048A9F70090BCE4 /* Sources */,
+				10F354D62048A9F70090BCE4 /* Frameworks */,
+				10F354D72048A9F70090BCE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10F354DB2048A9F70090BCE4 /* PBXTargetDependency */,
+			);
+			name = BlockusTests;
+			productName = BlockusTests;
+			productReference = 10F354D92048A9F70090BCE4 /* BlockusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		10F354E32048A9F70090BCE4 /* BlockusUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10F354F32048A9F70090BCE4 /* Build configuration list for PBXNativeTarget "BlockusUITests" */;
+			buildPhases = (
+				10F354E02048A9F70090BCE4 /* Sources */,
+				10F354E12048A9F70090BCE4 /* Frameworks */,
+				10F354E22048A9F70090BCE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10F354E62048A9F70090BCE4 /* PBXTargetDependency */,
+			);
+			name = BlockusUITests;
+			productName = BlockusUITests;
+			productReference = 10F354E42048A9F70090BCE4 /* BlockusUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		10F354B72048A9F70090BCE4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Kevin C. Garland";
+				TargetAttributes = {
+					10F354BE2048A9F70090BCE4 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					10F354D82048A9F70090BCE4 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 10F354BE2048A9F70090BCE4;
+					};
+					10F354E32048A9F70090BCE4 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 10F354BE2048A9F70090BCE4;
+					};
+				};
+			};
+			buildConfigurationList = 10F354BA2048A9F70090BCE4 /* Build configuration list for PBXProject "Blockus" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 10F354B62048A9F70090BCE4;
+			productRefGroup = 10F354C02048A9F70090BCE4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				10F354BE2048A9F70090BCE4 /* Blockus */,
+				10F354D82048A9F70090BCE4 /* BlockusTests */,
+				10F354E32048A9F70090BCE4 /* BlockusUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		10F354BD2048A9F70090BCE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10F354CE2048A9F70090BCE4 /* Main.storyboard in Resources */,
+				10F354C52048A9F70090BCE4 /* GameScene.sks in Resources */,
+				10F354D02048A9F70090BCE4 /* Assets.xcassets in Resources */,
+				10F354D32048A9F70090BCE4 /* LaunchScreen.storyboard in Resources */,
+				10F354C72048A9F70090BCE4 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10F354D72048A9F70090BCE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10F354E22048A9F70090BCE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		10F354BB2048A9F70090BCE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10F354C92048A9F70090BCE4 /* GameScene.swift in Sources */,
+				10F354CB2048A9F70090BCE4 /* GameViewController.swift in Sources */,
+				10F354C32048A9F70090BCE4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10F354D52048A9F70090BCE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10F354DE2048A9F70090BCE4 /* BlockusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10F354E02048A9F70090BCE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10F354E92048A9F70090BCE4 /* BlockusUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		10F354DB2048A9F70090BCE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10F354BE2048A9F70090BCE4 /* Blockus */;
+			targetProxy = 10F354DA2048A9F70090BCE4 /* PBXContainerItemProxy */;
+		};
+		10F354E62048A9F70090BCE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10F354BE2048A9F70090BCE4 /* Blockus */;
+			targetProxy = 10F354E52048A9F70090BCE4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		10F354CC2048A9F70090BCE4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10F354CD2048A9F70090BCE4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		10F354D12048A9F70090BCE4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10F354D22048A9F70090BCE4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		10F354EB2048A9F70090BCE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		10F354EC2048A9F70090BCE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		10F354EE2048A9F70090BCE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Blockus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Humber.Blockus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		10F354EF2048A9F70090BCE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Blockus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Humber.Blockus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		10F354F12048A9F70090BCE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BlockusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Humber.BlockusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blockus.app/Blockus";
+			};
+			name = Debug;
+		};
+		10F354F22048A9F70090BCE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BlockusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Humber.BlockusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blockus.app/Blockus";
+			};
+			name = Release;
+		};
+		10F354F42048A9F70090BCE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BlockusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Humber.BlockusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Blockus;
+			};
+			name = Debug;
+		};
+		10F354F52048A9F70090BCE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BlockusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Humber.BlockusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Blockus;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		10F354BA2048A9F70090BCE4 /* Build configuration list for PBXProject "Blockus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10F354EB2048A9F70090BCE4 /* Debug */,
+				10F354EC2048A9F70090BCE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10F354ED2048A9F70090BCE4 /* Build configuration list for PBXNativeTarget "Blockus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10F354EE2048A9F70090BCE4 /* Debug */,
+				10F354EF2048A9F70090BCE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10F354F02048A9F70090BCE4 /* Build configuration list for PBXNativeTarget "BlockusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10F354F12048A9F70090BCE4 /* Debug */,
+				10F354F22048A9F70090BCE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10F354F32048A9F70090BCE4 /* Build configuration list for PBXNativeTarget "BlockusUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10F354F42048A9F70090BCE4 /* Debug */,
+				10F354F52048A9F70090BCE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 10F354B72048A9F70090BCE4 /* Project object */;
+}
