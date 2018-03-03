@@ -12,16 +12,16 @@ a space ship on the left side of the screen and use it to attack incoming enemie
 point of the game is to survive as long as possible for a high score.
 
 
-================================||  STORY  ||===========================================
+================================||  STORY  ||=========================================
 
 Space-X has become too popular at pushing the boundary of space exploration. Defend the 
 head-Quarter from human and alien competition.
 
-================================||  GENRE  ||===========================================
+================================||  GENRE  ||=========================================
 
 This is a 2D side scrolling shoot-em-up game.
 
-===============================||  GAMEPLAY  ||=========================================
+===============================||  GAMEPLAY  ||=======================================
 
 You control your ship on the left and shoot incoming enemies. Tapping on the screen will 
 deploy missiles from the ground base to aid in your defense. Your ship will constantly 
