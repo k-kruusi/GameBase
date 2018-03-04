@@ -17,6 +17,7 @@ class Duck: GameObject {
     }
     
     // Update is called every frame and holds the main functionality of the duck
-    func update(_deltaTime: TimeInterval){
+    override func update(_deltaTime: TimeInterval) {
+        super.update(_deltaTime: _deltaTime)
     }
 }

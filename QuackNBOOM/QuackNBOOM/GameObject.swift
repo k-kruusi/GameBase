@@ -12,11 +12,19 @@ import Foundation
 import SpriteKit
 
 class GameObject {
+    // Position of the GameObject
+    var pos = CGPoint(x: 0, y: 0)
+    
     // Main sprite of the GameObject
     var sprite: SKSpriteNode
     
     // Sets the sprite's image
     required init(imagePath: String){
         sprite = SKSpriteNode(imageNamed: imagePath)
+    }
+    
+    func update(_deltaTime: TimeInterval){
+        // Updates sprite position with the object's position
+        sprite.position = pos
     }
 }
