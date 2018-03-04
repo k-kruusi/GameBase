@@ -1,4 +1,4 @@
-# QuackN'BOOMM
+# QuackN'BOOM
 **By Neriah and Neenee**
 
 ## Basic Description:
