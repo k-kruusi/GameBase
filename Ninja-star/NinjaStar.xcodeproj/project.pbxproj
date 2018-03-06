@@ -17,6 +17,7 @@
 		90C209C620475B7700BAB05D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C209C420475B7700BAB05D /* LaunchScreen.storyboard */; };
 		90C209D120475B7700BAB05D /* NinjaStarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C209D020475B7700BAB05D /* NinjaStarTests.swift */; };
 		90C209DC20475B7700BAB05D /* NinjaStarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C209DB20475B7700BAB05D /* NinjaStarUITests.swift */; };
+		B4D3BF65204B232600054EAD /* Ninja.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D3BF64204B232600054EAD /* Ninja.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		90C209D720475B7700BAB05D /* NinjaStarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NinjaStarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C209DB20475B7700BAB05D /* NinjaStarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinjaStarUITests.swift; sourceTree = "<group>"; };
 		90C209DD20475B7700BAB05D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4D3BF64204B232600054EAD /* Ninja.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ninja.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				90C209C220475B7700BAB05D /* Assets.xcassets */,
 				90C209C420475B7700BAB05D /* LaunchScreen.storyboard */,
 				90C209C720475B7700BAB05D /* Info.plist */,
+				B4D3BF64204B232600054EAD /* Ninja.swift */,
 			);
 			path = NinjaStar;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			files = (
 				90C209BC20475B7700BAB05D /* GameScene.swift in Sources */,
 				90C209BE20475B7700BAB05D /* GameViewController.swift in Sources */,
+				B4D3BF65204B232600054EAD /* Ninja.swift in Sources */,
 				90C209B620475B7700BAB05D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
