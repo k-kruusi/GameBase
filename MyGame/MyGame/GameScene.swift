@@ -9,7 +9,24 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
+    
+    var isGameStarted = Bool (false)
+    var isDead = Bool (false)
+    let collectSound = SKAction.playSoundFileNamed("CoinSound.mp3", waitForCompletion: false)
+    
+    var score = Int(0)
+    
+    var scoreLable = SKLabelNode()
+    var highscoreLable = SKLabelNode()
+    var playLable = SKLabelNode()
+    
+    var restartButton = SKSpriteNode()
+    var pauseButon = SKSpriteNode()
+    var logoImg = SKSpriteNode()
+    
+    var wallBlocks = SKNode()
+    var moveAndRemove = SKAction()
     
     
     
