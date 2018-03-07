@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC571A6920509D730073A3FC /* GameElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC571A6820509D730073A3FC /* GameElements.swift */; };
 		BC6746B6204759C10050DEA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6746B5204759C10050DEA5 /* AppDelegate.swift */; };
 		BC6746B8204759C10050DEA5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BC6746B7204759C10050DEA5 /* GameScene.sks */; };
 		BC6746BA204759C10050DEA5 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = BC6746B9204759C10050DEA5 /* Actions.sks */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC571A6820509D730073A3FC /* GameElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameElements.swift; sourceTree = "<group>"; };
 		BC6746B2204759C10050DEA5 /* MyGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC6746B5204759C10050DEA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC6746B7204759C10050DEA5 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				BC6746B9204759C10050DEA5 /* Actions.sks */,
 				BC6746BB204759C10050DEA5 /* GameScene.swift */,
 				BC6746BD204759C10050DEA5 /* GameViewController.swift */,
+				BC571A6820509D730073A3FC /* GameElements.swift */,
 				BC6746BF204759C10050DEA5 /* Main.storyboard */,
 				BC6746C2204759C10050DEA5 /* Assets.xcassets */,
 				BC6746C4204759C10050DEA5 /* LaunchScreen.storyboard */,
@@ -244,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC571A6920509D730073A3FC /* GameElements.swift in Sources */,
 				BC6746BC204759C10050DEA5 /* GameScene.swift in Sources */,
 				BC6746BE204759C10050DEA5 /* GameViewController.swift in Sources */,
 				BC6746B6204759C10050DEA5 /* AppDelegate.swift in Sources */,
