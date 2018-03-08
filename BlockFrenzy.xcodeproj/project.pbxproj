@@ -17,6 +17,7 @@
 		7BD138192051DB0C0055F982 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD138172051DB0C0055F982 /* LaunchScreen.storyboard */; };
 		7BD138242051DB0C0055F982 /* BlockFrenzyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD138232051DB0C0055F982 /* BlockFrenzyTests.swift */; };
 		7BD1382F2051DB0C0055F982 /* BlockFrenzyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1382E2051DB0C0055F982 /* BlockFrenzyUITests.swift */; };
+		7BD1383D2051E4400055F982 /* Dark_Knight_Dummo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7BD1383C2051E4400055F982 /* Dark_Knight_Dummo.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		7BD1382A2051DB0C0055F982 /* BlockFrenzyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockFrenzyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD1382E2051DB0C0055F982 /* BlockFrenzyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockFrenzyUITests.swift; sourceTree = "<group>"; };
 		7BD138302051DB0C0055F982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BD1383C2051E4400055F982 /* Dark_Knight_Dummo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Dark_Knight_Dummo.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		7BD138072051DB0C0055F982 /* BlockFrenzy */ = {
 			isa = PBXGroup;
 			children = (
+				7BD1383C2051E4400055F982 /* Dark_Knight_Dummo.mp3 */,
 				7BD138082051DB0C0055F982 /* AppDelegate.swift */,
 				7BD1380A2051DB0C0055F982 /* GameScene.sks */,
 				7BD1380C2051DB0C0055F982 /* Actions.sks */,
@@ -243,6 +246,7 @@
 			files = (
 				7BD138142051DB0C0055F982 /* Main.storyboard in Resources */,
 				7BD1380B2051DB0C0055F982 /* GameScene.sks in Resources */,
+				7BD1383D2051E4400055F982 /* Dark_Knight_Dummo.mp3 in Resources */,
 				7BD138162051DB0C0055F982 /* Assets.xcassets in Resources */,
 				7BD138192051DB0C0055F982 /* LaunchScreen.storyboard in Resources */,
 				7BD1380D2051DB0C0055F982 /* Actions.sks in Resources */,
