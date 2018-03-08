@@ -2,7 +2,7 @@
 //  GameScene.swift
 //  ConnectGame
 //
-//  Created by Romeo Vincenzo G. on 3/1/18.
+//  Created by Romeo Vincenzo G. and Isaac Rodrigues on 3/1/18.
 //  Copyright © 2018 Romeo Vincenzo G. All rights reserved.
 //
 
