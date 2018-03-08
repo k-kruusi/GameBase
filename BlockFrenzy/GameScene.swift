@@ -33,6 +33,14 @@ class GameScene: SKScene {
             BackgroundMusic.prepareToPlay()
             BackgroundMusic.play()
             
+            let backgoundImage = SKSpriteNode(imageNamed: "bg")
+            backgoundImage.position = CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2)
+            self.addChild(backgoundImage)
+            
+            
+            
+            
+            
         } catch{
             print(error)
         }
