@@ -7,9 +7,24 @@
 //
 
 import SpriteKit
+import GameplayKit
 
 class BaseGameObject : SKSpriteNode {
     
-    //put stuff here
-
+    init(imagedName name: String)
+    {
+        let tex = SKTexture(imageNamed: name)
+        super.init(texture: tex, color: UIColor.clear, size: tex.size())
+        
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func update(_ currentTime: TimeInterval){
+        
+    }
+    
 }
