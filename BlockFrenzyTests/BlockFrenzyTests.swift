@@ -1,15 +1,15 @@
 //
-//  VirusConquestTests.swift
-//  VirusConquestTests
+//  BlockFrenzyTests.swift
+//  BlockFrenzyTests
 //
-//  Created by Ly Paul H. on 3/1/18.
-//  Copyright © 2018 Ly Paul H. All rights reserved.
+//  Created by McLoughlin David J. on 3/8/18.
+//  Copyright © 2018 McLoughlin David J. All rights reserved.
 //
 
 import XCTest
-@testable import VirusConquest
+@testable import BlockFrenzy
 
-class VirusConquestTests: XCTestCase {
+class BlockFrenzyTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
