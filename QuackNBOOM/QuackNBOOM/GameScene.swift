@@ -17,11 +17,12 @@ class GameScene: SKScene {
     
     //creating variables
     let background = GameObject(imagePath: "Background")
-    let duckSprite = Duck(imagePath: "Duck")
+    //let duckSprite = Duck(imagePath: "Duck")
     //let bombSprite = Bomb(imagePath: "Bomb")
     let breadSprite = Bread(imagePath: "Bread")
     let gameOver = GameObject(imagePath: "GameOver")
     let bombController = BombController()
+    let duckController = DuckController()
     
     override func didMove(to view: SKView) {
         //adding the background to the scene
@@ -29,8 +30,9 @@ class GameScene: SKScene {
         background.pos = CGPoint(x: size.width/2, y: size.height/2)
         
         //adding the duck to the scene
-        addChild(duckSprite.sprite)
-        duckSprite.pos = CGPoint(x: size.width/2, y: 1000)
+        //addChild(duckSprite.sprite)
+        //duckSprite.pos = CGPoint(x: size.width/2, y: 1000)
+        addChild(duckController.getAllDucks().sprite)
         
         //adding the bomb to the scene
         //addChild(bombSprite.sprite)
@@ -59,9 +61,10 @@ class GameScene: SKScene {
         self.lastUpdateTime = currentTime
         
         background.update(_deltaTime: deltaTime)
-        duckSprite.update(_deltaTime: deltaTime)
+        //duckSprite.update(_deltaTime: deltaTime)
         //bombSprite.update(_deltaTime: currentTime)
         bombController.update(_deltaTime: deltaTime)
+        duckController.update(_deltaTime: deltaTime)
         breadSprite.update(_deltaTime: deltaTime)
         gameOver.update(_deltaTime: deltaTime)
     }
