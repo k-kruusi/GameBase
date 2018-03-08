@@ -15,6 +15,11 @@
 		30A9AF6220489B13005F3D6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A9AF6020489B13005F3D6F /* Main.storyboard */; };
 		30A9AF6420489B13005F3D6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A9AF6320489B13005F3D6F /* Assets.xcassets */; };
 		30A9AF6720489B13005F3D6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A9AF6520489B13005F3D6F /* LaunchScreen.storyboard */; };
+		F87362982051E19A003CBCA7 /* BaseGameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87362972051E19A003CBCA7 /* BaseGameObject.swift */; };
+		F873629A2051E235003CBCA7 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87362992051E235003CBCA7 /* Enemy.swift */; };
+		F873629C2051E259003CBCA7 /* Tower.swift in Sources */ = {isa = PBXBuildFile; fileRef = F873629B2051E259003CBCA7 /* Tower.swift */; };
+		F873629E2051E2D0003CBCA7 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = F873629D2051E2D0003CBCA7 /* Base.swift */; };
+		F87362A02051E321003CBCA7 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = F873629F2051E321003CBCA7 /* Level.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		30A9AF6820489B13005F3D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30A9AF6D20489B13005F3D6F /* XPaceInvadersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XPaceInvadersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A9AF7820489B13005F3D6F /* XPaceInvadersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XPaceInvadersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F87362972051E19A003CBCA7 /* BaseGameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGameObject.swift; sourceTree = "<group>"; };
+		F87362992051E235003CBCA7 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
+		F873629B2051E259003CBCA7 /* Tower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tower.swift; sourceTree = "<group>"; };
+		F873629D2051E2D0003CBCA7 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		F873629F2051E321003CBCA7 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,11 @@
 				30A9AF5820489B13005F3D6F /* GameScene.sks */,
 				30A9AF5A20489B13005F3D6F /* Actions.sks */,
 				30A9AF5C20489B13005F3D6F /* GameScene.swift */,
+				F87362972051E19A003CBCA7 /* BaseGameObject.swift */,
+				F873629F2051E321003CBCA7 /* Level.swift */,
+				F87362992051E235003CBCA7 /* Enemy.swift */,
+				F873629D2051E2D0003CBCA7 /* Base.swift */,
+				F873629B2051E259003CBCA7 /* Tower.swift */,
 				30A9AF5E20489B13005F3D6F /* GameViewController.swift */,
 				30A9AF6020489B13005F3D6F /* Main.storyboard */,
 				30A9AF6320489B13005F3D6F /* Assets.xcassets */,
@@ -246,7 +261,12 @@
 			files = (
 				30A9AF5D20489B13005F3D6F /* GameScene.swift in Sources */,
 				30A9AF5F20489B13005F3D6F /* GameViewController.swift in Sources */,
+				F873629C2051E259003CBCA7 /* Tower.swift in Sources */,
 				30A9AF5720489B13005F3D6F /* AppDelegate.swift in Sources */,
+				F873629A2051E235003CBCA7 /* Enemy.swift in Sources */,
+				F873629E2051E2D0003CBCA7 /* Base.swift in Sources */,
+				F87362A02051E321003CBCA7 /* Level.swift in Sources */,
+				F87362982051E19A003CBCA7 /* BaseGameObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
