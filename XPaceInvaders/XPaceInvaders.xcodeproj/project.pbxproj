@@ -15,6 +15,7 @@
 		30A9AF6220489B13005F3D6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A9AF6020489B13005F3D6F /* Main.storyboard */; };
 		30A9AF6420489B13005F3D6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A9AF6320489B13005F3D6F /* Assets.xcassets */; };
 		30A9AF6720489B13005F3D6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A9AF6520489B13005F3D6F /* LaunchScreen.storyboard */; };
+		30F226BA2051DE8900AE32BC /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F226B92051DE8900AE32BC /* MainMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		30A9AF6820489B13005F3D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30A9AF6D20489B13005F3D6F /* XPaceInvadersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XPaceInvadersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A9AF7820489B13005F3D6F /* XPaceInvadersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XPaceInvadersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		30F226B92051DE8900AE32BC /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				30A9AF6320489B13005F3D6F /* Assets.xcassets */,
 				30A9AF6520489B13005F3D6F /* LaunchScreen.storyboard */,
 				30A9AF6820489B13005F3D6F /* Info.plist */,
+				30F226B92051DE8900AE32BC /* MainMenuViewController.swift */,
 			);
 			path = XPaceInvaders;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30F226BA2051DE8900AE32BC /* MainMenuViewController.swift in Sources */,
 				30A9AF5D20489B13005F3D6F /* GameScene.swift in Sources */,
 				30A9AF5F20489B13005F3D6F /* GameViewController.swift in Sources */,
 				30A9AF5720489B13005F3D6F /* AppDelegate.swift in Sources */,
