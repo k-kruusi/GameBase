@@ -2,7 +2,7 @@
 //  GameViewController.swift
 //  ElementalAcolyte
 //
-//  Created by Asante Kwasi G. on 3/1/18.
+//  Created by Asante Kwasi G. on 3/8/18.
 //  Copyright © 2018 Asante Kwasi G. All rights reserved.
 //
 
@@ -11,7 +11,7 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

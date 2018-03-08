@@ -7,70 +7,80 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ED14B5D42048ADC800D55C48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED14B5D32048ADC800D55C48 /* AppDelegate.swift */; };
-		ED14B5D62048ADC800D55C48 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = ED14B5D52048ADC800D55C48 /* GameScene.sks */; };
-		ED14B5D82048ADC800D55C48 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = ED14B5D72048ADC800D55C48 /* Actions.sks */; };
-		ED14B5DA2048ADC800D55C48 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED14B5D92048ADC800D55C48 /* GameScene.swift */; };
-		ED14B5DC2048ADC800D55C48 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED14B5DB2048ADC800D55C48 /* GameViewController.swift */; };
-		ED14B5DF2048ADC800D55C48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED14B5DD2048ADC800D55C48 /* Main.storyboard */; };
-		ED14B5E12048ADC800D55C48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED14B5E02048ADC800D55C48 /* Assets.xcassets */; };
-		ED14B5E42048ADC800D55C48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED14B5E22048ADC800D55C48 /* LaunchScreen.storyboard */; };
-		ED14B5EF2048ADC800D55C48 /* ElementalAcolyteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED14B5EE2048ADC800D55C48 /* ElementalAcolyteTests.swift */; };
-		ED14B5FA2048ADC800D55C48 /* ElementalAcolyteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED14B5F92048ADC800D55C48 /* ElementalAcolyteUITests.swift */; };
+		ED888CEC2051EAA70089ADAA /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED888CEA2051EAA70089ADAA /* explosion.mp3 */; };
+		ED888CED2051EAA70089ADAA /* torpedo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED888CEB2051EAA70089ADAA /* torpedo.mp3 */; };
+		ED888CF22051EAEE0089ADAA /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = ED888CF02051EAEE0089ADAA /* Explosion.sks */; };
+		ED888CF32051EAEE0089ADAA /* Starfield.sks in Resources */ = {isa = PBXBuildFile; fileRef = ED888CF12051EAEE0089ADAA /* Starfield.sks */; };
+		EDA1D6232051CDCE00851549 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1D6222051CDCE00851549 /* AppDelegate.swift */; };
+		EDA1D6252051CDCE00851549 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EDA1D6242051CDCE00851549 /* GameScene.sks */; };
+		EDA1D6272051CDCE00851549 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = EDA1D6262051CDCE00851549 /* Actions.sks */; };
+		EDA1D6292051CDCE00851549 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1D6282051CDCE00851549 /* GameScene.swift */; };
+		EDA1D62B2051CDCE00851549 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1D62A2051CDCE00851549 /* GameViewController.swift */; };
+		EDA1D62E2051CDCE00851549 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA1D62C2051CDCE00851549 /* Main.storyboard */; };
+		EDA1D6302051CDCE00851549 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA1D62F2051CDCE00851549 /* Assets.xcassets */; };
+		EDA1D6332051CDCE00851549 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA1D6312051CDCE00851549 /* LaunchScreen.storyboard */; };
+		EDA1D63E2051CDCE00851549 /* ElementalAcolyteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1D63D2051CDCE00851549 /* ElementalAcolyteTests.swift */; };
+		EDA1D6492051CDCE00851549 /* ElementalAcolyteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1D6482051CDCE00851549 /* ElementalAcolyteUITests.swift */; };
+		EDA1D6572051D1DD00851549 /* hustle-on.wav in Resources */ = {isa = PBXBuildFile; fileRef = EDA1D6562051D1DC00851549 /* hustle-on.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		ED14B5EB2048ADC800D55C48 /* PBXContainerItemProxy */ = {
+		EDA1D63A2051CDCE00851549 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = ED14B5C82048ADC800D55C48 /* Project object */;
+			containerPortal = EDA1D6172051CDCE00851549 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = ED14B5CF2048ADC800D55C48;
+			remoteGlobalIDString = EDA1D61E2051CDCE00851549;
 			remoteInfo = ElementalAcolyte;
 		};
-		ED14B5F62048ADC800D55C48 /* PBXContainerItemProxy */ = {
+		EDA1D6452051CDCE00851549 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = ED14B5C82048ADC800D55C48 /* Project object */;
+			containerPortal = EDA1D6172051CDCE00851549 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = ED14B5CF2048ADC800D55C48;
+			remoteGlobalIDString = EDA1D61E2051CDCE00851549;
 			remoteInfo = ElementalAcolyte;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		ED14B5D02048ADC800D55C48 /* ElementalAcolyte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElementalAcolyte.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED14B5D32048ADC800D55C48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ED14B5D52048ADC800D55C48 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		ED14B5D72048ADC800D55C48 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		ED14B5D92048ADC800D55C48 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		ED14B5DB2048ADC800D55C48 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		ED14B5DE2048ADC800D55C48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		ED14B5E02048ADC800D55C48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		ED14B5E32048ADC800D55C48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		ED14B5E52048ADC800D55C48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ED14B5EA2048ADC800D55C48 /* ElementalAcolyteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElementalAcolyteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED14B5EE2048ADC800D55C48 /* ElementalAcolyteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementalAcolyteTests.swift; sourceTree = "<group>"; };
-		ED14B5F02048ADC800D55C48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ED14B5F52048ADC800D55C48 /* ElementalAcolyteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElementalAcolyteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED14B5F92048ADC800D55C48 /* ElementalAcolyteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementalAcolyteUITests.swift; sourceTree = "<group>"; };
-		ED14B5FB2048ADC800D55C48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED888CEA2051EAA70089ADAA /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
+		ED888CEB2051EAA70089ADAA /* torpedo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = torpedo.mp3; sourceTree = "<group>"; };
+		ED888CF02051EAEE0089ADAA /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
+		ED888CF12051EAEE0089ADAA /* Starfield.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Starfield.sks; sourceTree = "<group>"; };
+		EDA1D61F2051CDCE00851549 /* ElementalAcolyte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElementalAcolyte.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDA1D6222051CDCE00851549 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EDA1D6242051CDCE00851549 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		EDA1D6262051CDCE00851549 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		EDA1D6282051CDCE00851549 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		EDA1D62A2051CDCE00851549 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		EDA1D62D2051CDCE00851549 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EDA1D62F2051CDCE00851549 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDA1D6322051CDCE00851549 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EDA1D6342051CDCE00851549 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDA1D6392051CDCE00851549 /* ElementalAcolyteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElementalAcolyteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDA1D63D2051CDCE00851549 /* ElementalAcolyteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementalAcolyteTests.swift; sourceTree = "<group>"; };
+		EDA1D63F2051CDCE00851549 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDA1D6442051CDCE00851549 /* ElementalAcolyteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElementalAcolyteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDA1D6482051CDCE00851549 /* ElementalAcolyteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementalAcolyteUITests.swift; sourceTree = "<group>"; };
+		EDA1D64A2051CDCE00851549 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDA1D6562051D1DC00851549 /* hustle-on.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "hustle-on.wav"; path = "../../../../Downloads/hustle-mode-code-assets/assets/Assets/hustle-on.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		ED14B5CD2048ADC800D55C48 /* Frameworks */ = {
+		EDA1D61C2051CDCE00851549 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ED14B5E72048ADC800D55C48 /* Frameworks */ = {
+		EDA1D6362051CDCE00851549 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ED14B5F22048ADC800D55C48 /* Frameworks */ = {
+		EDA1D6412051CDCE00851549 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -80,56 +90,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		ED14B5C72048ADC800D55C48 = {
+		EDA1D6162051CDCE00851549 = {
 			isa = PBXGroup;
 			children = (
-				ED14B5D22048ADC800D55C48 /* ElementalAcolyte */,
-				ED14B5ED2048ADC800D55C48 /* ElementalAcolyteTests */,
-				ED14B5F82048ADC800D55C48 /* ElementalAcolyteUITests */,
-				ED14B5D12048ADC800D55C48 /* Products */,
+				EDA1D6212051CDCE00851549 /* ElementalAcolyte */,
+				EDA1D63C2051CDCE00851549 /* ElementalAcolyteTests */,
+				EDA1D6472051CDCE00851549 /* ElementalAcolyteUITests */,
+				EDA1D6202051CDCE00851549 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		ED14B5D12048ADC800D55C48 /* Products */ = {
+		EDA1D6202051CDCE00851549 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ED14B5D02048ADC800D55C48 /* ElementalAcolyte.app */,
-				ED14B5EA2048ADC800D55C48 /* ElementalAcolyteTests.xctest */,
-				ED14B5F52048ADC800D55C48 /* ElementalAcolyteUITests.xctest */,
+				EDA1D61F2051CDCE00851549 /* ElementalAcolyte.app */,
+				EDA1D6392051CDCE00851549 /* ElementalAcolyteTests.xctest */,
+				EDA1D6442051CDCE00851549 /* ElementalAcolyteUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ED14B5D22048ADC800D55C48 /* ElementalAcolyte */ = {
+		EDA1D6212051CDCE00851549 /* ElementalAcolyte */ = {
 			isa = PBXGroup;
 			children = (
-				ED14B5D32048ADC800D55C48 /* AppDelegate.swift */,
-				ED14B5D52048ADC800D55C48 /* GameScene.sks */,
-				ED14B5D72048ADC800D55C48 /* Actions.sks */,
-				ED14B5D92048ADC800D55C48 /* GameScene.swift */,
-				ED14B5DB2048ADC800D55C48 /* GameViewController.swift */,
-				ED14B5DD2048ADC800D55C48 /* Main.storyboard */,
-				ED14B5E02048ADC800D55C48 /* Assets.xcassets */,
-				ED14B5E22048ADC800D55C48 /* LaunchScreen.storyboard */,
-				ED14B5E52048ADC800D55C48 /* Info.plist */,
+				EDA1D6562051D1DC00851549 /* hustle-on.wav */,
+				EDA1D6222051CDCE00851549 /* AppDelegate.swift */,
+				EDA1D6242051CDCE00851549 /* GameScene.sks */,
+				EDA1D6262051CDCE00851549 /* Actions.sks */,
+				ED888CF02051EAEE0089ADAA /* Explosion.sks */,
+				ED888CF12051EAEE0089ADAA /* Starfield.sks */,
+				EDA1D6282051CDCE00851549 /* GameScene.swift */,
+				EDA1D62A2051CDCE00851549 /* GameViewController.swift */,
+				EDA1D62C2051CDCE00851549 /* Main.storyboard */,
+				ED888CEA2051EAA70089ADAA /* explosion.mp3 */,
+				ED888CEB2051EAA70089ADAA /* torpedo.mp3 */,
+				EDA1D62F2051CDCE00851549 /* Assets.xcassets */,
+				EDA1D6312051CDCE00851549 /* LaunchScreen.storyboard */,
+				EDA1D6342051CDCE00851549 /* Info.plist */,
 			);
 			path = ElementalAcolyte;
 			sourceTree = "<group>";
 		};
-		ED14B5ED2048ADC800D55C48 /* ElementalAcolyteTests */ = {
+		EDA1D63C2051CDCE00851549 /* ElementalAcolyteTests */ = {
 			isa = PBXGroup;
 			children = (
-				ED14B5EE2048ADC800D55C48 /* ElementalAcolyteTests.swift */,
-				ED14B5F02048ADC800D55C48 /* Info.plist */,
+				EDA1D63D2051CDCE00851549 /* ElementalAcolyteTests.swift */,
+				EDA1D63F2051CDCE00851549 /* Info.plist */,
 			);
 			path = ElementalAcolyteTests;
 			sourceTree = "<group>";
 		};
-		ED14B5F82048ADC800D55C48 /* ElementalAcolyteUITests */ = {
+		EDA1D6472051CDCE00851549 /* ElementalAcolyteUITests */ = {
 			isa = PBXGroup;
 			children = (
-				ED14B5F92048ADC800D55C48 /* ElementalAcolyteUITests.swift */,
-				ED14B5FB2048ADC800D55C48 /* Info.plist */,
+				EDA1D6482051CDCE00851549 /* ElementalAcolyteUITests.swift */,
+				EDA1D64A2051CDCE00851549 /* Info.plist */,
 			);
 			path = ElementalAcolyteUITests;
 			sourceTree = "<group>";
@@ -137,13 +152,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ED14B5CF2048ADC800D55C48 /* ElementalAcolyte */ = {
+		EDA1D61E2051CDCE00851549 /* ElementalAcolyte */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ED14B5FE2048ADC800D55C48 /* Build configuration list for PBXNativeTarget "ElementalAcolyte" */;
+			buildConfigurationList = EDA1D64D2051CDCE00851549 /* Build configuration list for PBXNativeTarget "ElementalAcolyte" */;
 			buildPhases = (
-				ED14B5CC2048ADC800D55C48 /* Sources */,
-				ED14B5CD2048ADC800D55C48 /* Frameworks */,
-				ED14B5CE2048ADC800D55C48 /* Resources */,
+				EDA1D61B2051CDCE00851549 /* Sources */,
+				EDA1D61C2051CDCE00851549 /* Frameworks */,
+				EDA1D61D2051CDCE00851549 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -151,72 +166,72 @@
 			);
 			name = ElementalAcolyte;
 			productName = ElementalAcolyte;
-			productReference = ED14B5D02048ADC800D55C48 /* ElementalAcolyte.app */;
+			productReference = EDA1D61F2051CDCE00851549 /* ElementalAcolyte.app */;
 			productType = "com.apple.product-type.application";
 		};
-		ED14B5E92048ADC800D55C48 /* ElementalAcolyteTests */ = {
+		EDA1D6382051CDCE00851549 /* ElementalAcolyteTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ED14B6012048ADC800D55C48 /* Build configuration list for PBXNativeTarget "ElementalAcolyteTests" */;
+			buildConfigurationList = EDA1D6502051CDCE00851549 /* Build configuration list for PBXNativeTarget "ElementalAcolyteTests" */;
 			buildPhases = (
-				ED14B5E62048ADC800D55C48 /* Sources */,
-				ED14B5E72048ADC800D55C48 /* Frameworks */,
-				ED14B5E82048ADC800D55C48 /* Resources */,
+				EDA1D6352051CDCE00851549 /* Sources */,
+				EDA1D6362051CDCE00851549 /* Frameworks */,
+				EDA1D6372051CDCE00851549 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				ED14B5EC2048ADC800D55C48 /* PBXTargetDependency */,
+				EDA1D63B2051CDCE00851549 /* PBXTargetDependency */,
 			);
 			name = ElementalAcolyteTests;
 			productName = ElementalAcolyteTests;
-			productReference = ED14B5EA2048ADC800D55C48 /* ElementalAcolyteTests.xctest */;
+			productReference = EDA1D6392051CDCE00851549 /* ElementalAcolyteTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		ED14B5F42048ADC800D55C48 /* ElementalAcolyteUITests */ = {
+		EDA1D6432051CDCE00851549 /* ElementalAcolyteUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ED14B6042048ADC800D55C48 /* Build configuration list for PBXNativeTarget "ElementalAcolyteUITests" */;
+			buildConfigurationList = EDA1D6532051CDCE00851549 /* Build configuration list for PBXNativeTarget "ElementalAcolyteUITests" */;
 			buildPhases = (
-				ED14B5F12048ADC800D55C48 /* Sources */,
-				ED14B5F22048ADC800D55C48 /* Frameworks */,
-				ED14B5F32048ADC800D55C48 /* Resources */,
+				EDA1D6402051CDCE00851549 /* Sources */,
+				EDA1D6412051CDCE00851549 /* Frameworks */,
+				EDA1D6422051CDCE00851549 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				ED14B5F72048ADC800D55C48 /* PBXTargetDependency */,
+				EDA1D6462051CDCE00851549 /* PBXTargetDependency */,
 			);
 			name = ElementalAcolyteUITests;
 			productName = ElementalAcolyteUITests;
-			productReference = ED14B5F52048ADC800D55C48 /* ElementalAcolyteUITests.xctest */;
+			productReference = EDA1D6442051CDCE00851549 /* ElementalAcolyteUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		ED14B5C82048ADC800D55C48 /* Project object */ = {
+		EDA1D6172051CDCE00851549 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Asante Kwasi G.";
 				TargetAttributes = {
-					ED14B5CF2048ADC800D55C48 = {
+					EDA1D61E2051CDCE00851549 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
-					ED14B5E92048ADC800D55C48 = {
+					EDA1D6382051CDCE00851549 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
-						TestTargetID = ED14B5CF2048ADC800D55C48;
+						TestTargetID = EDA1D61E2051CDCE00851549;
 					};
-					ED14B5F42048ADC800D55C48 = {
+					EDA1D6432051CDCE00851549 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
-						TestTargetID = ED14B5CF2048ADC800D55C48;
+						TestTargetID = EDA1D61E2051CDCE00851549;
 					};
 				};
 			};
-			buildConfigurationList = ED14B5CB2048ADC800D55C48 /* Build configuration list for PBXProject "ElementalAcolyte" */;
+			buildConfigurationList = EDA1D61A2051CDCE00851549 /* Build configuration list for PBXProject "ElementalAcolyte" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -224,39 +239,44 @@
 				en,
 				Base,
 			);
-			mainGroup = ED14B5C72048ADC800D55C48;
-			productRefGroup = ED14B5D12048ADC800D55C48 /* Products */;
+			mainGroup = EDA1D6162051CDCE00851549;
+			productRefGroup = EDA1D6202051CDCE00851549 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ED14B5CF2048ADC800D55C48 /* ElementalAcolyte */,
-				ED14B5E92048ADC800D55C48 /* ElementalAcolyteTests */,
-				ED14B5F42048ADC800D55C48 /* ElementalAcolyteUITests */,
+				EDA1D61E2051CDCE00851549 /* ElementalAcolyte */,
+				EDA1D6382051CDCE00851549 /* ElementalAcolyteTests */,
+				EDA1D6432051CDCE00851549 /* ElementalAcolyteUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		ED14B5CE2048ADC800D55C48 /* Resources */ = {
+		EDA1D61D2051CDCE00851549 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED14B5DF2048ADC800D55C48 /* Main.storyboard in Resources */,
-				ED14B5D62048ADC800D55C48 /* GameScene.sks in Resources */,
-				ED14B5E12048ADC800D55C48 /* Assets.xcassets in Resources */,
-				ED14B5E42048ADC800D55C48 /* LaunchScreen.storyboard in Resources */,
-				ED14B5D82048ADC800D55C48 /* Actions.sks in Resources */,
+				EDA1D62E2051CDCE00851549 /* Main.storyboard in Resources */,
+				EDA1D6252051CDCE00851549 /* GameScene.sks in Resources */,
+				EDA1D6572051D1DD00851549 /* hustle-on.wav in Resources */,
+				EDA1D6302051CDCE00851549 /* Assets.xcassets in Resources */,
+				ED888CF32051EAEE0089ADAA /* Starfield.sks in Resources */,
+				ED888CEC2051EAA70089ADAA /* explosion.mp3 in Resources */,
+				EDA1D6332051CDCE00851549 /* LaunchScreen.storyboard in Resources */,
+				ED888CF22051EAEE0089ADAA /* Explosion.sks in Resources */,
+				ED888CED2051EAA70089ADAA /* torpedo.mp3 in Resources */,
+				EDA1D6272051CDCE00851549 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ED14B5E82048ADC800D55C48 /* Resources */ = {
+		EDA1D6372051CDCE00851549 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ED14B5F32048ADC800D55C48 /* Resources */ = {
+		EDA1D6422051CDCE00851549 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -266,60 +286,60 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		ED14B5CC2048ADC800D55C48 /* Sources */ = {
+		EDA1D61B2051CDCE00851549 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED14B5DA2048ADC800D55C48 /* GameScene.swift in Sources */,
-				ED14B5DC2048ADC800D55C48 /* GameViewController.swift in Sources */,
-				ED14B5D42048ADC800D55C48 /* AppDelegate.swift in Sources */,
+				EDA1D6292051CDCE00851549 /* GameScene.swift in Sources */,
+				EDA1D62B2051CDCE00851549 /* GameViewController.swift in Sources */,
+				EDA1D6232051CDCE00851549 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ED14B5E62048ADC800D55C48 /* Sources */ = {
+		EDA1D6352051CDCE00851549 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED14B5EF2048ADC800D55C48 /* ElementalAcolyteTests.swift in Sources */,
+				EDA1D63E2051CDCE00851549 /* ElementalAcolyteTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ED14B5F12048ADC800D55C48 /* Sources */ = {
+		EDA1D6402051CDCE00851549 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED14B5FA2048ADC800D55C48 /* ElementalAcolyteUITests.swift in Sources */,
+				EDA1D6492051CDCE00851549 /* ElementalAcolyteUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		ED14B5EC2048ADC800D55C48 /* PBXTargetDependency */ = {
+		EDA1D63B2051CDCE00851549 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = ED14B5CF2048ADC800D55C48 /* ElementalAcolyte */;
-			targetProxy = ED14B5EB2048ADC800D55C48 /* PBXContainerItemProxy */;
+			target = EDA1D61E2051CDCE00851549 /* ElementalAcolyte */;
+			targetProxy = EDA1D63A2051CDCE00851549 /* PBXContainerItemProxy */;
 		};
-		ED14B5F72048ADC800D55C48 /* PBXTargetDependency */ = {
+		EDA1D6462051CDCE00851549 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = ED14B5CF2048ADC800D55C48 /* ElementalAcolyte */;
-			targetProxy = ED14B5F62048ADC800D55C48 /* PBXContainerItemProxy */;
+			target = EDA1D61E2051CDCE00851549 /* ElementalAcolyte */;
+			targetProxy = EDA1D6452051CDCE00851549 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		ED14B5DD2048ADC800D55C48 /* Main.storyboard */ = {
+		EDA1D62C2051CDCE00851549 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				ED14B5DE2048ADC800D55C48 /* Base */,
+				EDA1D62D2051CDCE00851549 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		ED14B5E22048ADC800D55C48 /* LaunchScreen.storyboard */ = {
+		EDA1D6312051CDCE00851549 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				ED14B5E32048ADC800D55C48 /* Base */,
+				EDA1D6322051CDCE00851549 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -327,7 +347,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		ED14B5FC2048ADC800D55C48 /* Debug */ = {
+		EDA1D64B2051CDCE00851549 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -384,7 +404,7 @@
 			};
 			name = Debug;
 		};
-		ED14B5FD2048ADC800D55C48 /* Release */ = {
+		EDA1D64C2051CDCE00851549 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -434,7 +454,7 @@
 			};
 			name = Release;
 		};
-		ED14B5FF2048ADC800D55C48 /* Debug */ = {
+		EDA1D64E2051CDCE00851549 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -448,7 +468,7 @@
 			};
 			name = Debug;
 		};
-		ED14B6002048ADC800D55C48 /* Release */ = {
+		EDA1D64F2051CDCE00851549 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -462,7 +482,7 @@
 			};
 			name = Release;
 		};
-		ED14B6022048ADC800D55C48 /* Debug */ = {
+		EDA1D6512051CDCE00851549 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -478,7 +498,7 @@
 			};
 			name = Debug;
 		};
-		ED14B6032048ADC800D55C48 /* Release */ = {
+		EDA1D6522051CDCE00851549 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -494,7 +514,7 @@
 			};
 			name = Release;
 		};
-		ED14B6052048ADC800D55C48 /* Debug */ = {
+		EDA1D6542051CDCE00851549 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -509,7 +529,7 @@
 			};
 			name = Debug;
 		};
-		ED14B6062048ADC800D55C48 /* Release */ = {
+		EDA1D6552051CDCE00851549 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -527,43 +547,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ED14B5CB2048ADC800D55C48 /* Build configuration list for PBXProject "ElementalAcolyte" */ = {
+		EDA1D61A2051CDCE00851549 /* Build configuration list for PBXProject "ElementalAcolyte" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ED14B5FC2048ADC800D55C48 /* Debug */,
-				ED14B5FD2048ADC800D55C48 /* Release */,
+				EDA1D64B2051CDCE00851549 /* Debug */,
+				EDA1D64C2051CDCE00851549 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ED14B5FE2048ADC800D55C48 /* Build configuration list for PBXNativeTarget "ElementalAcolyte" */ = {
+		EDA1D64D2051CDCE00851549 /* Build configuration list for PBXNativeTarget "ElementalAcolyte" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ED14B5FF2048ADC800D55C48 /* Debug */,
-				ED14B6002048ADC800D55C48 /* Release */,
+				EDA1D64E2051CDCE00851549 /* Debug */,
+				EDA1D64F2051CDCE00851549 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ED14B6012048ADC800D55C48 /* Build configuration list for PBXNativeTarget "ElementalAcolyteTests" */ = {
+		EDA1D6502051CDCE00851549 /* Build configuration list for PBXNativeTarget "ElementalAcolyteTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ED14B6022048ADC800D55C48 /* Debug */,
-				ED14B6032048ADC800D55C48 /* Release */,
+				EDA1D6512051CDCE00851549 /* Debug */,
+				EDA1D6522051CDCE00851549 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ED14B6042048ADC800D55C48 /* Build configuration list for PBXNativeTarget "ElementalAcolyteUITests" */ = {
+		EDA1D6532051CDCE00851549 /* Build configuration list for PBXNativeTarget "ElementalAcolyteUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ED14B6052048ADC800D55C48 /* Debug */,
-				ED14B6062048ADC800D55C48 /* Release */,
+				EDA1D6542051CDCE00851549 /* Debug */,
+				EDA1D6552051CDCE00851549 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = ED14B5C82048ADC800D55C48 /* Project object */;
+	rootObject = EDA1D6172051CDCE00851549 /* Project object */;
 }
