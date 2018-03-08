@@ -4,14 +4,16 @@
 //
 //  Created by Predko Brown Marya C. on 3/1/18.
 //  Copyright © 2018 Darren/Marya. All rights reserved.
-//
+//  Darren Added Accelerator code as it needs an UIViewController
 
 import UIKit
 import SpriteKit
 import GameplayKit
+import CoreMotion
 
 class GameViewController: UIViewController {
-
+    //needs to be made to allow accelorometer
+    let motionManager = CMMotionManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,7 +26,10 @@ class GameViewController: UIViewController {
                 // Present the scene
                 view.presentScene(scene)
             }
-            
+            //call to start up accelermeter
+            motionManager.startAccelerometerUpdates()
+            //sets the update intervals to 1 second so it can change fast
+            motionManager.accelerometerUpdateInterval = 1;
             view.ignoresSiblingOrder = true
             
             view.showsFPS = true
@@ -51,5 +56,11 @@ class GameViewController: UIViewController {
 
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    @objc func update() {
+        if let accelerometerData = motionManager.accelerometerData {
+            //prints out the latest information from the accelerometer
+            print(accelerometerData)
+        }
     }
 }
