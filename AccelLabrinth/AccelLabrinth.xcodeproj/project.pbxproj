@@ -15,6 +15,7 @@
 		0EAFB00D2048ABAC00E7067A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EAFB00B2048ABAC00E7067A /* Main.storyboard */; };
 		0EAFB00F2048ABAC00E7067A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EAFB00E2048ABAC00E7067A /* Assets.xcassets */; };
 		0EAFB0122048ABAC00E7067A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EAFB0102048ABAC00E7067A /* LaunchScreen.storyboard */; };
+		EFCEBB3D2051F5C20078C7E1 /* BallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCEBB3C2051F5C20078C7E1 /* BallController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0EAFB00E2048ABAC00E7067A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EAFB0112048ABAC00E7067A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0EAFB0132048ABAC00E7067A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFCEBB3C2051F5C20078C7E1 /* BallController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				0EAFB00E2048ABAC00E7067A /* Assets.xcassets */,
 				0EAFB0102048ABAC00E7067A /* LaunchScreen.storyboard */,
 				0EAFB0132048ABAC00E7067A /* Info.plist */,
+				EFCEBB3C2051F5C20078C7E1 /* BallController.swift */,
 			);
 			path = AccelLabrinth;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			files = (
 				0EAFB0082048ABAC00E7067A /* GameScene.swift in Sources */,
 				0EAFB00A2048ABAC00E7067A /* GameViewController.swift in Sources */,
+				EFCEBB3D2051F5C20078C7E1 /* BallController.swift in Sources */,
 				0EAFB0022048ABAC00E7067A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
