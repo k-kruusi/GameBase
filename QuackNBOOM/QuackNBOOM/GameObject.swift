@@ -14,9 +14,12 @@ import SpriteKit
 class GameObject {
     // Position of the GameObject
     var pos = CGPoint(x: 0, y: 0)
+    var zPos = CGFloat(-1)
+    // Scale is preset for the background
+    var scale = CGSize(width: 0.6, height: 0.75)
     
     // Main sprite of the GameObject
-    var sprite: SKSpriteNode
+    let sprite: SKSpriteNode
     
     // Sets the sprite's image
     required init(imagePath: String){
@@ -26,5 +29,8 @@ class GameObject {
     func update(_deltaTime: TimeInterval){
         // Updates sprite position with the object's position
         sprite.position = pos
+        sprite.zPosition = zPos
+        sprite.xScale = scale.width
+        sprite.yScale = scale.height
     }
 }
