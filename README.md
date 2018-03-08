@@ -1,8 +1,9 @@
 # GameBase
 Start your Game by branching off this project.
 
-Group Members (1)
+Group Members (2)
 Kevin C. Garland
+Eric Thompson
 
 Game proposal:
     Blocus from Google Play store.
