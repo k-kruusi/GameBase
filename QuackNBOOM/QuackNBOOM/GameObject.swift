@@ -5,29 +5,31 @@
 //  Created by Ngo Tuyetnhi N. and Benoit Neriah R. on 3/4/18.
 //  Copyright © 2018 Neriah and Neenee. All rights reserved.
 //
-// Basic GameObject holds only a single sprite and an initializer to set the image. Will be
-//      used by objects with no functionality such as backgrounds.
+// GameObject is the base for al other objects. This class holds only a single sprite, some
+//      attributes, and an initializer. GameObject will often be derived from but will
+//      also be used by objects with no functionality such as backgrounds.
 
 import Foundation
 import SpriteKit
 
 class GameObject {
-    // Position of the GameObject
-    var pos = CGPoint(x: 0, y: 0)
-    var zPos = CGFloat(-1)
-    // Scale is preset for the background
-    var scale = CGSize(width: 0.6, height: 0.75)
+    var pos = CGPoint(x: 0, y: 0)                   // Position of the GameObject
+    var zPos = CGFloat(-1)                          // zPosition defines what object is drawn first (lowest first, highest last)
+    var scale = CGSize(width: 0.6, height: 0.75)    // The scale or size of the object -- is preset for the background
+    let sprite: SKSpriteNode                        // Main sprite of the GameObject
     
-    // Main sprite of the GameObject
-    let sprite: SKSpriteNode
     
-    // Sets the sprite's image
+    // Initialize the sprite's image
+    //
+    // - Parameter imagePath: the path to the image for the gameObject.sprite
     required init(imagePath: String){
         sprite = SKSpriteNode(imageNamed: imagePath)
     }
     
+    // Update - runs once every frame to update the sprites attributes with those of this gameObject
+    //
+    // - Parameter deltaTime: the amount of time between each frame
     func update(_deltaTime: TimeInterval){
-        // Updates sprite position with the object's position
         sprite.position = pos
         sprite.zPosition = zPos
         sprite.xScale = scale.width
