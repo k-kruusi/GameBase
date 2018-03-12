@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		67366C2220508AA200A0E87D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67366C2120508AA200A0E87D /* AppDelegate.swift */; };
-		67366C2420508AA200A0E87D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 67366C2320508AA200A0E87D /* GameScene.sks */; };
-		67366C2620508AA200A0E87D /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 67366C2520508AA200A0E87D /* Actions.sks */; };
 		67366C2820508AA200A0E87D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67366C2720508AA200A0E87D /* GameScene.swift */; };
 		67366C2A20508AA200A0E87D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67366C2920508AA200A0E87D /* GameViewController.swift */; };
 		67366C2D20508AA200A0E87D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67366C2B20508AA200A0E87D /* Main.storyboard */; };
@@ -17,6 +15,9 @@
 		67366C3220508AA200A0E87D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67366C3020508AA200A0E87D /* LaunchScreen.storyboard */; };
 		67366C3D20508AA200A0E87D /* Space_X_Defense_ProgramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67366C3C20508AA200A0E87D /* Space_X_Defense_ProgramTests.swift */; };
 		67366C4820508AA200A0E87D /* Space_X_Defense_ProgramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67366C4720508AA200A0E87D /* Space_X_Defense_ProgramUITests.swift */; };
+		67405B3A2057032100CB5CB1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67405B392057032100CB5CB1 /* Player.swift */; };
+		67405B3C205704B500CB5CB1 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67405B3B205704B500CB5CB1 /* GameObject.swift */; };
+		67405B3E2057380700CB5CB1 /* Projectile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67405B3D2057380700CB5CB1 /* Projectile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +40,6 @@
 /* Begin PBXFileReference section */
 		67366C1E20508AA200A0E87D /* Space-X Defense Program.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Space-X Defense Program.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67366C2120508AA200A0E87D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		67366C2320508AA200A0E87D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		67366C2520508AA200A0E87D /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		67366C2720508AA200A0E87D /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		67366C2920508AA200A0E87D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		67366C2C20508AA200A0E87D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,6 +52,9 @@
 		67366C4320508AA200A0E87D /* Space-X Defense ProgramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Space-X Defense ProgramUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67366C4720508AA200A0E87D /* Space_X_Defense_ProgramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space_X_Defense_ProgramUITests.swift; sourceTree = "<group>"; };
 		67366C4920508AA200A0E87D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67405B392057032100CB5CB1 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		67405B3B205704B500CB5CB1 /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
+		67405B3D2057380700CB5CB1 /* Projectile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projectile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,14 +106,15 @@
 			isa = PBXGroup;
 			children = (
 				67366C2120508AA200A0E87D /* AppDelegate.swift */,
-				67366C2320508AA200A0E87D /* GameScene.sks */,
-				67366C2520508AA200A0E87D /* Actions.sks */,
 				67366C2720508AA200A0E87D /* GameScene.swift */,
 				67366C2920508AA200A0E87D /* GameViewController.swift */,
 				67366C2B20508AA200A0E87D /* Main.storyboard */,
 				67366C2E20508AA200A0E87D /* Assets.xcassets */,
 				67366C3020508AA200A0E87D /* LaunchScreen.storyboard */,
 				67366C3320508AA200A0E87D /* Info.plist */,
+				67405B392057032100CB5CB1 /* Player.swift */,
+				67405B3B205704B500CB5CB1 /* GameObject.swift */,
+				67405B3D2057380700CB5CB1 /* Projectile.swift */,
 			);
 			path = "Space-X Defense Program";
 			sourceTree = "<group>";
@@ -242,10 +245,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				67366C2D20508AA200A0E87D /* Main.storyboard in Resources */,
-				67366C2420508AA200A0E87D /* GameScene.sks in Resources */,
 				67366C2F20508AA200A0E87D /* Assets.xcassets in Resources */,
 				67366C3220508AA200A0E87D /* LaunchScreen.storyboard in Resources */,
-				67366C2620508AA200A0E87D /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67405B3E2057380700CB5CB1 /* Projectile.swift in Sources */,
+				67405B3A2057032100CB5CB1 /* Player.swift in Sources */,
 				67366C2820508AA200A0E87D /* GameScene.swift in Sources */,
 				67366C2A20508AA200A0E87D /* GameViewController.swift in Sources */,
 				67366C2220508AA200A0E87D /* AppDelegate.swift in Sources */,
+				67405B3C205704B500CB5CB1 /* GameObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
