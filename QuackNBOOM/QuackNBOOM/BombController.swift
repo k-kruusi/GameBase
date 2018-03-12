@@ -44,7 +44,7 @@ class BombController {
     // Updates all of the bombs
     //
     // - Parameter deltaTime: the amount of time between each frame
-    func update(_deltaTime: TimeInterval){
-        bomb.update(_deltaTime: _deltaTime)
+    func update(_ deltaTime: TimeInterval){
+        bomb.update(deltaTime)
     }
 }

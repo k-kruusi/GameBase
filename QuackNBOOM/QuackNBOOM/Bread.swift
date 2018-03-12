@@ -29,7 +29,7 @@ class Bread: GameObject {
     // Update - runs once every frame
     //
     // - Parameter deltaTime: the amount of time between each frame
-    override func update(_deltaTime: TimeInterval) {
-        super.update(_deltaTime: _deltaTime)
+    override func update(_ deltaTime: TimeInterval) {
+        super.update(deltaTime)
     }
 }

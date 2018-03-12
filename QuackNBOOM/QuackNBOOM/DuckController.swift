@@ -24,7 +24,7 @@ class DuckController{
     }
     
     //update all of the ducks
-    func update(_deltaTime: TimeInterval){
-        duck.update(_deltaTime: _deltaTime)
+    func update(_ deltaTime: TimeInterval){
+        duck.update(deltaTime)
     }
 }

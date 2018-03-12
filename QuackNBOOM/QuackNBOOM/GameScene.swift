@@ -59,13 +59,13 @@ class GameScene: SKScene {
         // Calculate deltaTime
         deltaTime = currentTime - lastUpdateTime
         self.lastUpdateTime = currentTime
-        background.update(_deltaTime: deltaTime)
+        background.update(deltaTime)
         //duckSprite.update(_deltaTime: deltaTime)
         //bombSprite.update(_deltaTime: currentTime)
-        bombController.update(_deltaTime: deltaTime)
-        duckController.update(_deltaTime: deltaTime)
-        breadSprite.update(_deltaTime: deltaTime)
-        gameOver.update(_deltaTime: deltaTime)
+        bombController.update(deltaTime)
+        duckController.update(deltaTime)
+        breadSprite.update(deltaTime)
+        gameOver.update(deltaTime)
     }
     
     // Shoot a bomb to the touched location

@@ -30,12 +30,12 @@ class Duck: GameObject {
     }
     
     // Update is called every frame and holds the main functionality of the duck
-    override func update(_deltaTime: TimeInterval) {
-        super.update(_deltaTime: _deltaTime)
+    override func update(_ deltaTime: TimeInterval) {
+        super.update(deltaTime)
         //check if the duck is killed
-        checkDead(_deltaTime: _deltaTime)
+        checkDead(deltaTime)
     }
-    func checkDead(_deltaTime: TimeInterval){
+    func checkDead(_ deltaTime: TimeInterval){
         if(isDead){
             //if the duck is dead, then 'disppear', just reset the position to the top again
             position = startPos;
@@ -48,7 +48,7 @@ class Duck: GameObject {
             }
             else{
                 //the duck is falling
-                position.y -= vel * CGFloat(_deltaTime)
+                position.y -= vel * CGFloat(deltaTime)
             }
         }
     }

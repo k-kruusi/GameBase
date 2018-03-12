@@ -34,7 +34,7 @@ class GameObject: SKSpriteNode {
     // Update - runs once every frame
     //
     // - Parameter deltaTime: the amount of time between each frame
-    func update(_deltaTime: TimeInterval){
+    func update(_ deltaTime: TimeInterval){
         // Empty
     }
 }

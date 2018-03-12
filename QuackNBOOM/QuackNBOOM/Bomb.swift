@@ -63,23 +63,23 @@ class Bomb: GameObject {
     // Update - runs  once every frame. Sets the sprites attributes to those of this Bomb
     //
     // - Parameter deltaTime: the amount of time between each frame
-    override func update(_deltaTime: TimeInterval) {
-        super.update(_deltaTime: _deltaTime)
+    override func update(_ deltaTime: TimeInterval) {
+        super.update(deltaTime)
         
         // Update the explosionSprite's attributes
         explosionSprite.position = position
         
-        handleExplosion(_deltaTime: _deltaTime)
+        handleExplosion(deltaTime)
     }
     
     
     // Handles the counting down and exploding
     //
     // - Parameter deltaTime: the amount of time between each frame
-    fileprivate func handleExplosion(_deltaTime: TimeInterval) {
+    fileprivate func handleExplosion(_ deltaTime: TimeInterval) {
         // Countdown
         if(explodeCountdown > CGFloat(0.0)){
-            explodeCountdown -= CGFloat(_deltaTime)
+            explodeCountdown -= CGFloat(deltaTime)
         }
         // EXPLODE!
         else if (explodeCountdown != CGFloat(-100.0)) {
