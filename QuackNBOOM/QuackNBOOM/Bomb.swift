@@ -18,43 +18,37 @@ class Bomb: GameObject {
     var explodeCountdown = CGFloat(0.5)         // The explosionCountdown explodes the bomb when it reaches 0. When the bomb has been exploded, it's set to -100
     
     
-    
     // Initializes both sprites and the attributes
     //
     // - Parameters:
-    //      - imagePath: bomb.sprite image
-    //      - explosionImagePath: explosionSprite image
+    //      - imagePath: bomb's image
+    //      - explosionImagePath: explosionSprite's image
     required init(imagePath: String, explosionImagePath: String){
         // Set images
         explosionSprite = SKSpriteNode(imageNamed: explosionImagePath)
         super.init(imagePath: imagePath)
         
         // Set attributes
-        zPos = 2.0
-        scale = CGSize(width: 0.75, height: 0.75)
+        xScale = 0.75
+        yScale = 0.75
+        explosionSprite.xScale = 0.75
+        explosionSprite.yScale = 0.75
+        explosionSprite.zPosition = zPosition   // Same zPos since the explosion and bomb will never apear at the same time
         
         // Set the sprites' visibility
-        sprite.isHidden = false
+        isHidden = false
         explosionSprite.isHidden = true
     }
     
     // Initializer. Automatically sets the explosion sprite
     //
-    // - Parameter: imagePath: bomb.sprite image
-    required init(imagePath: String){
-        // Set images
-        explosionSprite = SKSpriteNode(imageNamed: "Explode")   // Automatically sets image name
-        super.init(imagePath: imagePath)
-        
-        // Set attributes
-        zPos = 2.0
-        scale = CGSize(width: 0.75, height: 0.75)
-        
-        // Sets the sprites' visibility
-        sprite.isHidden = false
-        explosionSprite.isHidden = true
+    // - Parameter: imagePath: bomb's' image
+    convenience required init(imagePath: String){
+        self.init(imagePath: imagePath, explosionImagePath: "Explode")
     }
-    
+    required init?(coder aDecoder: NSCoder){
+        fatalError("init(coder:) has not been found")
+    }
     
     // Resets the explode countdown and the sprites' visibility
     //
@@ -62,7 +56,7 @@ class Bomb: GameObject {
         explodeCountdown = startExplodeCountdown
         
         // Sets the sprites' visibility
-        sprite.isHidden = false
+        isHidden = false
         explosionSprite.isHidden = true
     }
     
@@ -71,11 +65,9 @@ class Bomb: GameObject {
     // - Parameter deltaTime: the amount of time between each frame
     override func update(_deltaTime: TimeInterval) {
         super.update(_deltaTime: _deltaTime)
+        
         // Update the explosionSprite's attributes
-        explosionSprite.position = pos
-        explosionSprite.zPosition = zPos
-        explosionSprite.xScale = scale.width
-        explosionSprite.yScale = scale.height
+        explosionSprite.position = position
         
         handleExplosion(_deltaTime: _deltaTime)
     }
@@ -86,14 +78,14 @@ class Bomb: GameObject {
     // - Parameter deltaTime: the amount of time between each frame
     fileprivate func handleExplosion(_deltaTime: TimeInterval) {
         // Countdown
-        if(explodeCountdown > 0){
+        if(explodeCountdown > CGFloat(0.0)){
             explodeCountdown -= CGFloat(_deltaTime)
         }
         // EXPLODE!
-        else if (explodeCountdown != -100) {
-            sprite.isHidden = true
+        else if (explodeCountdown != CGFloat(-100.0)) {
+            isHidden = true
             explosionSprite.isHidden = false
-            explodeCountdown = -100 // Setting to -100 so visibility isn't set every frame
+            explodeCountdown = CGFloat(-100.0) // Setting to -100 so visibility isn't set every frame
         }
     }
     
@@ -101,7 +93,7 @@ class Bomb: GameObject {
     // Returns true if the bomb has exploded
     //
     public func isExploded()->Bool {
-        if(explodeCountdown == -100) {
+        if(explodeCountdown == CGFloat(-100.0)) {
             return true
         }
         return false

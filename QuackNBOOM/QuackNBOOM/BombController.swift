@@ -20,7 +20,7 @@ class BombController {
     // Initializer sets all bombs offscreen
     //
     required init() {
-        bomb.pos = CGPoint(x: -10, y: -10)
+        bomb.position = CGPoint(x: -10, y: -10)
     }
     
     
@@ -28,7 +28,7 @@ class BombController {
     //
     // - Parameter: location: the position of the tap on the screen
     public func shootBomb(location: CGPoint){
-        bomb.pos = location
+        bomb.position = location
         bomb.resetExplosionCountdown()
     }
     

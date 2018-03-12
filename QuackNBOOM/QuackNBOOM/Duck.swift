@@ -20,9 +20,13 @@ class Duck: GameObject {
     // Sets the sprite's image
     required init(imagePath: String){
         super.init(imagePath: imagePath)
-        zPos = 1.0
         // Proper scale for the ducks
-        scale = CGSize(width: 0.75, height: 0.75)
+        xScale = 0.75
+        yScale = 0.75
+    }
+    
+    required init?(coder aDecoder: NSCoder){
+        fatalError("init(coder:) has not been found")
     }
     
     // Update is called every frame and holds the main functionality of the duck
@@ -34,17 +38,17 @@ class Duck: GameObject {
     func checkDead(_deltaTime: TimeInterval){
         if(isDead){
             //if the duck is dead, then 'disppear', just reset the position to the top again
-            pos = startPos;
+            position = startPos;
         }
         else{
             //if the duck is not dead, then the duck will continue to fall
-            if(sprite.position.y < sprite.size.height / 2){
+            if(position.y < size.height / 2){
                 //if the position is less than the bottom of the screen, then the player loses
                 ///;w; set game over
             }
             else{
                 //the duck is falling
-                pos.y -= vel * CGFloat(_deltaTime)
+                position.y -= vel * CGFloat(_deltaTime)
             }
         }
     }

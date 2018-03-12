@@ -17,9 +17,13 @@ class Bread: GameObject {
     // - Parameter: imagePath: bread sprite image
     required init(imagePath: String){
         super.init(imagePath: imagePath)
+        
         // Setting the attributes
-        zPos = 0.0
-        scale = CGSize(width: 0.75, height: 0.75)
+        xScale = 0.75
+        yScale = 0.75
+    }
+    required init?(coder aDecoder: NSCoder){
+        fatalError("init(coder:) has not been found")
     }
     
     // Update - runs once every frame

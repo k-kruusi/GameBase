@@ -15,7 +15,7 @@ class DuckController{
     
     required init(){
         //set the initial position of the duck above the screen
-        duck.pos = CGPoint(x: 1000, y: 1750) //temp values, change later
+        duck.position = CGPoint(x: 1000, y: 1750) //temp values, change later
     }
     
     //returns all ducks on current controller
