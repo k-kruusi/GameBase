@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BBD06200204C8C3C006066AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD061FF204C8C3C006066AA /* AppDelegate.swift */; };
+		BBD06206204C8C3C006066AA /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD06205204C8C3C006066AA /* GameScene.swift */; };
+		BBD06208204C8C3C006066AA /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD06207204C8C3C006066AA /* GameViewController.swift */; };
+		BBD0620B204C8C3C006066AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBD06209204C8C3C006066AA /* Main.storyboard */; };
+		BBD0620D204C8C3C006066AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBD0620C204C8C3C006066AA /* Assets.xcassets */; };
+		BBD06210204C8C3C006066AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBD0620E204C8C3C006066AA /* LaunchScreen.storyboard */; };
+		BBD0621B204C8C3C006066AA /* QuackNBOOMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD0621A204C8C3C006066AA /* QuackNBOOMTests.swift */; };
+		BBD06226204C8C3C006066AA /* QuackNBOOMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD06225204C8C3C006066AA /* QuackNBOOMUITests.swift */; };
+		BBDDD1DD2051E841009F3176 /* DuckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDDD1DC2051E841009F3176 /* DuckController.swift */; };
+		FF65C7B3204C935B00A5D6BE /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65C7B2204C935B00A5D6BE /* GameObject.swift */; };
+		FF65C7B5204C965D00A5D6BE /* Duck.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65C7B4204C965D00A5D6BE /* Duck.swift */; };
+		FF65C7B7204C97A000A5D6BE /* Bomb.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65C7B6204C97A000A5D6BE /* Bomb.swift */; };
+		FFCD345D20508C4900E879F1 /* Bread.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCD345C20508C4900E879F1 /* Bread.swift */; };
+		FFCD345F2050998700E879F1 /* BombController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCD345E2050998700E879F1 /* BombController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BBD06217204C8C3C006066AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBD061F4204C8C3C006066AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBD061FB204C8C3C006066AA;
+			remoteInfo = QuackNBOOM;
+		};
+		BBD06222204C8C3C006066AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBD061F4204C8C3C006066AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBD061FB204C8C3C006066AA;
+			remoteInfo = QuackNBOOM;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BBD061FC204C8C3C006066AA /* QuackNBOOM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuackNBOOM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBD061FF204C8C3C006066AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BBD06205204C8C3C006066AA /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		BBD06207204C8C3C006066AA /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		BBD0620A204C8C3C006066AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BBD0620C204C8C3C006066AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BBD0620F204C8C3C006066AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BBD06211204C8C3C006066AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBD06216204C8C3C006066AA /* QuackNBOOMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuackNBOOMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBD0621A204C8C3C006066AA /* QuackNBOOMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuackNBOOMTests.swift; sourceTree = "<group>"; };
+		BBD0621C204C8C3C006066AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBD06221204C8C3C006066AA /* QuackNBOOMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuackNBOOMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBD06225204C8C3C006066AA /* QuackNBOOMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuackNBOOMUITests.swift; sourceTree = "<group>"; };
+		BBD06227204C8C3C006066AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBDDD1DC2051E841009F3176 /* DuckController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuckController.swift; sourceTree = "<group>"; };
+		FF65C7B2204C935B00A5D6BE /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
+		FF65C7B4204C965D00A5D6BE /* Duck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duck.swift; sourceTree = "<group>"; };
+		FF65C7B6204C97A000A5D6BE /* Bomb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bomb.swift; sourceTree = "<group>"; };
+		FFCD345C20508C4900E879F1 /* Bread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bread.swift; sourceTree = "<group>"; };
+		FFCD345E2050998700E879F1 /* BombController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BombController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BBD061F9204C8C3C006066AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBD06213204C8C3C006066AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBD0621E204C8C3C006066AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BBD061F3204C8C3C006066AA = {
+			isa = PBXGroup;
+			children = (
+				BBD061FE204C8C3C006066AA /* QuackNBOOM */,
+				BBD06219204C8C3C006066AA /* QuackNBOOMTests */,
+				BBD06224204C8C3C006066AA /* QuackNBOOMUITests */,
+				BBD061FD204C8C3C006066AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BBD061FD204C8C3C006066AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBD061FC204C8C3C006066AA /* QuackNBOOM.app */,
+				BBD06216204C8C3C006066AA /* QuackNBOOMTests.xctest */,
+				BBD06221204C8C3C006066AA /* QuackNBOOMUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBD061FE204C8C3C006066AA /* QuackNBOOM */ = {
+			isa = PBXGroup;
+			children = (
+				BBD061FF204C8C3C006066AA /* AppDelegate.swift */,
+				BBD06205204C8C3C006066AA /* GameScene.swift */,
+				BBD06207204C8C3C006066AA /* GameViewController.swift */,
+				BBD06209204C8C3C006066AA /* Main.storyboard */,
+				BBD0620C204C8C3C006066AA /* Assets.xcassets */,
+				BBD0620E204C8C3C006066AA /* LaunchScreen.storyboard */,
+				BBD06211204C8C3C006066AA /* Info.plist */,
+				FF65C7B2204C935B00A5D6BE /* GameObject.swift */,
+				FF65C7B4204C965D00A5D6BE /* Duck.swift */,
+				FF65C7B6204C97A000A5D6BE /* Bomb.swift */,
+				FFCD345C20508C4900E879F1 /* Bread.swift */,
+				FFCD345E2050998700E879F1 /* BombController.swift */,
+				BBDDD1DC2051E841009F3176 /* DuckController.swift */,
+			);
+			path = QuackNBOOM;
+			sourceTree = "<group>";
+		};
+		BBD06219204C8C3C006066AA /* QuackNBOOMTests */ = {
+			isa = PBXGroup;
+			children = (
+				BBD0621A204C8C3C006066AA /* QuackNBOOMTests.swift */,
+				BBD0621C204C8C3C006066AA /* Info.plist */,
+			);
+			path = QuackNBOOMTests;
+			sourceTree = "<group>";
+		};
+		BBD06224204C8C3C006066AA /* QuackNBOOMUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BBD06225204C8C3C006066AA /* QuackNBOOMUITests.swift */,
+				BBD06227204C8C3C006066AA /* Info.plist */,
+			);
+			path = QuackNBOOMUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BBD061FB204C8C3C006066AA /* QuackNBOOM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBD0622A204C8C3C006066AA /* Build configuration list for PBXNativeTarget "QuackNBOOM" */;
+			buildPhases = (
+				BBD061F8204C8C3C006066AA /* Sources */,
+				BBD061F9204C8C3C006066AA /* Frameworks */,
+				BBD061FA204C8C3C006066AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuackNBOOM;
+			productName = QuackNBOOM;
+			productReference = BBD061FC204C8C3C006066AA /* QuackNBOOM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BBD06215204C8C3C006066AA /* QuackNBOOMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBD0622D204C8C3C006066AA /* Build configuration list for PBXNativeTarget "QuackNBOOMTests" */;
+			buildPhases = (
+				BBD06212204C8C3C006066AA /* Sources */,
+				BBD06213204C8C3C006066AA /* Frameworks */,
+				BBD06214204C8C3C006066AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBD06218204C8C3C006066AA /* PBXTargetDependency */,
+			);
+			name = QuackNBOOMTests;
+			productName = QuackNBOOMTests;
+			productReference = BBD06216204C8C3C006066AA /* QuackNBOOMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BBD06220204C8C3C006066AA /* QuackNBOOMUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBD06230204C8C3C006066AA /* Build configuration list for PBXNativeTarget "QuackNBOOMUITests" */;
+			buildPhases = (
+				BBD0621D204C8C3C006066AA /* Sources */,
+				BBD0621E204C8C3C006066AA /* Frameworks */,
+				BBD0621F204C8C3C006066AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBD06223204C8C3C006066AA /* PBXTargetDependency */,
+			);
+			name = QuackNBOOMUITests;
+			productName = QuackNBOOMUITests;
+			productReference = BBD06221204C8C3C006066AA /* QuackNBOOMUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BBD061F4204C8C3C006066AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Neriah and Neenee";
+				TargetAttributes = {
+					BBD061FB204C8C3C006066AA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					BBD06215204C8C3C006066AA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BBD061FB204C8C3C006066AA;
+					};
+					BBD06220204C8C3C006066AA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BBD061FB204C8C3C006066AA;
+					};
+				};
+			};
+			buildConfigurationList = BBD061F7204C8C3C006066AA /* Build configuration list for PBXProject "QuackNBOOM" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BBD061F3204C8C3C006066AA;
+			productRefGroup = BBD061FD204C8C3C006066AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BBD061FB204C8C3C006066AA /* QuackNBOOM */,
+				BBD06215204C8C3C006066AA /* QuackNBOOMTests */,
+				BBD06220204C8C3C006066AA /* QuackNBOOMUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BBD061FA204C8C3C006066AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBD0620B204C8C3C006066AA /* Main.storyboard in Resources */,
+				BBD0620D204C8C3C006066AA /* Assets.xcassets in Resources */,
+				BBD06210204C8C3C006066AA /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBD06214204C8C3C006066AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBD0621F204C8C3C006066AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BBD061F8204C8C3C006066AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF65C7B5204C965D00A5D6BE /* Duck.swift in Sources */,
+				FF65C7B3204C935B00A5D6BE /* GameObject.swift in Sources */,
+				BBDDD1DD2051E841009F3176 /* DuckController.swift in Sources */,
+				BBD06206204C8C3C006066AA /* GameScene.swift in Sources */,
+				FFCD345F2050998700E879F1 /* BombController.swift in Sources */,
+				BBD06208204C8C3C006066AA /* GameViewController.swift in Sources */,
+				BBD06200204C8C3C006066AA /* AppDelegate.swift in Sources */,
+				FFCD345D20508C4900E879F1 /* Bread.swift in Sources */,
+				FF65C7B7204C97A000A5D6BE /* Bomb.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBD06212204C8C3C006066AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBD0621B204C8C3C006066AA /* QuackNBOOMTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBD0621D204C8C3C006066AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBD06226204C8C3C006066AA /* QuackNBOOMUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BBD06218204C8C3C006066AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBD061FB204C8C3C006066AA /* QuackNBOOM */;
+			targetProxy = BBD06217204C8C3C006066AA /* PBXContainerItemProxy */;
+		};
+		BBD06223204C8C3C006066AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBD061FB204C8C3C006066AA /* QuackNBOOM */;
+			targetProxy = BBD06222204C8C3C006066AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BBD06209204C8C3C006066AA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBD0620A204C8C3C006066AA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BBD0620E204C8C3C006066AA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBD0620F204C8C3C006066AA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BBD06228204C8C3C006066AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BBD06229204C8C3C006066AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BBD0622B204C8C3C006066AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QuackNBOOM/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NeriahAndNeenee.QuackNBOOM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BBD0622C204C8C3C006066AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QuackNBOOM/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NeriahAndNeenee.QuackNBOOM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BBD0622E204C8C3C006066AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QuackNBOOMTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NeriahAndNeenee.QuackNBOOMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuackNBOOM.app/QuackNBOOM";
+			};
+			name = Debug;
+		};
+		BBD0622F204C8C3C006066AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QuackNBOOMTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NeriahAndNeenee.QuackNBOOMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuackNBOOM.app/QuackNBOOM";
+			};
+			name = Release;
+		};
+		BBD06231204C8C3C006066AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QuackNBOOMUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NeriahAndNeenee.QuackNBOOMUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QuackNBOOM;
+			};
+			name = Debug;
+		};
+		BBD06232204C8C3C006066AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QuackNBOOMUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NeriahAndNeenee.QuackNBOOMUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QuackNBOOM;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BBD061F7204C8C3C006066AA /* Build configuration list for PBXProject "QuackNBOOM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBD06228204C8C3C006066AA /* Debug */,
+				BBD06229204C8C3C006066AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBD0622A204C8C3C006066AA /* Build configuration list for PBXNativeTarget "QuackNBOOM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBD0622B204C8C3C006066AA /* Debug */,
+				BBD0622C204C8C3C006066AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBD0622D204C8C3C006066AA /* Build configuration list for PBXNativeTarget "QuackNBOOMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBD0622E204C8C3C006066AA /* Debug */,
+				BBD0622F204C8C3C006066AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBD06230204C8C3C006066AA /* Build configuration list for PBXNativeTarget "QuackNBOOMUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBD06231204C8C3C006066AA /* Debug */,
+				BBD06232204C8C3C006066AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BBD061F4204C8C3C006066AA /* Project object */;
+}
