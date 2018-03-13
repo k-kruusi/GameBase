@@ -11,16 +11,20 @@ import Foundation
 import SpriteKit
 
 class BombController {
-    // TODO: create an array of bombs
-    // TEMP: only one bomb for testing
-    let bomb = Bomb(imagePath: "Bomb")
-    
+    let numberOfBombs = 2
+    var bombs:[Bomb] = []
     
     
     // Initializer sets all bombs offscreen
     //
     required init() {
-        bomb.position = CGPoint(x: -10, y: -10)
+        // Add the specified amount of bombs to the array
+        var i = 0
+        while(i < numberOfBombs){
+            let bomb = Bomb(imagePath: "Bomb")
+            bombs.append(bomb)
+            i+=1
+        }
     }
     
     
@@ -28,16 +32,21 @@ class BombController {
     //
     // - Parameter: location: the position of the tap on the screen
     public func shootBomb(location: CGPoint){
-        bomb.position = location
-        bomb.resetExplosionCountdown()
+        for bomb in bombs {
+            // Find and shoot a bomb that is currently not in use
+            if(bomb.isInactive()){
+                bomb.position = location
+                break
+            }
+        }
+        // If no bombs are found that are not currently in use, than don't do anything
     }
     
     
     // Returns all of the bombs in this BombController
     //
-    public func getAllBombs()->Bomb {
-        // TODO: Return the array of bombs
-        return bomb
+    public func getAllBombs()->Array<Bomb> {
+        return bombs
     }
     
     
@@ -45,6 +54,8 @@ class BombController {
     //
     // - Parameter deltaTime: the amount of time between each frame
     func update(_ deltaTime: TimeInterval){
-        bomb.update(deltaTime)
+        for bomb in bombs {
+            bomb.update(deltaTime)
+        }
     }
 }

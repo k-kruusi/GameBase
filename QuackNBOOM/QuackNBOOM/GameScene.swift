@@ -38,8 +38,10 @@ class GameScene: SKScene {
         //addChild(bombSprite.sprite)
         //addChild(bombSprite.explosionSprite)
         //bombSprite.pos = CGPoint(x: 750, y: 150)
-        addChild(bombController.getAllBombs())
-        addChild(bombController.getAllBombs().explosionSprite)
+        for bomb in bombController.getAllBombs(){
+            addChild(bomb)
+            addChild(bomb.explosionSprite)
+        }
         
         //adding the bread to the scene
         addChild(breadSprite)
