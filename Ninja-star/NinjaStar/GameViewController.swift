@@ -14,7 +14,8 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+      let value = UIInterfaceOrientation.landscapeLeft.rawValue
+      UIDevice.current.setValue(value, forKey: "orientation")
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
             if let scene = SKScene(fileNamed: "GameScene") {
@@ -32,16 +33,14 @@ class GameViewController: UIViewController {
         }
     }
 
+
+   
     override var shouldAutorotate: Bool {
         return true
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            return .allButUpsideDown
-        } else {
-            return .all
-        }
+        return UIInterfaceOrientationMask.landscape
     }
 
     override func didReceiveMemoryWarning() {

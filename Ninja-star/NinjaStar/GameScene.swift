@@ -13,30 +13,58 @@ class GameScene: SKScene {
     
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
-    
+   
+   // Buttons
+   var PlayGameLabel = SKLabelNode()
+   
+   //create the ninja
+   var ninja: Ninja?
+   
     override func didMove(to view: SKView) {
-        
+      //create the play game label
+      PlayGameLabel = CreateLabel(position: CGPoint(x: 200, y: 200), name: "Play Game", fontsize: 45, color: UIColor.white)
+      self.addChild(PlayGameLabel)
+      //set the ninja in the scene to the ninja class
+      if (self.childNode(withName: "Player") as? SKSpriteNode != nil)
+      {
+         let temp: SKSpriteNode = (self.childNode(withName: "Player") as? SKSpriteNode)!
+         ninja = Ninja(skspritenode: temp)
+         ninja?.physicsBody?.isDynamic = false
+         if(ninja?.physicsBody?.isDynamic == false){
+         print("that worked Kappa")
+         }
+      }else{
+         print ("That failed")
+      }
+      
         // Get label node from scene and store it for use later
         self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
         if let label = self.label {
             label.alpha = 0.0
             label.run(SKAction.fadeIn(withDuration: 2.0))
         }
-        
+
         // Create shape node to use during mouse interaction
         let w = (self.size.width + self.size.height) * 0.05
         self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
-        
+
         if let spinnyNode = self.spinnyNode {
             spinnyNode.lineWidth = 2.5
-            
+
             spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
             spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
                                               SKAction.fadeOut(withDuration: 0.5),
                                               SKAction.removeFromParent()]))
         }
     }
-    
+  //Create label function
+   func CreateLabel(position: CGPoint, name: String, fontsize: CGFloat, color: UIColor) ->SKLabelNode{
+      let Label = SKLabelNode(text: name)
+      Label.position = position
+      Label.fontSize = fontsize
+      Label.color = color
+      return Label
+   }
     
     func touchDown(atPoint pos : CGPoint) {
         if let n = self.spinnyNode?.copy() as! SKShapeNode? {
@@ -68,6 +96,18 @@ class GameScene: SKScene {
         }
         
         for t in touches { self.touchDown(atPoint: t.location(in: self)) }
+      
+      //when the user clicks on Play Game, Switch to game scene
+      for touch in touches {
+         let location = touch.location(in: self)
+         if PlayGameLabel.contains(location){
+            let gameScene = GameScene(fileNamed: "GamePlayScene")!
+            gameScene.scaleMode = .resizeFill
+            let myTransition = SKTransition.moveIn(with: .up, duration: 1.0)
+            self.view?.presentScene(gameScene, transition: myTransition)
+            
+         }
+      }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {

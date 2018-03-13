@@ -17,6 +17,8 @@
 		90C209C620475B7700BAB05D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C209C420475B7700BAB05D /* LaunchScreen.storyboard */; };
 		90C209D120475B7700BAB05D /* NinjaStarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C209D020475B7700BAB05D /* NinjaStarTests.swift */; };
 		90C209DC20475B7700BAB05D /* NinjaStarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C209DB20475B7700BAB05D /* NinjaStarUITests.swift */; };
+		B409322220577617001C89BE /* GamePlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B409322120577617001C89BE /* GamePlayScene.swift */; };
+		B409322420577665001C89BE /* GamePlayScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B409322320577665001C89BE /* GamePlayScene.sks */; };
 		B4D3BF65204B232600054EAD /* Ninja.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D3BF64204B232600054EAD /* Ninja.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +56,8 @@
 		90C209D720475B7700BAB05D /* NinjaStarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NinjaStarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C209DB20475B7700BAB05D /* NinjaStarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinjaStarUITests.swift; sourceTree = "<group>"; };
 		90C209DD20475B7700BAB05D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B409322120577617001C89BE /* GamePlayScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayScene.swift; sourceTree = "<group>"; };
+		B409322320577665001C89BE /* GamePlayScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GamePlayScene.sks; sourceTree = "<group>"; };
 		B4D3BF64204B232600054EAD /* Ninja.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ninja.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +119,8 @@
 				90C209C420475B7700BAB05D /* LaunchScreen.storyboard */,
 				90C209C720475B7700BAB05D /* Info.plist */,
 				B4D3BF64204B232600054EAD /* Ninja.swift */,
+				B409322120577617001C89BE /* GamePlayScene.swift */,
+				B409322320577665001C89BE /* GamePlayScene.sks */,
 			);
 			path = NinjaStar;
 			sourceTree = "<group>";
@@ -205,7 +211,7 @@
 				TargetAttributes = {
 					90C209B120475B7700BAB05D = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					90C209CB20475B7700BAB05D = {
 						CreatedOnToolsVersion = 9.2;
@@ -246,6 +252,7 @@
 			files = (
 				90C209C120475B7700BAB05D /* Main.storyboard in Resources */,
 				90C209B820475B7700BAB05D /* GameScene.sks in Resources */,
+				B409322420577665001C89BE /* GamePlayScene.sks in Resources */,
 				90C209C320475B7700BAB05D /* Assets.xcassets in Resources */,
 				90C209C620475B7700BAB05D /* LaunchScreen.storyboard in Resources */,
 				90C209BA20475B7700BAB05D /* Actions.sks in Resources */,
@@ -277,6 +284,7 @@
 				90C209BE20475B7700BAB05D /* GameViewController.swift in Sources */,
 				B4D3BF65204B232600054EAD /* Ninja.swift in Sources */,
 				90C209B620475B7700BAB05D /* AppDelegate.swift in Sources */,
+				B409322220577617001C89BE /* GamePlayScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,13 +450,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NinjaStar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Adid-Nissan.NinjaStar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -456,13 +466,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NinjaStar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Adid-Nissan.NinjaStar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
