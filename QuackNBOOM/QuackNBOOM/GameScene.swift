@@ -10,7 +10,7 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
-    var deltaTime: TimeInterval = 0.0
+    //var deltaTime: TimeInterval = 0.0
     private var lastUpdateTime: TimeInterval?
     
     ///just setting up the scene
@@ -32,7 +32,10 @@ class GameScene: SKScene {
         //adding the duck to the scene
         //addChild(duckSprite.sprite)
         //duckSprite.pos = CGPoint(x: size.width/2, y: 1000)
-        addChild(duckController.getAllDucks())
+        //addChild(duckController.getAllDucks())
+        for duck in duckController.getAllDucks(){
+            addChild(duck)
+        }
         
         //adding the bomb to the scene
         //addChild(bombSprite.sprite)
@@ -57,9 +60,8 @@ class GameScene: SKScene {
             self.lastUpdateTime = currentTime
             return
         }
-        
         // Calculate deltaTime
-        deltaTime = currentTime - lastUpdateTime
+        let deltaTime = currentTime - lastUpdateTime
         self.lastUpdateTime = currentTime
         background.update(deltaTime)
         //duckSprite.update(_deltaTime: deltaTime)
