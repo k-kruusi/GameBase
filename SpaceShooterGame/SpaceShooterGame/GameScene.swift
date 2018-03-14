@@ -37,7 +37,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         gbackground.zPosition = -1
         
         //Player (File, Scale, Position, Add)
-        player = SKSpriteNode (imageNamed: "redfighter0006")
+        player = SKSpriteNode (imageNamed: "redfighter0005")
         player.setScale(0.4)
         player.position = CGPoint(x: self.frame.size.width / 40 - 20, y: player.size.height / 25 - 500)
         self.addChild(player)
@@ -46,10 +46,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.gravity = CGVector(dx: 0, dy:0)
         self.physicsWorld.contactDelegate = self
         
-        //Score (Text, Position, Font, Size, Color, Default, Add)
+        //Score (Text, Position, Size, Color, Default, Add)
         scoreLabel = SKLabelNode(text: "Score: 0")
-        scoreLabel.position = CGPoint(x: -300, y: -550)
-        scoreLabel.fontName = "TimesNewRoman"
+        scoreLabel.position = CGPoint(x: -300, y: -650)
         scoreLabel.fontSize = 30
         scoreLabel.fontColor = UIColor.white
         score = 0
