@@ -30,16 +30,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var moveAndRemove = SKAction()
     
     //Chopper atlas for animation
-    let chopperAtlas = SKTextureAtlas(named: "player")
-    var chopperSprites = Array<Any>()
-    var chpper = SKSpriteNode()
+    //let chopperAtlas = SKTextureAtlas(named: "player")
+    var chopperSprites: [SKTexture] = [SKTexture(imageNamed: "img1"), SKTexture(imageNamed: "img2"), SKTexture(imageNamed: "img3"), SKTexture(imageNamed: "img4")]
+    var chopper = SKSpriteNode.init(imageNamed: "img1")
     var repeatActionChopper = SKAction()
     
     override func didMove(to view: SKView) {
         // Get label node from scene and store it for use later
         createScene()
         
-        
+        self.chopper = createChopper()
+        self.addChild(chopper)
+        //animate and repeat the chopper animation
+        let animateChopper = SKAction.animate(with: self.chopperSprites, timePerFrame: 0.1)
+        self.repeatActionChopper = SKAction.repeatForever(animateChopper)
+        chopper.run(repeatActionChopper)
+   
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -84,6 +90,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             background.size = (self.view?.bounds.size)!
             self.addChild(background)
         }
+        //add textures to the sprite array
+        //chopperSprites.append(chopperAtlas.textureNamed("img1"))
+        //chopperSprites.append(chopperAtlas.textureNamed("img2"))
+        //chopperSprites.append(chopperAtlas.textureNamed("img3"))
+        //chopperSprites.append(chopperAtlas.textureNamed("img4"))
         
     }
 }
