@@ -11,7 +11,7 @@ import SpriteKit
 
 class KidFactory {
     
-    private func pickupKid(_ type : KidType) -> Kid {
+    private func GenerateKid(_ type : KidType) -> Kid {
         
         switch type {
         case .Kid1:
@@ -20,20 +20,26 @@ class KidFactory {
             return Kid(KidType: .Kid2)
         case .Kid3:
             return Kid(KidType: .Kid3)
+        case .Kid4:
+            return Kid(KidType: .Kid4)
+        case .Kid5:
+            return Kid(KidType: .Kid5)
         default:
-            fatalError()
+            //fatalerror()
+            return Kid(KidType: .Kid1)
         }
     }
     
-    func CreateKid(KidType: KidType?) -> Kid {
+    func createKid(specificType: KidType?) -> Kid {
         
-        guard let KidType = KidType else {
-            let rand = Int(arc4random_uniform(2))
-            let type = KidType(value: rand)!
-            return pickupKid(type)
+        guard let sType = specificType else {
+            let rand = Int(arc4random_uniform(5))
+            print(rand)
+            let randKidType = KidType(value: rand)!
+            return GenerateKid(randKidType)
         }
         
-        return pickupKid(KidType)
+        return GenerateKid(sType)
     }
     
 }
