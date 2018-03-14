@@ -15,7 +15,7 @@ import SpriteKit
 
 class Duck: GameObject {
     //boolean if duck is dead or not
-    let isDead = false; //ducks start as 'not dead'
+    var isDead = false; //ducks start as 'not dead'
     var startPos = CGPoint(x: 0, y: 0)
     //speed of the duck
     let vel = CGFloat(450) //250
@@ -44,6 +44,8 @@ class Duck: GameObject {
         if isDead {
             //if the duck is dead, then 'disppear', just reset the position to the top again
             position = CGPoint(x: CGFloat(arc4random_uniform(550) + 750), y: CGFloat(arc4random_uniform(800) + 1750))
+            //once the duck has been reset, then the boolean will go back to being false
+            isDead = false
             return
         }
         //if the duck is not dead, then the duck will continue to fall
@@ -56,5 +58,9 @@ class Duck: GameObject {
             //the duck continues falling
             position.y -= vel * CGFloat(deltaTime)
         }
+    }
+    public func killDuck(){
+        //just sets the status of the duck to true, meaning DEAD
+        isDead = true
     }
 }
