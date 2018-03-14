@@ -10,6 +10,8 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
+    //variable that will hold our falling objects
+    var kids: [Kid] = []
     
    
 }
