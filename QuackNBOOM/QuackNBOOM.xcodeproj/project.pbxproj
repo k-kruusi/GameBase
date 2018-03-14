@@ -16,6 +16,7 @@
 		BBD0621B204C8C3C006066AA /* QuackNBOOMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD0621A204C8C3C006066AA /* QuackNBOOMTests.swift */; };
 		BBD06226204C8C3C006066AA /* QuackNBOOMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD06225204C8C3C006066AA /* QuackNBOOMUITests.swift */; };
 		BBDDD1DD2051E841009F3176 /* DuckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDDD1DC2051E841009F3176 /* DuckController.swift */; };
+		FF0101352059CA5B00A973AC /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0101342059CA5B00A973AC /* AudioPlayer.swift */; };
 		FF65C7B3204C935B00A5D6BE /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65C7B2204C935B00A5D6BE /* GameObject.swift */; };
 		FF65C7B5204C965D00A5D6BE /* Duck.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65C7B4204C965D00A5D6BE /* Duck.swift */; };
 		FF65C7B7204C97A000A5D6BE /* Bomb.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65C7B6204C97A000A5D6BE /* Bomb.swift */; };
@@ -57,6 +58,7 @@
 		BBD06225204C8C3C006066AA /* QuackNBOOMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuackNBOOMUITests.swift; sourceTree = "<group>"; };
 		BBD06227204C8C3C006066AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBDDD1DC2051E841009F3176 /* DuckController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuckController.swift; sourceTree = "<group>"; };
+		FF0101342059CA5B00A973AC /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		FF65C7B2204C935B00A5D6BE /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		FF65C7B4204C965D00A5D6BE /* Duck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duck.swift; sourceTree = "<group>"; };
 		FF65C7B6204C97A000A5D6BE /* Bomb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bomb.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				FFCD345E2050998700E879F1 /* BombController.swift */,
 				BBDDD1DC2051E841009F3176 /* DuckController.swift */,
 				FFBAC9EA2058A544009858D8 /* GameManager.swift */,
+				FF0101342059CA5B00A973AC /* AudioPlayer.swift */,
 			);
 			path = QuackNBOOM;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			files = (
 				FF65C7B5204C965D00A5D6BE /* Duck.swift in Sources */,
 				FF65C7B3204C935B00A5D6BE /* GameObject.swift in Sources */,
+				FF0101352059CA5B00A973AC /* AudioPlayer.swift in Sources */,
 				BBDDD1DD2051E841009F3176 /* DuckController.swift in Sources */,
 				BBD06206204C8C3C006066AA /* GameScene.swift in Sources */,
 				FFCD345F2050998700E879F1 /* BombController.swift in Sources */,
