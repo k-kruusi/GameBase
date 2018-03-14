@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB17D95120589F9600DFBCC9 /* Background.sks in Resources */ = {isa = PBXBuildFile; fileRef = CB17D95020589F9600DFBCC9 /* Background.sks */; };
 		CB79DBB22050553D0054B067 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB79DBB12050553D0054B067 /* AppDelegate.swift */; };
 		CB79DBB42050553D0054B067 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = CB79DBB32050553D0054B067 /* GameScene.sks */; };
 		CB79DBB62050553D0054B067 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = CB79DBB52050553D0054B067 /* Actions.sks */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB17D95020589F9600DFBCC9 /* Background.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Background.sks; sourceTree = "<group>"; };
 		CB79DBAE2050553D0054B067 /* SpaceShooterGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceShooterGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB79DBB12050553D0054B067 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB79DBB32050553D0054B067 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				CB79DBB12050553D0054B067 /* AppDelegate.swift */,
 				CB79DBB32050553D0054B067 /* GameScene.sks */,
 				CB79DBB52050553D0054B067 /* Actions.sks */,
+				CB17D95020589F9600DFBCC9 /* Background.sks */,
 				CB79DBB72050553D0054B067 /* GameScene.swift */,
 				CB79DBB92050553D0054B067 /* GameViewController.swift */,
 				CB79DBBB2050553D0054B067 /* Main.storyboard */,
@@ -135,6 +138,7 @@
 				CB79DBBD2050553D0054B067 /* Main.storyboard in Resources */,
 				CB79DBB42050553D0054B067 /* GameScene.sks in Resources */,
 				CB79DBBF2050553D0054B067 /* Assets.xcassets in Resources */,
+				CB17D95120589F9600DFBCC9 /* Background.sks in Resources */,
 				CB79DBC22050553D0054B067 /* LaunchScreen.storyboard in Resources */,
 				CB79DBB62050553D0054B067 /* Actions.sks in Resources */,
 			);
