@@ -23,6 +23,7 @@ import SpriteKit
 
 class Bomb: GameObject {
     let explosionSprite: SKSpriteNode               // Another sprite for the explosion
+    let explosionRange = CGFloat(100)               // The killing range of the explosion
     let startExplodeCountdown = CGFloat(0.5)        // The value as to what to reset the explodeCcountdown to
     var explodeCountdown = CGFloat(0.0)             // The explosionCountdown explodes the bomb when it reaches 0. When the bomb has been exploded, it's set to -100
     let startBombRemovalCountdown = CGFloat(0.2)    // The value as to what to reset the bombRemovalCountdown to

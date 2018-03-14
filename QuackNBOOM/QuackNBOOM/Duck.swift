@@ -15,7 +15,8 @@ import SpriteKit
 
 class Duck: GameObject {
     //boolean if duck is dead or not
-    var isDead = false; //ducks start as 'not dead'
+    var isDead = false //ducks start as 'not dead'
+    var gameOver = false
     var startPos = CGPoint(x: 0, y: 0)
     //speed of the duck
     let vel = CGFloat(450) //250
@@ -49,12 +50,15 @@ class Duck: GameObject {
             return
         }
         //if the duck is not dead, then the duck will continue to fall
-        if(position.y < size.height / 2){
+        if(position.y < 0){
             //if the position is less than the bottom of the screen, then the player loses
             ///;w; set game over
-            position = CGPoint(x: CGFloat(arc4random_uniform(550) + 750), y: CGFloat(arc4random_uniform(800) + 1750)) //temp placement, delete later
+            gameOver = true
         }
         else{
+            if(gameOver){
+                return
+            }
             //the duck continues falling
             position.y -= vel * CGFloat(deltaTime)
         }

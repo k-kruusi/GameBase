@@ -11,7 +11,7 @@ import Foundation
 import SpriteKit
 
 class BombController {
-    let numberOfBombs = 5
+    let numberOfBombs = 3
     var bombs:[Bomb] = []
     
     

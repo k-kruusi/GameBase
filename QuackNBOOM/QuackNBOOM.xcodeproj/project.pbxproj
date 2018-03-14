@@ -19,6 +19,7 @@
 		FF65C7B3204C935B00A5D6BE /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65C7B2204C935B00A5D6BE /* GameObject.swift */; };
 		FF65C7B5204C965D00A5D6BE /* Duck.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65C7B4204C965D00A5D6BE /* Duck.swift */; };
 		FF65C7B7204C97A000A5D6BE /* Bomb.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65C7B6204C97A000A5D6BE /* Bomb.swift */; };
+		FFBAC9EB2058A544009858D8 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBAC9EA2058A544009858D8 /* GameManager.swift */; };
 		FFCD345D20508C4900E879F1 /* Bread.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCD345C20508C4900E879F1 /* Bread.swift */; };
 		FFCD345F2050998700E879F1 /* BombController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCD345E2050998700E879F1 /* BombController.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		FF65C7B2204C935B00A5D6BE /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		FF65C7B4204C965D00A5D6BE /* Duck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duck.swift; sourceTree = "<group>"; };
 		FF65C7B6204C97A000A5D6BE /* Bomb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bomb.swift; sourceTree = "<group>"; };
+		FFBAC9EA2058A544009858D8 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		FFCD345C20508C4900E879F1 /* Bread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bread.swift; sourceTree = "<group>"; };
 		FFCD345E2050998700E879F1 /* BombController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BombController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +126,7 @@
 				FFCD345C20508C4900E879F1 /* Bread.swift */,
 				FFCD345E2050998700E879F1 /* BombController.swift */,
 				BBDDD1DC2051E841009F3176 /* DuckController.swift */,
+				FFBAC9EA2058A544009858D8 /* GameManager.swift */,
 			);
 			path = QuackNBOOM;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				BBD06200204C8C3C006066AA /* AppDelegate.swift in Sources */,
 				FFCD345D20508C4900E879F1 /* Bread.swift in Sources */,
 				FF65C7B7204C97A000A5D6BE /* Bomb.swift in Sources */,
+				FFBAC9EB2058A544009858D8 /* GameManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

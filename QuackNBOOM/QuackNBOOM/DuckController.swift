@@ -38,4 +38,27 @@ class DuckController{
             duck.update(deltaTime)
         }
     }
+    
+    func isGameOver()->Bool{
+        //check which duck has reached the bottom of the screen
+        for duck in ducks{
+            if (duck.gameOver){
+                //if any of the ducks reach the bottom of the screen, then it is GAME OVER!!
+                for duck in ducks{
+                    duck.gameOver = true
+                }
+                return true
+            }
+        }
+        return false
+    }
+    
+    func resetDucks(){
+        //goes through all of the ducks in order to set all of their positions to be at the top of the screen for the new game play
+        for duck in ducks{
+            duck.position = CGPoint(x: CGFloat(arc4random_uniform(550) + 750), y: CGFloat(arc4random_uniform(800) + 1750))
+            duck.isDead = false
+            duck.gameOver = false
+        }
+    }
 }

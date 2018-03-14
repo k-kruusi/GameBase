@@ -10,19 +10,16 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
-    //var deltaTime: TimeInterval = 0.0
     private var lastUpdateTime: TimeInterval?
+    var isGameOver = false
     
     ///just setting up the scene
     
     //creating variables
     let background = GameObject(imagePath: "Background")
-    //let duckSprite = Duck(imagePath: "Duck")
-    //let bombSprite = Bomb(imagePath: "Bomb")
     let breadSprite = Bread(imagePath: "Bread")
+    let gameManager = GameManager()
     let gameOver = GameObject(imagePath: "GameOver")
-    let duckController = DuckController()
-    let bombController = BombController()
     
     override func didMove(to view: SKView) {
         //adding the background to the scene
@@ -30,18 +27,12 @@ class GameScene: SKScene {
         background.position = CGPoint(x: size.width/2, y: size.height/2)
         
         //adding the duck to the scene
-        //addChild(duckSprite.sprite)
-        //duckSprite.pos = CGPoint(x: size.width/2, y: 1000)
-        //addChild(duckController.getAllDucks())
-        for duck in duckController.getAllDucks(){
+        for duck in gameManager.getAllDucks(){
             addChild(duck)
         }
         
         //adding the bomb to the scene
-        //addChild(bombSprite.sprite)
-        //addChild(bombSprite.explosionSprite)
-        //bombSprite.pos = CGPoint(x: 750, y: 150)
-        for bomb in bombController.getAllBombs(){
+        for bomb in gameManager.getAllBombs(){
             addChild(bomb)
             addChild(bomb.explosionSprite)
         }
@@ -50,9 +41,10 @@ class GameScene: SKScene {
         addChild(breadSprite)
         breadSprite.position = CGPoint(x: size.width/2, y: 100)
         
-        //addChild(gameOver.sprite)
-        //gameOver.pos = CGPoint(x: size.width/2, y: size.height/2)
-        //gameOver.zPos = 3.0
+        //adding the gameOver to the scene
+        addChild(gameOver)
+        gameOver.position = CGPoint(x: size.width/2, y: size.height/2)
+        gameOver.isHidden = true
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -64,20 +56,29 @@ class GameScene: SKScene {
         let deltaTime = currentTime - lastUpdateTime
         self.lastUpdateTime = currentTime
         background.update(deltaTime)
-        //duckSprite.update(_deltaTime: deltaTime)
-        //bombSprite.update(_deltaTime: currentTime)
-        bombController.update(deltaTime)
-        duckController.update(deltaTime)
+        gameManager.update(deltaTime)
         breadSprite.update(deltaTime)
         gameOver.update(deltaTime)
+        
+        if(gameManager.isGameOver()){
+            isGameOver = true
+            gameOver.isHidden = false
+        }
     }
     
     // Shoot a bomb to the touched location
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for touch in touches {
-            let location = touch.location(in: self)
-            //bombSprite.pos = location
-            bombController.shootBomb(location: location)
+        if(!isGameOver){
+            for touch in touches {
+                let location = touch.location(in: self)
+                //bombSprite.pos = location
+                gameManager.shootBomb(location: location)
+            }
+        }
+        else{
+            gameManager.duckController.resetDucks()
+            isGameOver = false
+            gameOver.isHidden = true
         }
     }
 }
