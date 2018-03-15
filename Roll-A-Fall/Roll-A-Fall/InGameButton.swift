@@ -26,19 +26,21 @@ class InGameButton: Gameobject {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func ifClicked(currentPlayerMovementSpeed: CGFloat){
+    func ifClicked(background: ParallaxingBackground ){
         //Button Will Animate By scaling larger then going back to its original size
         
         
-      /*  switch buttonType {
-        case speedUp:
-            <#code#>
-        case speedDown:
+        switch buttonType {
+        case "speedUp":
+            background.changeSpeed(newSpeed: "speedUp")
+            break;
+        case "slowDown":
+            background.changeSpeed(newSpeed: "slowDown")
+            break;
         default:
-            <#code#>
+            print("Button Error")
+            break;
         }
- 
-    }*/
         
         
         

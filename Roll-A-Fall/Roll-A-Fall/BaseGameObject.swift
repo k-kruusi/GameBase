@@ -11,11 +11,10 @@ import SpriteKit
 
 class Gameobject : SKSpriteNode{
     
-    var vert01 : CGPoint?
-    var vert02 : CGPoint?
-    var vert03 : CGPoint?
-    var vert04 : CGPoint?
-    var positionPoints : [CGPoint]?
+    var vert01 : CGPoint = CGPoint()
+    var vert02 : CGPoint = CGPoint()
+    var vert03 : CGPoint = CGPoint()
+    var vert04 : CGPoint = CGPoint()
     
     //Position So Background can be background and game objects can operate at different layers
     
@@ -35,11 +34,10 @@ class Gameobject : SKSpriteNode{
         //References the super class (SKSpriteNode) and initilizes it  within this class
         super.init(texture: tex, color : col,size: s)
         self.zPosition = zPos
-        self.vert01 = CGPoint(x: position.x, y: position.y)
-        self.vert02 = CGPoint(x: position.x + size.width, y: position.y)
-        self.vert01 = CGPoint(x: position.x + size.width, y: position.y + size.height)
-        self.vert01 = CGPoint(x: position.x, y: position.y + size.height)
-        self.positionPoints = [vert01!,vert02!,vert03!,vert04!]
+        self.vert01 = CGPoint(x: position.x - (size.width/2), y: position.y - (size.height/2))
+        self.vert02 = CGPoint(x: position.x + (size.width/2), y: position.y - (size.height/2))
+        self.vert03 = CGPoint(x: position.x + (size.width/2), y: position.y + (size.height/2))
+        self.vert04 = CGPoint(x: position.x - (size.width/2), y: position.y + (size.height/2))
         
         
     }
@@ -51,11 +49,18 @@ class Gameobject : SKSpriteNode{
     //Function That Can Be Called When youre checking to see if an object is colliding with this object and you want the object to operate with a box collider and collide with a box collider. The object you input is the one with the box collider
     func isCollidingBox(positions: [CGPoint]) -> Bool {
         for position in positions {
-            if(position.x > (vert01?.x)! && position.x < (vert02?.x)! && position.y > (vert01?.y)! && position.y < (vert03?.y)! ){
+            if(position.x > vert01.x && position.x < vert02.x && position.y > vert01.y && position.y < vert03.y ){
                 return true
             }
         }
         return false
+    }
+    //USE IF POSITION HAS CHANGED SINCE INIT
+    func updateCollider() {
+        self.vert01 = CGPoint(x: position.x - (size.width/2), y: position.y - (size.height/2))
+        self.vert02 = CGPoint(x: position.x + (size.width/2), y: position.y - (size.height/2))
+        self.vert03 = CGPoint(x: position.x + (size.width/2), y: position.y + (size.height/2))
+        self.vert04 = CGPoint(x: position.x - (size.width/2), y: position.y + (size.height/2))
     }
     
     
