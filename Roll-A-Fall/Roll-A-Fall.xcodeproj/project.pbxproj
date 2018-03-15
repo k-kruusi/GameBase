@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B81DC32A204F8B1700EE11F7 /* BlockGameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81DC329204F8B1700EE11F7 /* BlockGameObject.swift */; };
+		B8744220205187F80012F246 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B874421F205187F80012F246 /* Player.swift */; };
+		B87442242051E62C0012F246 /* InGameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87442232051E62C0012F246 /* InGameButton.swift */; };
 		B8EA085120489DF000FE8BBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EA085020489DF000FE8BBA /* AppDelegate.swift */; };
 		B8EA085320489DF000FE8BBA /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B8EA085220489DF000FE8BBA /* GameScene.sks */; };
 		B8EA085520489DF000FE8BBA /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = B8EA085420489DF000FE8BBA /* Actions.sks */; };
@@ -15,8 +18,8 @@
 		B8EA085C20489DF000FE8BBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8EA085A20489DF000FE8BBA /* Main.storyboard */; };
 		B8EA085E20489DF000FE8BBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8EA085D20489DF000FE8BBA /* Assets.xcassets */; };
 		B8EA086120489DF000FE8BBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8EA085F20489DF000FE8BBA /* LaunchScreen.storyboard */; };
-		B8EA086C20489DF000FE8BBA /* Roll_A_FallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EA086B20489DF000FE8BBA /* Roll_A_FallTests.swift */; };
-		B8EA087720489DF000FE8BBA /* Roll_A_FallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EA087620489DF000FE8BBA /* Roll_A_FallUITests.swift */; };
+		B8FA35BC2048F72000902395 /* BaseGameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FA35BB2048F72000902395 /* BaseGameObject.swift */; };
+		B8FA35BE2048FA8F00902395 /* ParallaxingBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FA35BD2048FA8F00902395 /* ParallaxingBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B81DC329204F8B1700EE11F7 /* BlockGameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockGameObject.swift; sourceTree = "<group>"; };
+		B874421F205187F80012F246 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		B87442232051E62C0012F246 /* InGameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InGameButton.swift; sourceTree = "<group>"; };
 		B8EA084D20489DF000FE8BBA /* Roll-A-Fall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Roll-A-Fall.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8EA085020489DF000FE8BBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8EA085220489DF000FE8BBA /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -48,11 +54,9 @@
 		B8EA086020489DF000FE8BBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8EA086220489DF000FE8BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8EA086720489DF000FE8BBA /* Roll-A-FallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Roll-A-FallTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B8EA086B20489DF000FE8BBA /* Roll_A_FallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roll_A_FallTests.swift; sourceTree = "<group>"; };
-		B8EA086D20489DF000FE8BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8EA087220489DF000FE8BBA /* Roll-A-FallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Roll-A-FallUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B8EA087620489DF000FE8BBA /* Roll_A_FallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roll_A_FallUITests.swift; sourceTree = "<group>"; };
-		B8EA087820489DF000FE8BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8FA35BB2048F72000902395 /* BaseGameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGameObject.swift; sourceTree = "<group>"; };
+		B8FA35BD2048FA8F00902395 /* ParallaxingBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxingBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +88,6 @@
 			isa = PBXGroup;
 			children = (
 				B8EA084F20489DF000FE8BBA /* Roll-A-Fall */,
-				B8EA086A20489DF000FE8BBA /* Roll-A-FallTests */,
-				B8EA087520489DF000FE8BBA /* Roll-A-FallUITests */,
 				B8EA084E20489DF000FE8BBA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,26 +114,13 @@
 				B8EA085D20489DF000FE8BBA /* Assets.xcassets */,
 				B8EA085F20489DF000FE8BBA /* LaunchScreen.storyboard */,
 				B8EA086220489DF000FE8BBA /* Info.plist */,
+				B8FA35BB2048F72000902395 /* BaseGameObject.swift */,
+				B8FA35BD2048FA8F00902395 /* ParallaxingBackground.swift */,
+				B81DC329204F8B1700EE11F7 /* BlockGameObject.swift */,
+				B874421F205187F80012F246 /* Player.swift */,
+				B87442232051E62C0012F246 /* InGameButton.swift */,
 			);
 			path = "Roll-A-Fall";
-			sourceTree = "<group>";
-		};
-		B8EA086A20489DF000FE8BBA /* Roll-A-FallTests */ = {
-			isa = PBXGroup;
-			children = (
-				B8EA086B20489DF000FE8BBA /* Roll_A_FallTests.swift */,
-				B8EA086D20489DF000FE8BBA /* Info.plist */,
-			);
-			path = "Roll-A-FallTests";
-			sourceTree = "<group>";
-		};
-		B8EA087520489DF000FE8BBA /* Roll-A-FallUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B8EA087620489DF000FE8BBA /* Roll_A_FallUITests.swift */,
-				B8EA087820489DF000FE8BBA /* Info.plist */,
-			);
-			path = "Roll-A-FallUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +261,12 @@
 			files = (
 				B8EA085720489DF000FE8BBA /* GameScene.swift in Sources */,
 				B8EA085920489DF000FE8BBA /* GameViewController.swift in Sources */,
+				B87442242051E62C0012F246 /* InGameButton.swift in Sources */,
+				B81DC32A204F8B1700EE11F7 /* BlockGameObject.swift in Sources */,
 				B8EA085120489DF000FE8BBA /* AppDelegate.swift in Sources */,
+				B8744220205187F80012F246 /* Player.swift in Sources */,
+				B8FA35BC2048F72000902395 /* BaseGameObject.swift in Sources */,
+				B8FA35BE2048FA8F00902395 /* ParallaxingBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +274,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8EA086C20489DF000FE8BBA /* Roll_A_FallTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +281,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8EA087720489DF000FE8BBA /* Roll_A_FallUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
