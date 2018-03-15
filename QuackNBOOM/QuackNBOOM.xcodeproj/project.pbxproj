@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB37C5E0205B1CA6007407B3 /* ExplosionSound1.wav in Resources */ = {isa = PBXBuildFile; fileRef = BB37C5D7205B1CA5007407B3 /* ExplosionSound1.wav */; };
+		BB37C5E1205B1CA6007407B3 /* ShootingSound2.wav in Resources */ = {isa = PBXBuildFile; fileRef = BB37C5D8205B1CA5007407B3 /* ShootingSound2.wav */; };
+		BB37C5E2205B1CA6007407B3 /* ExplosionSound4.wav in Resources */ = {isa = PBXBuildFile; fileRef = BB37C5D9205B1CA5007407B3 /* ExplosionSound4.wav */; };
+		BB37C5E3205B1CA6007407B3 /* DemonicQuack2.wav in Resources */ = {isa = PBXBuildFile; fileRef = BB37C5DA205B1CA5007407B3 /* DemonicQuack2.wav */; };
+		BB37C5E4205B1CA6007407B3 /* ExplosionSound3.wav in Resources */ = {isa = PBXBuildFile; fileRef = BB37C5DB205B1CA5007407B3 /* ExplosionSound3.wav */; };
+		BB37C5E5205B1CA6007407B3 /* GameOverSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = BB37C5DC205B1CA5007407B3 /* GameOverSound.wav */; };
+		BB37C5E6205B1CA6007407B3 /* DemonicQuack1.wav in Resources */ = {isa = PBXBuildFile; fileRef = BB37C5DD205B1CA6007407B3 /* DemonicQuack1.wav */; };
+		BB37C5E7205B1CA6007407B3 /* ExplosionSound2.wav in Resources */ = {isa = PBXBuildFile; fileRef = BB37C5DE205B1CA6007407B3 /* ExplosionSound2.wav */; };
+		BB37C5E8205B1CA6007407B3 /* ShootingSound1.wav in Resources */ = {isa = PBXBuildFile; fileRef = BB37C5DF205B1CA6007407B3 /* ShootingSound1.wav */; };
 		BBD06200204C8C3C006066AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD061FF204C8C3C006066AA /* AppDelegate.swift */; };
 		BBD06206204C8C3C006066AA /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD06205204C8C3C006066AA /* GameScene.swift */; };
 		BBD06208204C8C3C006066AA /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD06207204C8C3C006066AA /* GameViewController.swift */; };
@@ -43,6 +52,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB37C5D7205B1CA5007407B3 /* ExplosionSound1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ExplosionSound1.wav; path = Assets.xcassets/Resources/Audios/ExplosionSound1.wav; sourceTree = "<group>"; };
+		BB37C5D8205B1CA5007407B3 /* ShootingSound2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ShootingSound2.wav; path = Assets.xcassets/Resources/Audios/ShootingSound2.wav; sourceTree = "<group>"; };
+		BB37C5D9205B1CA5007407B3 /* ExplosionSound4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ExplosionSound4.wav; path = Assets.xcassets/Resources/Audios/ExplosionSound4.wav; sourceTree = "<group>"; };
+		BB37C5DA205B1CA5007407B3 /* DemonicQuack2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = DemonicQuack2.wav; path = Assets.xcassets/Resources/Audios/DemonicQuack2.wav; sourceTree = "<group>"; };
+		BB37C5DB205B1CA5007407B3 /* ExplosionSound3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ExplosionSound3.wav; path = Assets.xcassets/Resources/Audios/ExplosionSound3.wav; sourceTree = "<group>"; };
+		BB37C5DC205B1CA5007407B3 /* GameOverSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = GameOverSound.wav; path = Assets.xcassets/Resources/Audios/GameOverSound.wav; sourceTree = "<group>"; };
+		BB37C5DD205B1CA6007407B3 /* DemonicQuack1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = DemonicQuack1.wav; path = Assets.xcassets/Resources/Audios/DemonicQuack1.wav; sourceTree = "<group>"; };
+		BB37C5DE205B1CA6007407B3 /* ExplosionSound2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ExplosionSound2.wav; path = Assets.xcassets/Resources/Audios/ExplosionSound2.wav; sourceTree = "<group>"; };
+		BB37C5DF205B1CA6007407B3 /* ShootingSound1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ShootingSound1.wav; path = Assets.xcassets/Resources/Audios/ShootingSound1.wav; sourceTree = "<group>"; };
 		BBD061FC204C8C3C006066AA /* QuackNBOOM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuackNBOOM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD061FF204C8C3C006066AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBD06205204C8C3C006066AA /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -115,6 +133,15 @@
 		BBD061FE204C8C3C006066AA /* QuackNBOOM */ = {
 			isa = PBXGroup;
 			children = (
+				BB37C5DD205B1CA6007407B3 /* DemonicQuack1.wav */,
+				BB37C5DA205B1CA5007407B3 /* DemonicQuack2.wav */,
+				BB37C5D7205B1CA5007407B3 /* ExplosionSound1.wav */,
+				BB37C5DE205B1CA6007407B3 /* ExplosionSound2.wav */,
+				BB37C5DB205B1CA5007407B3 /* ExplosionSound3.wav */,
+				BB37C5D9205B1CA5007407B3 /* ExplosionSound4.wav */,
+				BB37C5DC205B1CA5007407B3 /* GameOverSound.wav */,
+				BB37C5DF205B1CA6007407B3 /* ShootingSound1.wav */,
+				BB37C5D8205B1CA5007407B3 /* ShootingSound2.wav */,
 				BBD061FF204C8C3C006066AA /* AppDelegate.swift */,
 				BBD06205204C8C3C006066AA /* GameScene.swift */,
 				BBD06207204C8C3C006066AA /* GameViewController.swift */,
@@ -261,6 +288,15 @@
 			files = (
 				BBD0620B204C8C3C006066AA /* Main.storyboard in Resources */,
 				BBD0620D204C8C3C006066AA /* Assets.xcassets in Resources */,
+				BB37C5E5205B1CA6007407B3 /* GameOverSound.wav in Resources */,
+				BB37C5E7205B1CA6007407B3 /* ExplosionSound2.wav in Resources */,
+				BB37C5E0205B1CA6007407B3 /* ExplosionSound1.wav in Resources */,
+				BB37C5E2205B1CA6007407B3 /* ExplosionSound4.wav in Resources */,
+				BB37C5E4205B1CA6007407B3 /* ExplosionSound3.wav in Resources */,
+				BB37C5E8205B1CA6007407B3 /* ShootingSound1.wav in Resources */,
+				BB37C5E6205B1CA6007407B3 /* DemonicQuack1.wav in Resources */,
+				BB37C5E3205B1CA6007407B3 /* DemonicQuack2.wav in Resources */,
+				BB37C5E1205B1CA6007407B3 /* ShootingSound2.wav in Resources */,
 				BBD06210204C8C3C006066AA /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

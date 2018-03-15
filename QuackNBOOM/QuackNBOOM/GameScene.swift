@@ -8,6 +8,7 @@
 
 import SpriteKit
 import GameplayKit
+import AVFoundation
 
 class GameScene: SKScene {
     private var lastUpdateTime: TimeInterval?
@@ -20,6 +21,10 @@ class GameScene: SKScene {
     let breadSprite = Bread(imagePath: "Bread")
     let gameManager = GameManager()
     let gameOver = GameObject(imagePath: "GameOver")
+    
+    //;w; audio components
+    var gameOverSFX = AVAudioPlayer()
+    let gameOverSound = Bundle.main.path(forResource: "GameOverSound", ofType: "wav")
     
     override func didMove(to view: SKView) {
         //adding the background to the scene
@@ -45,6 +50,15 @@ class GameScene: SKScene {
         addChild(gameOver)
         gameOver.position = CGPoint(x: size.width/2, y: size.height/2)
         gameOver.isHidden = true
+        
+        //;w; initialize the audio components
+        do{
+            try gameOverSFX = AVAudioPlayer(contentsOf: URL(fileURLWithPath: gameOverSound!))
+            gameOverSFX.numberOfLoops = 0;
+        } catch{
+            //error
+            print("GAME OVER SOUND CANNOT BE FOUND!")
+        }
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -63,6 +77,7 @@ class GameScene: SKScene {
         if(gameManager.isGameOver()){
             isGameOver = true
             gameOver.isHidden = false
+            gameOverSFX.play(); //;w; change this up? we need to make it so that it only plays once when it's game over
         }
     }
     

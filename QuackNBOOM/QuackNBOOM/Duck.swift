@@ -12,6 +12,7 @@
 
 import Foundation
 import SpriteKit
+import AVFoundation
 
 class Duck: GameObject {
     //boolean if duck is dead or not
@@ -20,6 +21,12 @@ class Duck: GameObject {
     var startPos = CGPoint(x: 0, y: 0)
     //speed of the duck
     let vel = CGFloat(450) //250
+    //the audio components of the duck
+    var quackSFX1 = AVAudioPlayer()
+    var quackSFX2 = AVAudioPlayer()
+    //the file paths of each audio
+    let quackSound1 = Bundle.main.path(forResource: "DemonicQuack1", ofType: "wav")
+    let quackSound2 = Bundle.main.path(forResource: "DemonicQuack2", ofType: "wav")
     
     // Sets the sprite's image
     required init(imagePath: String){
@@ -29,6 +36,18 @@ class Duck: GameObject {
         yScale = 0.75
         //randomize the start position of each duck
         self.startPos = CGPoint(x: CGFloat(arc4random_uniform(550) + 750), y: CGFloat(arc4random_uniform(200) + 1750))
+        
+        //init the audio
+        do{
+            try quackSFX1 = AVAudioPlayer(contentsOf: URL(fileURLWithPath: quackSound1!))
+        } catch{
+            print("QUACK SOUND 1 CANNOT BE FOUND!")
+        }
+        do{
+            try quackSFX2 = AVAudioPlayer(contentsOf: URL(fileURLWithPath: quackSound2!))
+        } catch{
+            print("QUACK SOUND 2 CANNOT BE FOUND!")
+        }
     }
     
     required init?(coder aDecoder: NSCoder){
@@ -52,7 +71,6 @@ class Duck: GameObject {
         //if the duck is not dead, then the duck will continue to fall
         if(position.y < 0){
             //if the position is less than the bottom of the screen, then the player loses
-            ///;w; set game over
             gameOver = true
         }
         else{

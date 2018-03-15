@@ -20,6 +20,7 @@
 
 import Foundation
 import SpriteKit
+import AVFoundation
 
 class Bomb: GameObject {
     let explosionSprite: SKSpriteNode               // Another sprite for the explosion
@@ -29,6 +30,14 @@ class Bomb: GameObject {
     let startBombRemovalCountdown = CGFloat(0.2)    // The value as to what to reset the bombRemovalCountdown to
     var bombRemovalCountdown = CGFloat(0.0)         // Moves the object after the bomb has exploded. Stats to countdown when the bomb explodes
     
+    var bombSFX1 = AVAudioPlayer() //;w; audio components
+    var bombSFX2 = AVAudioPlayer()
+    var bombSFX3 = AVAudioPlayer()
+    var bombSFX4 = AVAudioPlayer()
+    let explodeSound1 = Bundle.main.path(forResource: "ExplosionSound1", ofType: "wav")
+    let explodeSound2 = Bundle.main.path(forResource: "ExplosionSound2", ofType: "wav")
+    let explodeSound3 = Bundle.main.path(forResource: "ExplosionSound3", ofType: "wav")
+    let explodeSound4 = Bundle.main.path(forResource: "ExplosionSound4", ofType: "wav")
     
     // Initializes both sprites and the attributes
     //
@@ -51,6 +60,32 @@ class Bomb: GameObject {
         // Set the sprites' visibility
         isHidden = false
         explosionSprite.isHidden = true
+        
+        //;w; initialize the audio components
+        do{
+            try bombSFX1 = AVAudioPlayer(contentsOf: URL(fileURLWithPath: explodeSound1!))
+        } catch{
+            //error
+            print("EXPLODING SOUND 1 CANNOT BE FOUND!")
+        }
+        do{
+            try bombSFX2 = AVAudioPlayer(contentsOf: URL(fileURLWithPath: explodeSound2!))
+        } catch{
+            //error
+            print("EXPLODING SOUND 2 CANNOT BE FOUND!")
+        }
+        do{
+            try bombSFX3 = AVAudioPlayer(contentsOf: URL(fileURLWithPath: explodeSound3!))
+        } catch{
+            //error
+            print("EXPLODING SOUND 3 CANNOT BE FOUND!")
+        }
+        do{
+            try bombSFX4 = AVAudioPlayer(contentsOf: URL(fileURLWithPath: explodeSound4!))
+        } catch{
+            //error
+            print("EXPLODING SOUND 4 CANNOT BE FOUND!")
+        }
     }
     
     // Initializer. Automatically sets the explosion sprite
