@@ -18,12 +18,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var score = Int(0)
     
-    var scoreLable = SKLabelNode()
-    var highscoreLable = SKLabelNode()
-    var playLable = SKLabelNode()
+    var scoreLabel = SKLabelNode()
+    var highscoreLabel = SKLabelNode()
+    var playLabel = SKLabelNode()
     
     var restartButton = SKSpriteNode()
-    var pauseButon = SKSpriteNode()
+    var pauseButton = SKSpriteNode()
     var logoImg = SKSpriteNode()
     
     var wallBlocks = SKNode()
@@ -95,6 +95,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //chopperSprites.append(chopperAtlas.textureNamed("img2"))
         //chopperSprites.append(chopperAtlas.textureNamed("img3"))
         //chopperSprites.append(chopperAtlas.textureNamed("img4"))
+        
+        scoreLabel = createScoreLabel()
+        self.addChild(scoreLabel)
+        
+        highscoreLabel = createHighscoreLabel()
+        self.addChild(highscoreLabel)
+        
+        createLogo()
+        
+        playLabel = createPlayLabel()
+        self.addChild(playLabel)
+        
+        
         
     }
 }
