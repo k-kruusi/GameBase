@@ -4,6 +4,7 @@
 //
 //  Created by Predko Brown Marya C. on 3/1/18.
 //  Copyright © 2018 Darren/Marya. All rights reserved.
+
 //  Darren Added Accelerator code as it needs an UIViewController
 
 import UIKit
@@ -28,8 +29,8 @@ class GameViewController: UIViewController {
             }
             //call to start up accelermeter
             motionManager.startAccelerometerUpdates()
-            //sets the update intervals to 1 second so it can change fast
-            motionManager.accelerometerUpdateInterval = 1;
+            //sets the update intervals to 1 millosecond so it can change fast
+            motionManager.accelerometerUpdateInterval = 0.001;
             view.ignoresSiblingOrder = true
             
             view.showsFPS = true
