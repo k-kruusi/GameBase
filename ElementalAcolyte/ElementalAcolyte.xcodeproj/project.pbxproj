@@ -11,6 +11,13 @@
 		ED888CED2051EAA70089ADAA /* torpedo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED888CEB2051EAA70089ADAA /* torpedo.mp3 */; };
 		ED888CF22051EAEE0089ADAA /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = ED888CF02051EAEE0089ADAA /* Explosion.sks */; };
 		ED888CF32051EAEE0089ADAA /* Starfield.sks in Resources */ = {isa = PBXBuildFile; fileRef = ED888CF12051EAEE0089ADAA /* Starfield.sks */; };
+		ED997308205AD2E000085473 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED997307205AD2E000085473 /* GameObject.swift */; };
+		ED99730A205AD30A00085473 /* Acolyte.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED997309205AD30A00085473 /* Acolyte.swift */; };
+		ED99730C205AD48D00085473 /* CGPoint+VectorMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED99730B205AD48D00085473 /* CGPoint+VectorMath.swift */; };
+		ED99730E205ADFB000085473 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED99730D205ADFB000085473 /* Element.swift */; };
+		ED997313205B002D00085473 /* CGFloat+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED997312205B002D00085473 /* CGFloat+Random.swift */; };
+		ED997315205B007F00085473 /* ElementFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED997314205B007F00085473 /* ElementFactory.swift */; };
+		ED997317205B023F00085473 /* SpawnManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED997316205B023F00085473 /* SpawnManager.swift */; };
 		EDA1D6232051CDCE00851549 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1D6222051CDCE00851549 /* AppDelegate.swift */; };
 		EDA1D6252051CDCE00851549 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EDA1D6242051CDCE00851549 /* GameScene.sks */; };
 		EDA1D6272051CDCE00851549 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = EDA1D6262051CDCE00851549 /* Actions.sks */; };
@@ -21,7 +28,6 @@
 		EDA1D6332051CDCE00851549 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA1D6312051CDCE00851549 /* LaunchScreen.storyboard */; };
 		EDA1D63E2051CDCE00851549 /* ElementalAcolyteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1D63D2051CDCE00851549 /* ElementalAcolyteTests.swift */; };
 		EDA1D6492051CDCE00851549 /* ElementalAcolyteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1D6482051CDCE00851549 /* ElementalAcolyteUITests.swift */; };
-		EDA1D6572051D1DD00851549 /* hustle-on.wav in Resources */ = {isa = PBXBuildFile; fileRef = EDA1D6562051D1DC00851549 /* hustle-on.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +52,13 @@
 		ED888CEB2051EAA70089ADAA /* torpedo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = torpedo.mp3; sourceTree = "<group>"; };
 		ED888CF02051EAEE0089ADAA /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
 		ED888CF12051EAEE0089ADAA /* Starfield.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Starfield.sks; sourceTree = "<group>"; };
+		ED997307205AD2E000085473 /* GameObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
+		ED997309205AD30A00085473 /* Acolyte.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acolyte.swift; sourceTree = "<group>"; };
+		ED99730B205AD48D00085473 /* CGPoint+VectorMath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+VectorMath.swift"; sourceTree = "<group>"; };
+		ED99730D205ADFB000085473 /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
+		ED997312205B002D00085473 /* CGFloat+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Random.swift"; sourceTree = "<group>"; };
+		ED997314205B007F00085473 /* ElementFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementFactory.swift; sourceTree = "<group>"; };
+		ED997316205B023F00085473 /* SpawnManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpawnManager.swift; sourceTree = "<group>"; };
 		EDA1D61F2051CDCE00851549 /* ElementalAcolyte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElementalAcolyte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA1D6222051CDCE00851549 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDA1D6242051CDCE00851549 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -62,7 +75,6 @@
 		EDA1D6442051CDCE00851549 /* ElementalAcolyteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElementalAcolyteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA1D6482051CDCE00851549 /* ElementalAcolyteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementalAcolyteUITests.swift; sourceTree = "<group>"; };
 		EDA1D64A2051CDCE00851549 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EDA1D6562051D1DC00851549 /* hustle-on.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "hustle-on.wav"; path = "../../../../Downloads/hustle-mode-code-assets/assets/Assets/hustle-on.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +102,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED99730F205AFD6600085473 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				ED997312205B002D00085473 /* CGFloat+Random.swift */,
+				ED997309205AD30A00085473 /* Acolyte.swift */,
+				EDA1D6222051CDCE00851549 /* AppDelegate.swift */,
+				ED99730B205AD48D00085473 /* CGPoint+VectorMath.swift */,
+				ED99730D205ADFB000085473 /* Element.swift */,
+				ED997307205AD2E000085473 /* GameObject.swift */,
+				EDA1D6282051CDCE00851549 /* GameScene.swift */,
+				EDA1D62A2051CDCE00851549 /* GameViewController.swift */,
+				ED997314205B007F00085473 /* ElementFactory.swift */,
+				ED997316205B023F00085473 /* SpawnManager.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		ED997310205AFDA900085473 /* Emitter */ = {
+			isa = PBXGroup;
+			children = (
+				ED888CF02051EAEE0089ADAA /* Explosion.sks */,
+				ED888CF12051EAEE0089ADAA /* Starfield.sks */,
+			);
+			path = Emitter;
+			sourceTree = "<group>";
+		};
+		ED997311205AFDBF00085473 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				ED888CEA2051EAA70089ADAA /* explosion.mp3 */,
+				ED888CEB2051EAA70089ADAA /* torpedo.mp3 */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
 		EDA1D6162051CDCE00851549 = {
 			isa = PBXGroup;
 			children = (
@@ -113,20 +160,15 @@
 		EDA1D6212051CDCE00851549 /* ElementalAcolyte */ = {
 			isa = PBXGroup;
 			children = (
-				EDA1D6562051D1DC00851549 /* hustle-on.wav */,
-				EDA1D6222051CDCE00851549 /* AppDelegate.swift */,
-				EDA1D6242051CDCE00851549 /* GameScene.sks */,
+				ED997311205AFDBF00085473 /* Audio */,
+				ED997310205AFDA900085473 /* Emitter */,
+				ED99730F205AFD6600085473 /* Classes */,
+				EDA1D6342051CDCE00851549 /* Info.plist */,
 				EDA1D6262051CDCE00851549 /* Actions.sks */,
-				ED888CF02051EAEE0089ADAA /* Explosion.sks */,
-				ED888CF12051EAEE0089ADAA /* Starfield.sks */,
-				EDA1D6282051CDCE00851549 /* GameScene.swift */,
-				EDA1D62A2051CDCE00851549 /* GameViewController.swift */,
-				EDA1D62C2051CDCE00851549 /* Main.storyboard */,
-				ED888CEA2051EAA70089ADAA /* explosion.mp3 */,
-				ED888CEB2051EAA70089ADAA /* torpedo.mp3 */,
+				EDA1D6242051CDCE00851549 /* GameScene.sks */,
 				EDA1D62F2051CDCE00851549 /* Assets.xcassets */,
 				EDA1D6312051CDCE00851549 /* LaunchScreen.storyboard */,
-				EDA1D6342051CDCE00851549 /* Info.plist */,
+				EDA1D62C2051CDCE00851549 /* Main.storyboard */,
 			);
 			path = ElementalAcolyte;
 			sourceTree = "<group>";
@@ -258,7 +300,6 @@
 			files = (
 				EDA1D62E2051CDCE00851549 /* Main.storyboard in Resources */,
 				EDA1D6252051CDCE00851549 /* GameScene.sks in Resources */,
-				EDA1D6572051D1DD00851549 /* hustle-on.wav in Resources */,
 				EDA1D6302051CDCE00851549 /* Assets.xcassets in Resources */,
 				ED888CF32051EAEE0089ADAA /* Starfield.sks in Resources */,
 				ED888CEC2051EAA70089ADAA /* explosion.mp3 in Resources */,
@@ -290,9 +331,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED997308205AD2E000085473 /* GameObject.swift in Sources */,
+				ED99730C205AD48D00085473 /* CGPoint+VectorMath.swift in Sources */,
 				EDA1D6292051CDCE00851549 /* GameScene.swift in Sources */,
+				ED997313205B002D00085473 /* CGFloat+Random.swift in Sources */,
 				EDA1D62B2051CDCE00851549 /* GameViewController.swift in Sources */,
+				ED99730A205AD30A00085473 /* Acolyte.swift in Sources */,
+				ED99730E205ADFB000085473 /* Element.swift in Sources */,
 				EDA1D6232051CDCE00851549 /* AppDelegate.swift in Sources */,
+				ED997315205B007F00085473 /* ElementFactory.swift in Sources */,
+				ED997317205B023F00085473 /* SpawnManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,8 +15,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private var spinnyNode : SKShapeNode?*/
     
     var starfield:SKEmitterNode!
-    var player:SKSpriteNode!
-
+    
+    private let player = Acolyte()
+    //private let element = Element(type: ElementType.Lightning)
+    private var spawnManager: SpawnManager?
+    private var elements: [Element] = []
+    
     var scoreLabel:SKLabelNode!
     var score:Int = 0{
         didSet{
@@ -43,21 +47,31 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                                               SKAction.fadeOut(withDuration: 0.5),
                                               SKAction.removeFromParent()]))
         }*/
+        
         self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
         self.physicsWorld.contactDelegate = self
         
         starfield = SKEmitterNode(fileNamed: "Starfield")
-        starfield.position = CGPoint(x: 0, y: 1472)
+        starfield.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height)
         starfield.advanceSimulationTime(10)
         starfield.zPosition = -1
         self.addChild(starfield)
         
-        player = SKSpriteNode(imageNamed: "shuttle")
+        /*player = SKSpriteNode(imageNamed: "shuttle")
         player.position = CGPoint(x:self.frame.size.width / 2 - self.frame.size.width / 2, y: -self.frame.size.height / 2 + player.frame.size.height)
-        self.addChild(player)
+        self.addChild(player)*/
+        player.zPosition = 1
+        player.position = CGPoint (x:0+player.frame.size.width, y:self.frame.size.height/2)
+        addChild(player)
+        
+        /*element.zPosition = 1
+        element.position = CGPoint(x:self.frame.width/2, y:self.frame.size.height/2)
+        addChild(element)*/
+        spawnManager = SpawnManager(givenSpawnArea: CGRect(x:self.frame.width, y:0, width: 100, height: self.frame.height), min: 0.5, max: 1)
+        spawnManager?.scene = self
         
         scoreLabel = SKLabelNode(text: "Score: 0")
-        scoreLabel.position = CGPoint(x:0, y: self.frame.size.height / 2  - 60)
+        scoreLabel.position = CGPoint(x:0+scoreLabel.frame.size.width-30, y: self.frame.size.height - 50)
         scoreLabel.fontName = "AmericanTypewriter-Bold"
         scoreLabel.fontSize = 36
         scoreLabel.fontColor = UIColor.white
@@ -65,52 +79,88 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(scoreLabel)
     }
     
+    deinit {
+        elements = []
+    }
+    
+    override func update(_ currentTime: TimeInterval) {
+        super.update(currentTime)
+        // Called before each frame is rendered
+        //element.update(currentTime)
+        
+        var toBeDeleted : [Int] = []
+        
+        for ele in elements {
+            ele.update(currentTime)
+            
+            let acolyte = ele.collision(items: [player]).first
+            if let _ = acolyte{
+                print("Collision")
+                ele.removeFromParent()
+                toBeDeleted.append(elements.index(of: ele)!)
+            }
+        }
+        
+        deleteElement(toBeDeleted)
+        
+        guard let element = spawnManager?.update(currentTime) else {
+            return
+        }
+        
+        elements.append(element)
+    }
+    
+    private func deleteElement(_ elementIndexes: [Int]) {
+        let reversedIndexes = elementIndexes.reversed()
+        for index in reversedIndexes{
+            elements.remove(at: index)
+        }
+    }
+    
     func touchDown(atPoint pos : CGPoint) {
         /*if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.green
-            self.addChild(n)
-        }*/
+         n.position = pos
+         n.strokeColor = SKColor.green
+         self.addChild(n)
+         }*/
     }
     
     func touchMoved(toPoint pos : CGPoint) {
         /*if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.blue
-            self.addChild(n)
-        }*/
+         n.position = pos
+         n.strokeColor = SKColor.blue
+         self.addChild(n)
+         }*/
     }
     
     func touchUp(atPoint pos : CGPoint) {
         /*if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.red
-            self.addChild(n)
-        }*/
+         n.position = pos
+         n.strokeColor = SKColor.red
+         self.addChild(n)
+         }*/
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         /*if let label = self.label {
-            label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
+         label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
+         }
+         
+         for t in touches { self.touchDown(atPoint: t.location(in: self)) }*/
+        for ele in elements {
+            ele.elementSpeed = ele.elementSpeed + CGFloat(5.0)
         }
-        
-        for t in touches { self.touchDown(atPoint: t.location(in: self)) }*/
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        /*for t in touches { self.touchMoved(toPoint: t.location(in: self)) }*/
+        for t in touches { self.touchMoved(toPoint: t.location(in: self)) }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        /*for t in touches { self.touchUp(atPoint: t.location(in: self)) }*/
+        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        /*for t in touches { self.touchUp(atPoint: t.location(in: self)) }*/
-    }
-    
-    
-    override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
+        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
     }
 }
