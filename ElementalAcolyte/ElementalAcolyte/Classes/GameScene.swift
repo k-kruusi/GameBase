@@ -16,7 +16,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var starfield:SKEmitterNode!
     
-    private let player = Acolyte()
+    private let player = Acolyte(element: AcolyteElement.Netural)
     //private let element = Element(type: ElementType.Lightning)
     private var spawnManager: SpawnManager?
     private var elements: [Element] = []

@@ -9,10 +9,18 @@
 import Foundation
 import SpriteKit
 
+enum AcolyteElement: UInt32{
+    case Fire = 0
+    case Water = 1
+    case Lightning = 2
+    case Netural = 3
+}
 class Acolyte: GameObject {
     private static let acolyteZposOffset: CGFloat = 1000
+    let element: AcolyteElement
     
-    init(){
+    init(element: AcolyteElement){
+        self.element = element
         super.init(imageName: "shuttle")
         self.zPosition = self.zPosition + Acolyte.acolyteZposOffset
         self.zRotation = CGFloat(-Double.pi / 2)

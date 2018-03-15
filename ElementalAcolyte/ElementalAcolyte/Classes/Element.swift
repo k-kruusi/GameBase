@@ -46,7 +46,5 @@ class Element: GameObject {
             return
         }*/
         position = position.travel(inDirection: vel!, atVelocity: elementSpeed, for: deltaTime)
-        
-        print (position)
     }
 }
