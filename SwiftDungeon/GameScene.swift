@@ -12,7 +12,6 @@ import GameplayKit
 class GameScene: SKScene {
     
     var gameManager: GameManager?
-    var joystick: Joystick?
     
     var stickActive:Bool = false
     
@@ -22,30 +21,23 @@ class GameScene: SKScene {
         gameManager = GameManager()
         gameManager?.scene = self
         gameManager?.StartGame(size: size)
-        
-        joystick = Joystick()
-        joystick?.scene = self
-        joystick?.Start()
     }
     
     override func update(_ currentTime: TimeInterval) {
         super.update(currentTime)
-        if((gameManager?.player.position.x)! > CGFloat(800))
-        {
-            
-        }
-        
-        gameManager?.player.update(currentTime)
-        
-        gameManager?.player.SetDirection(dir: (joystick?.dirVector)!)
+      
+        gameManager?.update(currentTime)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let location = touch.location(in: self)
             
-            joystick?.OnBegin(loc: location)
+            gameManager?.joystick?.OnBegin(loc: location)
             
+            if (gameManager?.attackButton?.OnClick(loc: location))! {
+                gameManager?.player.attack()
+            }
         }
     }
     
@@ -53,12 +45,12 @@ class GameScene: SKScene {
         for touch in touches {
             let location = touch.location(in: self)
             
-            joystick?.OnMoved(loc: location)
+            gameManager?.joystick?.OnMoved(loc: location)
         }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        joystick?.OnEnded()
+        gameManager?.joystick?.OnEnded()
     }
     
 }

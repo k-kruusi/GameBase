@@ -12,8 +12,8 @@ import SpriteKit
 class Joystick {
 
     //Joystick sprites
-    let joystick = SKSpriteNode(imageNamed: "slime_idle_01")
-    let joystickBase = SKSpriteNode(imageNamed: "slime_idle_02")
+    let joystickBase = SKSpriteNode(imageNamed: "joystick_arrows")
+    let joystick = SKSpriteNode(imageNamed: "joystick_arrows")
     //Check for active
     var stickActive:Bool = false
     //Weak ref to scene
@@ -26,14 +26,16 @@ class Joystick {
     init() {
     }
     
-    func Start() {
+    func Start(size:CGSize) {
+        //Set alpha of the base to 0 so that only the joystick ball is visible
         scene?.addChild(joystickBase)
-        joystickBase.position = CGPoint(x:400, y:400)
-        joystickBase.setScale(4)
+        joystickBase.position = CGPoint(x: 400, y: 400)
+        joystickBase.alpha = 0
         
         scene?.addChild(joystick)
         joystick.position = joystickBase.position
-        joystick.setScale(4)
+        joystick.alpha = 0.5
+        joystickBase.zPosition = CGFloat(10)
     }
 
     func OnBegin(loc:CGPoint) {
