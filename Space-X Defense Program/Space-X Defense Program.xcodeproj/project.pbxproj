@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		672CDCCA20602FC90009B88F /* StructValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672CDCC920602FC90009B88F /* StructValues.swift */; };
+		672CDCCC20603BE80009B88F /* CGPoint+VectorMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672CDCCB20603BE80009B88F /* CGPoint+VectorMath.swift */; };
 		67366C2220508AA200A0E87D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67366C2120508AA200A0E87D /* AppDelegate.swift */; };
 		67366C2820508AA200A0E87D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67366C2720508AA200A0E87D /* GameScene.swift */; };
 		67366C2A20508AA200A0E87D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67366C2920508AA200A0E87D /* GameViewController.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		672CDCC920602FC90009B88F /* StructValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructValues.swift; sourceTree = "<group>"; };
+		672CDCCB20603BE80009B88F /* CGPoint+VectorMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+VectorMath.swift"; sourceTree = "<group>"; };
 		67366C1E20508AA200A0E87D /* Space-X Defense Program.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Space-X Defense Program.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67366C2120508AA200A0E87D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67366C2720508AA200A0E87D /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -112,9 +116,11 @@
 				67366C2E20508AA200A0E87D /* Assets.xcassets */,
 				67366C3020508AA200A0E87D /* LaunchScreen.storyboard */,
 				67366C3320508AA200A0E87D /* Info.plist */,
-				67405B392057032100CB5CB1 /* Player.swift */,
 				67405B3B205704B500CB5CB1 /* GameObject.swift */,
+				67405B392057032100CB5CB1 /* Player.swift */,
 				67405B3D2057380700CB5CB1 /* Projectile.swift */,
+				672CDCC920602FC90009B88F /* StructValues.swift */,
+				672CDCCB20603BE80009B88F /* CGPoint+VectorMath.swift */,
 			);
 			path = "Space-X Defense Program";
 			sourceTree = "<group>";
@@ -272,11 +278,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				67405B3E2057380700CB5CB1 /* Projectile.swift in Sources */,
+				672CDCCA20602FC90009B88F /* StructValues.swift in Sources */,
 				67405B3A2057032100CB5CB1 /* Player.swift in Sources */,
 				67366C2820508AA200A0E87D /* GameScene.swift in Sources */,
 				67366C2A20508AA200A0E87D /* GameViewController.swift in Sources */,
 				67366C2220508AA200A0E87D /* AppDelegate.swift in Sources */,
 				67405B3C205704B500CB5CB1 /* GameObject.swift in Sources */,
+				672CDCCC20603BE80009B88F /* CGPoint+VectorMath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
