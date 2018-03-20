@@ -30,9 +30,11 @@ class Player: GameObject {
         fatalError("init(coder:) has not been implemented")
     }
     
-    /// update method to inject updates into the crazy catlady during the game loop
-    ///
-    /// - Parameter currentTime: the current time
+    func posY () -> CGFloat
+    {
+        return position.y
+    }
+    
     override func update(_ currentTime: TimeInterval) {
         
         // in order to use the functionality provided in GameObject we need to call super here

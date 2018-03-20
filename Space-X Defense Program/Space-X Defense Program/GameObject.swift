@@ -65,4 +65,10 @@ class GameObject: SKSpriteNode {
         
         return colliders
     }
+    
+    func cleanUp() {
+        
+        removeFromParent()
+    }
+    
 }
