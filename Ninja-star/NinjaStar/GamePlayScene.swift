@@ -14,49 +14,48 @@ class GamePlayScene: SKScene {
    private var label : SKLabelNode?
    private var spinnyNode : SKShapeNode?
    
-   // Buttons
-   var PlayGameLabel = SKLabelNode()
-   
    //create the ninja
-   var ninja: Ninja?
+   private let ninja = Ninja()
+   
+   //background
+   private let background = SKSpriteNode(imageNamed: "GameBackground")
+   
+   //Ground
+   private let ground = SKSpriteNode()
    
    override func didMove(to view: SKView) {
-      //create the play game label
-      PlayGameLabel = CreateLabel(position: CGPoint(x: 200, y: 200), name: "Play Game", fontsize: 45, color: UIColor.white)
-      self.addChild(PlayGameLabel)
-      //set the ninja in the scene to the ninja class
-      if (self.childNode(withName: "Player") as? SKSpriteNode != nil)
-      {
-         let temp: SKSpriteNode = (self.childNode(withName: "Player") as? SKSpriteNode)!
-         ninja = Ninja(skspritenode: temp)
-         ninja?.physicsBody?.isDynamic = false
-         if(ninja?.physicsBody?.isDynamic == false){
-            print("that worked Kappa")
-         }
-      }else{
-         print ("That failed")
-      }
+      super.didMove(to: view)
       
-      // Get label node from scene and store it for use later
-      self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
-      if let label = self.label {
-         label.alpha = 0.0
-         label.run(SKAction.fadeIn(withDuration: 2.0))
-      }
       
-      // Create shape node to use during mouse interaction
-      let w = (self.size.width + self.size.height) * 0.05
-      self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
+      //set the ninja  position in the scene
+      ninja.position = CGPoint(x: 100, y: 100)
       
-      if let spinnyNode = self.spinnyNode {
-         spinnyNode.lineWidth = 2.5
-         
-         spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
-         spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
-                                           SKAction.fadeOut(withDuration: 0.5),
-                                           SKAction.removeFromParent()]))
-      }
+      //set-up the background position and size to fill the window
+      backgroundColor = SKColor.black
+      background.zPosition = -1
+      background.size.width = UIScreen.main.bounds.size.width
+      background.size.height = UIScreen.main.bounds.size.height
+      addChild(background)
+      
+      //Set-up the ground so that the player does not fall through the ground. Also place it on the same zposition as the player
+      ground.color = UIColor.clear
+      ground.zPosition = 1
+      let sizeOfGround = CGSize(width: UIScreen.main.bounds.size.width, height: 1)
+      ground.size.width = sizeOfGround.width
+      ground.size.height = sizeOfGround.height
+      ground.position.y = -100
+      ground.physicsBody = SKPhysicsBody(rectangleOf: sizeOfGround)
+      ground.physicsBody?.affectedByGravity = false
+      ground.physicsBody?.isDynamic = false
+      addChild(ground)
+      //add ninja as a child of the scene
+      addChild(ninja)
+      ninja.zPosition = 1
+      ninja.position = CGPoint(x: 0, y: 0)
    }
+   
+   
+   
    //Create label function
    func CreateLabel(position: CGPoint, name: String, fontsize: CGFloat, color: UIColor) ->SKLabelNode{
       let Label = SKLabelNode(text: name)
@@ -99,14 +98,7 @@ class GamePlayScene: SKScene {
       
       //when the user clicks on Play Game, Switch to game scene
       for touch in touches {
-         let location = touch.location(in: self)
-         if PlayGameLabel.contains(location){
-            let gameScene = GameScene(fileNamed: "GamePlayScene")!
-            gameScene.scaleMode = .resizeFill
-            let myTransition = SKTransition.moveIn(with: .up, duration: 1.0)
-            self.view?.presentScene(gameScene, transition: myTransition)
-            
-         }
+         // let location = touch.location(in: self)
       }
    }
    

@@ -22,7 +22,7 @@ import SpriteKit
 
 
 
-class Ninja: SKSpriteNode{
+class Ninja: SKSpriteNode {
    //the ninja animations
    var NinjaFrames: [SKTexture]?
    
@@ -49,8 +49,37 @@ class Ninja: SKSpriteNode{
    
    var playerPos: CGVector
    
-   //init the variables
+   //store time interval and last update time so that we can update the ninja object
+   var deltaTime: TimeInterval = 0.0
+   private var lastUpdateTime: TimeInterval?
    
+   
+   //default init override
+   init() {
+      let texture = SKTexture(imageNamed: "Idle__000")
+      //GameObject.zCounter = GameObject.zCounter + 1
+      run = true
+      sprint = false
+      shurOrientaion = CGVector(dx: 1.0, dy: 1.0)
+      playerPos = CGVector(dx: 1.0, dy: 1.0)
+      let boxSize: CGSize = CGSize(width: texture.size().width/5, height: texture.size().height/5)
+      super.init(texture: texture, color: .clear, size: boxSize)
+      
+      //Set Up the Physics for the Player.
+      self.physicsBody = SKPhysicsBody(rectangleOf: boxSize)
+      self.physicsBody?.affectedByGravity = true
+      if let physics = physicsBody {
+         physics.affectedByGravity = true
+         physics.allowsRotation = false
+         physics.isDynamic = true
+         physics.usesPreciseCollisionDetection = true
+         physics.linearDamping = 0.8
+         physics.angularDamping = 0.8
+      }
+      
+   }
+   
+   //init the variables
    override init(texture: SKTexture!, color: SKColor!, size: CGSize) {
       
       sprint = false
@@ -62,10 +91,22 @@ class Ninja: SKSpriteNode{
       
       //set a name to thePlayer
       name = "Ninja"
-      
       speed = 5
       
-      //run = true
+      
+   }
+   
+   //Update
+   func update(_ currentTime: TimeInterval) {
+      guard let lastUpdateTime = lastUpdateTime else {
+         self.lastUpdateTime = currentTime
+         return
+      }
+      
+      // calculating delta time
+      deltaTime = currentTime - lastUpdateTime
+      
+      self.lastUpdateTime = currentTime
    }
    
    //run animation
