@@ -36,17 +36,17 @@ enum KidType {
     var speed: CGFloat{
         switch self {
         case .Kid1:
-            return 1
-        case .Kid2:
             return 2
+        case .Kid2:
+            return 3
         case .Kid3:
-            return 1
+            return 2
         case .Kid4:
-            return 4
+            return 5
         case .Kid5:
             return 3
         default:
-            return 1
+            return 2
         }
     }
     
@@ -73,7 +73,11 @@ class Kid: SKSpriteNode
 {
     var type: KidType
     
-    let unitVector = CGPoint(x: 0, y:-5)
+    var movementSpeed = CGPoint(x: 0, y:-1)
+    
+    var collided = Bool(false);
+    
+    var topOfScreen = CGPoint(x:0, y:0)
     
     
     init(KidType: KidType) {
@@ -90,7 +94,32 @@ class Kid: SKSpriteNode
     }
     
     func updateKids(){
-        position = CGPoint (x: position.x + (unitVector.x), y: position.y + (unitVector.y))
+        position = CGPoint (x: position.x + (speed * movementSpeed.x), y: position.y + (speed * movementSpeed.y))
+        
+    }
+    
+    func reverseDirection() -> Bool {
+        if (!collided){
+            collided = true;
+            movementSpeed = CGPoint(x: movementSpeed.x * -1, y: movementSpeed.y * -1);
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func deleteIfOffscreen() -> Bool {
+        if (collided && position.y > topOfScreen.y){
+            return true
+        }
+        return false
+    }
+    
+    func speedMultiplier(mod: Int){
+        if (mod > 10){
+            let newMod = mod / 10
+            speed *= CGFloat(newMod)
+        }
     }
     
 }

@@ -18,6 +18,7 @@
 		C46E12412047513B00F4E33A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C46E123F2047513B00F4E33A /* LaunchScreen.storyboard */; };
 		C46E124C2047513B00F4E33A /* ItsRainingKidsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E124B2047513B00F4E33A /* ItsRainingKidsTests.swift */; };
 		C46E12572047513B00F4E33A /* ItsRainingKidsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E12562047513B00F4E33A /* ItsRainingKidsUITests.swift */; };
+		C4B32A462061874F00DA6681 /* Trampoline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B32A452061874F00DA6681 /* Trampoline.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		C46E12522047513B00F4E33A /* ItsRainingKidsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ItsRainingKidsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46E12562047513B00F4E33A /* ItsRainingKidsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItsRainingKidsUITests.swift; sourceTree = "<group>"; };
 		C46E12582047513B00F4E33A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4B32A452061874F00DA6681 /* Trampoline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trampoline.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				C46E123D2047513B00F4E33A /* Assets.xcassets */,
 				C46E123F2047513B00F4E33A /* LaunchScreen.storyboard */,
 				C46E12422047513B00F4E33A /* Info.plist */,
+				C4B32A452061874F00DA6681 /* Trampoline.swift */,
 			);
 			path = ItsRainingKids;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				C46E12312047513B00F4E33A /* AppDelegate.swift in Sources */,
 				0C20AFE72059911100463EC2 /* KidFactory.swift in Sources */,
 				0C20AFE82059911100463EC2 /* SpawnManager.swift in Sources */,
+				C4B32A462061874F00DA6681 /* Trampoline.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

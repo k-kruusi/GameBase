@@ -34,7 +34,7 @@ class KidFactory {
         
         guard let sType = specificType else {
             let rand = Int(arc4random_uniform(5))
-            print(rand)
+            //print(rand)
             let randKidType = KidType(value: rand)!
             return GenerateKid(randKidType)
         }
