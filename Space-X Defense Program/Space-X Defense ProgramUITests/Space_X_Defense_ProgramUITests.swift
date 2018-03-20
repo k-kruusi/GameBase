@@ -2,7 +2,7 @@
 //  Space_X_Defense_ProgramUITests.swift
 //  Space-X Defense ProgramUITests
 //
-//  Created by Su Haifeng on 3/7/18.
+//  Created by Su Haifeng and Favero Miguel on 3/7/18.
 //  Copyright © 2018 Su Haifeng. All rights reserved.
 //
 
@@ -32,5 +32,4 @@ class Space_X_Defense_ProgramUITests: XCTestCase {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-    
 }

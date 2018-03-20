@@ -2,8 +2,9 @@
 //  CGPoint+VectorMath.swift
 //  Space-X Defense Program
 //
-//  Created by Su Haifeng on 3/19/18.
-//  Copyright © 2018 Su Haifeng. All rights reserved.
+//  File Created by Favero Miguel Fernando on 3/13/18.
+//
+//  Code by Kevin, taken from class lab
 //
 
 import SpriteKit
@@ -18,7 +19,7 @@ extension CGPoint {
     
     /// get the unit vector of self
     var asUnitVector: CGPoint {
-        return divide(by: length)
+       return divide(by: length)
     }
     
     /// divide self by a scalar
@@ -26,7 +27,7 @@ extension CGPoint {
     /// - Parameter by: a CGFloat scalar number
     /// - Returns: the divided point
     func divide(by: CGFloat) -> CGPoint {
-        return CGPoint(x: self.x / by, y: y / by)
+         return CGPoint(x: self.x / by, y: y / by)
     }
     
     /// Simple movement function that starts where you currently are
@@ -36,7 +37,7 @@ extension CGPoint {
     ///   - velocity: the velocity you wish to travel
     ///   - time: the time you wish to travel
     /// - Returns: the distance you traveled from where you currently are
-    func travel(in direction: CGPoint, at velocity: CGFloat, for time: TimeInterval) -> CGPoint {
+    func travel(inDirection direction: CGPoint, atVelocity velocity: CGFloat, for time: TimeInterval) -> CGPoint {
         return CGPoint(x: velocity * CGFloat(time) * direction.x + x, y: velocity * CGFloat(time) * direction.y + y)
     }
     
@@ -53,7 +54,7 @@ extension CGPoint {
     static func * (left: CGPoint, right: CGFloat) -> CGPoint {
         return CGPoint(x: left.x * right, y: left.y * right)
     }
-    
+  
     /// subtract one CGPoint from another
     ///
     /// - Parameters:
@@ -63,7 +64,7 @@ extension CGPoint {
     static func - (left: CGPoint, right: CGPoint) -> CGPoint {
         return CGPoint(x: left.x - right.x, y: left.y - right.y)
     }
-    
+  
     /// A simple check to see if you have reached your target by compairing direction vectors
     ///
     /// - Parameter target: the next iteration of your target direction

@@ -2,7 +2,7 @@
 //  GameScene.swift
 //  Space-X Defense Program
 //
-//  Created by Su Haifeng on 3/7/18.
+//  Created by Su Haifeng and Favero Miguel on 3/7/18.
 //  Copyright © 2018 Su Haifeng. All rights reserved.
 //
 
@@ -21,8 +21,12 @@ class GameScene: SKScene {
     var gameTimer: Timer!                                                               //timer for repeating functions
     var projectileTimer: Timer!                                                         //timer for projectile spawning
     
+    private var spawnManager: EnemySpawnManager?
+    private var planes: [EnemyPlane] = []
+    
     override func didMove(to view: SKView) {
-        
+        super.didMove(to: view)
+              
         backgroundColor = SKColor.black                                                 //defaulted colored to black for the background
         background.zPosition = Values.bgZPOS                                            //depth of background, -1 makes it go behind other 2D elements
         background.position = CGPoint(x: size.width / 2, y: size.height / 2 )           //centering the background images
@@ -32,17 +36,6 @@ class GameScene: SKScene {
         addChild(player)                                                                //adding the spaceship to the scene
         player.position = Values.playerStartPosition                                    //positioning the spaceship to spawn on the centre of the leftmost corner
         player.setScale(Values.playerScale)                                             //scale the spaceship down
-        
-        
-        
-        
-        
-        // Get label node from scene and store it for use later
-        /*self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
-        if let label = self.label {
-            label.alpha = 0.0
-            label.run(SKAction.fadeIn(withDuration: 2.0))
-        }*/
         
         // Create shape node to use during mouse interaction
         let w = (self.size.width + self.size.height) * 0.02
@@ -56,17 +49,11 @@ class GameScene: SKScene {
                                               SKAction.fadeOut(withDuration: 0.2),                             //0.5 default
                                               SKAction.removeFromParent()]))
         }
-        
-        
-        //Spawning the projectiles
-        /*run(SKAction.repeatForever(
-            SKAction.sequence([
-                SKAction.run(addProjectiles),
-                SKAction.wait(forDuration: 1.0)
-                ])
-        ))*/
+      
+        spawnManager = EnemySpawnManager(givenSpawnArea: CGRect(x: UIScreen.main.bounds.width / 2, y: -(UIScreen.main.bounds.height / 2) + 100, width: 50, height: UIScreen.main.bounds.height - 200), min: 0.5, max: 1)
+        spawnManager?.scene = self
     }
-    
+  
     //Mouse Interactions (On Touch)
     func touchDown(atPoint pos : CGPoint) {
         
@@ -149,15 +136,42 @@ class GameScene: SKScene {
         
     }
     
+    deinit {
+        planes = []
+    }
     
-    override func update(_ currentTime: TimeInterval) {
+    override func update(_ currentTime: TimeInterval)
+    {
         // Called before each frame is rendered
+        super.update(currentTime)
         
+        var toBeDeleted : [Int] = []
+      
         //limiting the spaceship from going too high and too low on the screen
         if(player.position.y < 120){player.position.y = 120}
         if(player.position.y > 1420){player.position.y = 1420}
+      
+        for plane in planes
+        {
+            plane.update(currentTime)
+        }
         
+        deletePlanes(toBeDeleted)
+        
+        guard let plane = spawnManager?.update(time: currentTime) else {
+            return
+        }
+        
+        planes.append(plane)
     }
     
-   
+    private func deletePlanes(_ planeIndexes: [Int])
+    {
+        let reversedIndexes = planeIndexes.reversed()
+        
+        for index in reversedIndexes
+        {
+            planes.remove(at: index)
+        }
+    }
 }

@@ -2,7 +2,8 @@
 //  AppDelegate.swift
 //  Space-X Defense Program
 //
-//  Created by Su Haifeng on 3/7/18.
+//
+//  Created by Su Haifeng and Favero Miguel on 3/7/18.
 //  Copyright © 2018 Su Haifeng. All rights reserved.
 //
 
