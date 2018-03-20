@@ -13,19 +13,22 @@ class GameScene: SKScene {
     
     private let background = SKSpriteNode(imageNamed: "background")
     private let player = Player()
-    
+    private var projectileList: [Projectile] = []
     
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
     
     var gameTimer: Timer!                                                               //timer for repeating functions
     var projectileTimer: Timer!                                                         //timer for projectile spawning
+    var enemyProjTimer: Timer!
+    var tempPlane: EnemyPlane!
     
     private var spawnManager: EnemySpawnManager?
     private var planes: [EnemyPlane] = []
+    private var enemyProjList: [Projectile] = []
     
     override func didMove(to view: SKView) {
-        super.didMove(to: view)
+       // super.didMove(to: view)
               
         backgroundColor = SKColor.black                                                 //defaulted colored to black for the background
         background.zPosition = Values.bgZPOS                                            //depth of background, -1 makes it go behind other 2D elements
@@ -50,17 +53,12 @@ class GameScene: SKScene {
                                               SKAction.removeFromParent()]))
         }
       
-        spawnManager = EnemySpawnManager(givenSpawnArea: CGRect(x: UIScreen.main.bounds.width / 2, y: -(UIScreen.main.bounds.height / 2) + 100, width: 50, height: UIScreen.main.bounds.height - 200), min: 0.5, max: 1)
+        spawnManager = EnemySpawnManager(givenSpawnArea: CGRect(x: self.size.width, y: self.size.height / 6, width: 50, height: self.size.height / 2), min: 0.5, max: 1)
         spawnManager?.scene = self
     }
   
     //Mouse Interactions (On Touch)
     func touchDown(atPoint pos : CGPoint) {
-        
-        
-        //addChild(projectiles)
-        //projectiles.position.x += 220
-        //projectiles.position.y = pos.y
         
     }
     
@@ -101,6 +99,7 @@ class GameScene: SKScene {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         gameTimer.invalidate()
+        projectileTimer.invalidate()
         
         for t in touches { self.touchUp(atPoint: t.location(in: self)) }
     }
@@ -111,67 +110,129 @@ class GameScene: SKScene {
     
     @objc func Thruster()
     {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position.y = player.position.y
-            n.strokeColor = SKColor.yellow
-            self.addChild(n)
-        }
+//        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
+//            n.position.y = player.position.y
+//            n.strokeColor = SKColor.yellow
+//            self.addChild(n)
+//        }
     }
     
     @objc func addProjectiles() {
         
         // Create projectiles
-        let Projectiles = Projectile()
+        let Projectiles = Projectile(type: ProjectileType.player)
         
         // Determine where to spawn the monster along the Y axis
         Projectiles.position = CGPoint(x: 220, y: player.position.y)
+        Projectiles.vel = CGPoint(x: 1, y: 0)
         
         // Add the projectiles to the scene
         addChild(Projectiles)
         
         // Create the actions
-        let actionMove = SKAction.move(to: CGPoint(x: 2500, y: player.position.y), duration: TimeInterval(Values.actualDuration))
-        let actionMoveDone = SKAction.removeFromParent()
-        Projectiles.run(SKAction.sequence([actionMove, actionMoveDone]))
+        //let actionMove = SKAction.move(to: CGPoint(x: 2500, y: player.position.y), duration: TimeInterval(Values.actualDuration))
+        //let actionMoveDone = SKAction.removeFromParent()
+        //Projectiles.run(SKAction.sequence([actionMove, actionMoveDone]))
         
+        projectileList.append(Projectiles)
+    }
+    
+    @objc func addEnemyProjectiles() {
+        
+        // Create projectiles
+        let projectiles = Projectile(type: ProjectileType.enemy)
+        
+        // Determine where to spawn the monster along the Y axis
+        projectiles.position = CGPoint(x: tempPlane.position.x, y: tempPlane.position.y)
+        projectiles.vel = CGPoint(x: -1, y: 0)
+        
+        // Add the projectiles to the scene
+        addChild(projectiles)
+        
+        enemyProjList.append(projectiles)
     }
     
     deinit {
         planes = []
+        projectileList = []
+        enemyProjList = []
     }
     
     override func update(_ currentTime: TimeInterval)
     {
         // Called before each frame is rendered
-        super.update(currentTime)
-        
-        var toBeDeleted : [Int] = []
+        //super.update(currentTime)
       
         //limiting the spaceship from going too high and too low on the screen
         if(player.position.y < 120){player.position.y = 120}
         if(player.position.y > 1420){player.position.y = 1420}
-      
+        
+        for projectile in projectileList
+        {
+            projectile.update(currentTime)
+            
+            if projectile.position.x > 2100
+            {
+                projectile.cleanUp()
+                projectileList.remove(at: projectileList.index(of: projectile)!)
+            }
+        }
+        
+        for projectile in enemyProjList
+        {
+            projectile.update(currentTime)
+            
+            if projectile.position.x < 0
+            {
+                projectile.cleanUp()
+                enemyProjList.remove(at: enemyProjList.index(of: projectile)!)
+            }
+            
+            let playerPlane = projectile.collision(items: [player]).first
+            
+            if let _ = playerPlane
+            {
+                player.cleanUp()
+                
+                projectile.cleanUp()
+                enemyProjList.remove(at: enemyProjList.index(of: projectile)!)
+            }
+        }
+        
         for plane in planes
         {
             plane.update(currentTime)
+            
+            if plane.type == EnemyPlaneType.smarter && plane.canShoot == true
+            {
+                plane.canShoot = false;
+                enemyProjTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(addEnemyProjectiles) , userInfo: nil, repeats: false)
+                tempPlane = plane
+            }
+            
+            for projectile in projectileList
+            {
+                let proj = plane.collision(items: [projectile]).first
+                
+                if let _ = proj
+                {
+                    plane.cleanUp()
+                    projectile.cleanUp()
+                    
+                    planes.remove(at: planes.index(of: plane)!)
+                    projectileList.remove(at: projectileList.index(of: projectile)!)
+                }
+            }
         }
         
-        deletePlanes(toBeDeleted)
-        
-        guard let plane = spawnManager?.update(time: currentTime) else {
-            return
-        }
-        
-        planes.append(plane)
-    }
-    
-    private func deletePlanes(_ planeIndexes: [Int])
-    {
-        let reversedIndexes = planeIndexes.reversed()
-        
-        for index in reversedIndexes
+        if(planes.count < 5)
         {
-            planes.remove(at: index)
+            guard let plane = spawnManager?.update(time: currentTime) else {
+                return
+            }
+        
+            planes.append(plane)
         }
+        
     }
 }

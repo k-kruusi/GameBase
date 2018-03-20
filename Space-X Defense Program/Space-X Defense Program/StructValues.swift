@@ -18,7 +18,7 @@ extension GameScene {
         static let bgScale : CGFloat = 1.43
         
         //Spaceship (Player)
-        static let playerStartPosition = CGPoint(x: 220, y: 400)
+        static let playerStartPosition = CGPoint(x: 220, y: 700)
         static let playerScale : CGFloat = 0.6
         
         //Projectiles
