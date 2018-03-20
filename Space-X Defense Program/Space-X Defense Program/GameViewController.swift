@@ -2,8 +2,8 @@
 //  GameViewController.swift
 //  Space-X Defense Program
 //
-//  Created by Favero Miguel Fernando on 3/13/18.
-//  Copyright © 2018 Miguel Haifeng. All rights reserved.
+//  Created by Su Haifeng and Favero Miguel on 3/7/18.
+//  Copyright © 2018 Su Haifeng. All rights reserved.
 //
 
 import UIKit
@@ -24,8 +24,6 @@ class GameViewController: UIViewController {
                 // Present the scene
                 view.presentScene(scene)
             }
-            
-            view.ignoresSiblingOrder = true
             
             view.showsFPS = true
             view.showsNodeCount = true
@@ -48,7 +46,6 @@ class GameViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
-
     override var prefersStatusBarHidden: Bool {
         return true
     }

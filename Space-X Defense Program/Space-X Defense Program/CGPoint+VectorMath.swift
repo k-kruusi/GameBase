@@ -6,7 +6,6 @@
 //
 //  Code by Kevin, taken from class lab
 //
-//
 
 import SpriteKit
 
@@ -52,6 +51,10 @@ extension CGPoint {
         return CGPoint(x: left.x + right.x, y: left.y + right.y)
     }
     
+    static func * (left: CGPoint, right: CGFloat) -> CGPoint {
+        return CGPoint(x: left.x * right, y: left.y * right)
+    }
+  
     /// subtract one CGPoint from another
     ///
     /// - Parameters:
@@ -60,5 +63,24 @@ extension CGPoint {
     /// - Returns: the result
     static func - (left: CGPoint, right: CGPoint) -> CGPoint {
         return CGPoint(x: left.x - right.x, y: left.y - right.y)
+    }
+  
+    /// A simple check to see if you have reached your target by compairing direction vectors
+    ///
+    /// - Parameter target: the next iteration of your target direction
+    /// - Returns: true or false you your target vector has mutated in another direction
+    func didOvershoot(next target: CGPoint) -> Bool {
+        if (self.x > 0) == (target.x > 0) && (self.y > 0) == (target.y > 0) {
+            return true
+        }
+        return false
+    }
+    
+    /// Returns the facing angle of a given direction in radians
+    ///
+    /// - Parameter direction: the direction you wish to point
+    /// - Returns: the angel in radians
+    static func facingAngle(_ direction: CGPoint) -> CGFloat {
+        return CGFloat( atan2( Double(direction.y), Double(direction.x)))
     }
 }

@@ -2,8 +2,8 @@
 //  Space_X_Defense_ProgramTests.swift
 //  Space-X Defense ProgramTests
 //
-//  Created by Favero Miguel Fernando on 3/13/18.
-//  Copyright © 2018 Miguel Haifeng. All rights reserved.
+//  Created by Su Haifeng and Favero Miguel on 3/7/18.
+//  Copyright © 2018 Su Haifeng. All rights reserved.
 //
 
 import XCTest
@@ -32,5 +32,4 @@ class Space_X_Defense_ProgramTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    
 }

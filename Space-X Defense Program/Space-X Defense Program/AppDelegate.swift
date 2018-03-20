@@ -2,8 +2,9 @@
 //  AppDelegate.swift
 //  Space-X Defense Program
 //
-//  Created by Favero Miguel Fernando on 3/13/18.
-//  Copyright © 2018 Miguel Haifeng. All rights reserved.
+//
+//  Created by Su Haifeng and Favero Miguel on 3/7/18.
+//  Copyright © 2018 Su Haifeng. All rights reserved.
 //
 
 import UIKit
