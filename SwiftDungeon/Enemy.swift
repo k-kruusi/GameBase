@@ -12,7 +12,7 @@ import SpriteKit
 class Enemy : Entity {
     
     //Speed of Enemy
-    private var velocity: CGFloat = 100
+    private var velocity: CGFloat = 50
     
     // Position of target to chase
     private var targetPosition: CGPoint = CGPoint(x: 0, y: 0)
@@ -25,11 +25,20 @@ class Enemy : Entity {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func SetTarget(_ position: CGPoint) {
+    func setTarget(_ position: CGPoint) {
         targetPosition = position
     }
     
-    func MoveToTarget() {
+    func moveToTarget() {
+        let direction = CGPoint(x: targetPosition.x - position.x, y: targetPosition.y - position.y)
+        
+        if(direction.x > 0) {
+            xScale = -5
+        }
+        else if (direction.x < 0) {
+            xScale = 5
+        }
+        
         if(position.x > targetPosition.x) {
             position = CGPoint(x: position.x - (velocity * CGFloat(deltaTime)), y: position.y)
         }
@@ -48,7 +57,7 @@ class Enemy : Entity {
     override func update(_ currentTime: TimeInterval) {
         super.update(currentTime)
         
-        MoveToTarget()
+        moveToTarget()
     }
     
 }

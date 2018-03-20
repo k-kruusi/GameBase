@@ -22,11 +22,8 @@ class Joystick {
     var dirVector:CGPoint = CGPoint(x:0, y:0)
     var xDist:CGFloat = 0
     var yDist:CGFloat = 0
-
-    init() {
-    }
     
-    func Start(size:CGSize) {
+    func start(size:CGSize) {
         //Set alpha of the base to 0 so that only the joystick ball is visible
         scene?.addChild(joystickBase)
         joystickBase.position = CGPoint(x: 400, y: 400)
@@ -38,7 +35,7 @@ class Joystick {
         joystickBase.zPosition = CGFloat(10)
     }
 
-    func OnBegin(loc:CGPoint) {
+    func onBegin(loc:CGPoint) {
         if (joystick.frame.contains(loc)) {
             stickActive = true
         }
@@ -47,14 +44,11 @@ class Joystick {
         }
     }
     
-    func OnMoved(loc:CGPoint) {
+    func onMoved(loc:CGPoint) {
         if (stickActive) {
             //Finding the direction and angle of the gesture
             let v = CGVector(dx: loc.x - joystickBase.position.x, dy: loc.y - joystickBase.position.y)
             let angle = atan2(v.dy, v.dx)
-            
-            //Conversion to degrees
-            let deg = angle * CGFloat(180 / Double.pi)
             
             //How far the joystick can move out from the base
             let length:CGFloat = joystickBase.frame.size.height / 2
@@ -76,7 +70,7 @@ class Joystick {
         }
     }
     
-    func OnEnded() {
+    func onEnded() {
         //Reset the joystick's position back to the joystickBase's position after the touch event has ended
         if (stickActive) {
             let move:SKAction = SKAction.move(to: joystickBase.position, duration: 0.2)

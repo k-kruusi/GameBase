@@ -20,12 +20,11 @@ class GameScene: SKScene {
         backgroundColor = #colorLiteral(red: 0.1631777585, green: 0.1484030187, blue: 0.2081771195, alpha: 1)
         gameManager = GameManager()
         gameManager?.scene = self
-        gameManager?.StartGame(size: size)
+        gameManager?.startGame(size: size)
     }
     
     override func update(_ currentTime: TimeInterval) {
         super.update(currentTime)
-      
         gameManager?.update(currentTime)
     }
     
@@ -33,9 +32,9 @@ class GameScene: SKScene {
         for touch in touches {
             let location = touch.location(in: self)
             
-            gameManager?.joystick?.OnBegin(loc: location)
+            gameManager?.joystick?.onBegin(loc: location)
             
-            if (gameManager?.attackButton?.OnClick(loc: location))! {
+            if (gameManager?.attackButton?.onClick(loc: location))! {
                 gameManager?.player.attack()
             }
         }
@@ -45,12 +44,12 @@ class GameScene: SKScene {
         for touch in touches {
             let location = touch.location(in: self)
             
-            gameManager?.joystick?.OnMoved(loc: location)
+            gameManager?.joystick?.onMoved(loc: location)
         }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        gameManager?.joystick?.OnEnded()
+        gameManager?.joystick?.onEnded()
     }
     
 }

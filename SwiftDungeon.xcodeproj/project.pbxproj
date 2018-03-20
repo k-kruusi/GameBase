@@ -22,6 +22,7 @@
 		7F91730920475AE80076533D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F91730720475AE80076533D /* LaunchScreen.storyboard */; };
 		7F91731420475AE90076533D /* SwiftDungeonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F91731320475AE90076533D /* SwiftDungeonTests.swift */; };
 		7F91731F20475AE90076533D /* SwiftDungeonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F91731E20475AE90076533D /* SwiftDungeonUITests.swift */; };
+		7FADDD6A20619D170065E94A /* EnemyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FADDD6920619D170065E94A /* EnemyFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		7F91731A20475AE90076533D /* SwiftDungeonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDungeonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F91731E20475AE90076533D /* SwiftDungeonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDungeonUITests.swift; sourceTree = "<group>"; };
 		7F91732020475AE90076533D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FADDD6920619D170065E94A /* EnemyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				432CF1A7205875CD0022D1DF /* Joystick.swift */,
 				439FEAA92060378200F35A8B /* AttackButton.swift */,
 				7F5E88A620604FCA00338F72 /* Enemy.swift */,
+				7FADDD6920619D170065E94A /* EnemyFactory.swift */,
 			);
 			path = SwiftDungeon;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			files = (
 				7F3426542056EE130057A2EF /* Map.swift in Sources */,
 				432CF1A8205875CD0022D1DF /* Joystick.swift in Sources */,
+				7FADDD6A20619D170065E94A /* EnemyFactory.swift in Sources */,
 				7F9172FF20475AE80076533D /* GameScene.swift in Sources */,
 				7F3426522056EDF80057A2EF /* GameManager.swift in Sources */,
 				432CF1A4205861AD0022D1DF /* Entity.swift in Sources */,

@@ -11,8 +11,9 @@ import SpriteKit
 
 class Map : SKSpriteNode {
     
-    var enemySpawns:[CGPoint] = [CGPoint(x: 800, y: 800), CGPoint(x: 700, y: 700), CGPoint(x: 900, y: 900), CGPoint(x: 900, y: 900), CGPoint(x: 900, y: 900)]
-    var playerSpawn = CGPoint(x: 100, y: 300)
+    var playerSpawn = CGPoint(x: 200, y: 650)
+    
+    var enemySpawns:[CGPoint] = [CGPoint(x: 900, y: 800), CGPoint(x: 1000, y: 700), CGPoint(x: 1100, y: 900), CGPoint(x: 1200, y: 900), CGPoint(x: 1300, y: 900)]
     
     init() {
         let texture = SKTexture(imageNamed: "map")

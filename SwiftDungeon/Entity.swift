@@ -47,8 +47,7 @@ class Entity : SKSpriteNode {
                     colliders.append(item)
                 }
             }
-        }
-        
+        }        
         return colliders
     }
     

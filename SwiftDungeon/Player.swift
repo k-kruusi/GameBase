@@ -19,10 +19,16 @@ class Player : Entity {
     private var textureAnimation: [SKTexture] = []
     //Check if already animating (Prevent spamming)
     var isAnimating:Bool = false
+    //Check if attacking
+    var isAttacking:Bool = false
+    //Check if dead
+    var isDead:Bool = false
     //SKAction for animation
     var animationAction:SKAction = SKAction()
     //Timer for animation
     var animTimer:Double = 0
+    //Health
+    var health:Int = 10
     
     init() {
         super.init(imageName: "rogue_idle_01")
@@ -35,9 +41,22 @@ class Player : Entity {
     
     override func update(_ currentTime: TimeInterval) {
         super.update(currentTime)
+        
+        if (isDead) {
+            return
+        }
+        
         if (direction.x != 0 || direction.y != 0) {
             moveTo()
         }
+        
+        if(direction.x > 0) {
+            xScale = -5
+        }
+        else if (direction.x < 0) {
+            xScale = 5
+        }
+        
         position.x -= velocity * direction.x * CGFloat(deltaTime)
         position.y += velocity * direction.y * CGFloat(deltaTime)
         
@@ -47,10 +66,11 @@ class Player : Entity {
             animTimer += deltaTime
             if (animTimer > animationAction.duration) {
                 isAnimating = false
+                isAttacking = false
                 animTimer = 0
             }
         }
-
+        
     }
     
     //Idle animation
@@ -75,6 +95,7 @@ class Player : Entity {
     //Attack animation/action
     func attack() {
         if (!isAnimating) {
+            isAttacking = true
             isAnimating = true
             textureAnimation = [SKTexture(imageNamed: "rogue_attack_01"),
                                 SKTexture(imageNamed: "rogue_attack_02"),
@@ -91,6 +112,7 @@ class Player : Entity {
             animationAction = SKAction.animate(with: textureAnimation, timePerFrame: 0.08)
             self.run(animationAction)
         }
+        
     }
     
     //Move animation/action
@@ -113,7 +135,43 @@ class Player : Entity {
         }
     }
     
-    func SetDirection(dir:CGPoint) {
+    //Death animation
+    func death() {
+        if (!isAnimating) {
+            isDead = true
+            isAnimating = true
+            textureAnimation = [SKTexture(imageNamed: "rogue_death_01"),
+                                SKTexture(imageNamed: "rogue_death_02"),
+                                SKTexture(imageNamed: "rogue_death_03"),
+                                SKTexture(imageNamed: "rogue_death_04"),
+                                SKTexture(imageNamed: "rogue_death_05"),
+                                SKTexture(imageNamed: "rogue_death_06"),
+                                SKTexture(imageNamed: "rogue_death_07"),
+                                SKTexture(imageNamed: "rogue_death_08"),
+                                SKTexture(imageNamed: "rogue_death_09")]
+            
+            animationAction = SKAction.animate(with: textureAnimation, timePerFrame: 0.08)
+            
+            self.run(animationAction)
+        }
+        
+    }
+    
+    func takeDamage() {
+        health -= 1
+        if health < 0 {
+            health = 0
+            death()
+        }
+    }
+    
+    func resetPlayer() {
+        health = 10
+        isDead = false
+    }
+    
+    func setDirection(dir:CGPoint) {
         direction = dir
     }
 }
+

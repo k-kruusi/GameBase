@@ -16,17 +16,14 @@ class AttackButton {
     //Weak ref to scene
     weak var scene: GameScene?
     
-    init() {
-    }
-    
-    func Start(size:CGSize) {
+    func start(size:CGSize) {
         scene?.addChild(buttonSprite)
         buttonSprite.position = CGPoint(x: size.width - 400, y: 400)
         buttonSprite.alpha = 0.5
         buttonSprite.zPosition = CGFloat(10)
     }
     
-    func OnClick(loc:CGPoint) -> Bool {
+    func onClick(loc:CGPoint) -> Bool {
         if (buttonSprite.frame.contains(loc)) {
                 return true
         }
