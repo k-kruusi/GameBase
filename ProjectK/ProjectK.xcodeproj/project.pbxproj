@@ -15,6 +15,7 @@
 		120695D22061B32B008948B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 120695D02061B32B008948B7 /* LaunchScreen.storyboard */; };
 		120695DB2061B37A008948B7 /* BaseCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120695DA2061B37A008948B7 /* BaseCharacter.swift */; };
 		120695DD2061BC62008948B7 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120695DC2061BC62008948B7 /* Player.swift */; };
+		120695DF2061C7CD008948B7 /* Projectile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120695DE2061C7CD008948B7 /* Projectile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		120695D32061B32B008948B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		120695DA2061B37A008948B7 /* BaseCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCharacter.swift; sourceTree = "<group>"; };
 		120695DC2061BC62008948B7 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		120695DE2061C7CD008948B7 /* Projectile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projectile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				120695DA2061B37A008948B7 /* BaseCharacter.swift */,
 				120695DC2061BC62008948B7 /* Player.swift */,
+				120695DE2061C7CD008948B7 /* Projectile.swift */,
 			);
 			path = BaseCharacter;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				120695DF2061C7CD008948B7 /* Projectile.swift in Sources */,
 				120695C82061B32B008948B7 /* GameScene.swift in Sources */,
 				120695CA2061B32B008948B7 /* GameViewController.swift in Sources */,
 				120695DB2061B37A008948B7 /* BaseCharacter.swift in Sources */,

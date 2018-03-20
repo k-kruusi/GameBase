@@ -30,7 +30,7 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         super.update(currentTime)
-        player.MoveTo()
+        //player.MoveTo() //moves player towards target destination
         
         //zombie test
         //zombie.SetTarget(newTarget: player.position)
@@ -42,8 +42,8 @@ class GameScene: SKScene {
         
         let touch: UITouch = touches.first as! UITouch
         
-        player.SetTarget(newTarget: touch.location(in: self))
-        player.SetRotateTarget(newTarget: touch.location(in: self))
-        player.RotateTowards()
+        //player.SetTarget(newTarget: touch.location(in: self))  //set target for player to move to
+        player.SetRotateTarget(newTarget: touch.location(in: self))  //set target for rotation
+        player.RotateTowards() //rotate towards target
     }
 }
