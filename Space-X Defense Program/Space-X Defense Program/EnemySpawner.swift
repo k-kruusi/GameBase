@@ -20,8 +20,8 @@ class EnemySpawner
             return randomEnemyPlane()
         }
         
-        let plane = EnemyPlane(type: enemyPlaneType, imageName: "enemyPlane-1")
-        plane.size = CGSize(width: plane.size.width/8, height: plane.size.width/8)
+        let plane = EnemyPlane(type: enemyPlaneType)
+        plane.size = CGSize(width: plane.size.width/2, height: plane.size.width/2)
         return plane
     }
     
@@ -31,8 +31,8 @@ class EnemySpawner
         let rand: UInt32 = arc4random() % 3
         let enemyPlaneType = EnemyPlaneType(rawValue: rand)
         
-        let plane = EnemyPlane(type: enemyPlaneType!, imageName: "enemyPlane-1")
-        plane.size = CGSize(width: plane.size.width/8, height: plane.size.width/8)
+        let plane = EnemyPlane(type: enemyPlaneType!)
+        plane.size = CGSize(width: plane.size.width/2, height: plane.size.width/2)
         plane.zRotation = CGFloat(Double.pi / 2)
         return plane
     }
@@ -88,7 +88,7 @@ class EnemySpawnManager
         //nil type because we want to make it random, integrated into the enum already
         let enemyPlane = enemySpawner.makeEnemyPlane(enemyPlaneType: nil)
         
-        enemyPlane.vel = CGPoint(x: 1, y: 0)
+        enemyPlane.vel = CGPoint(x: -1, y: 0)
         
         scene.addChild(enemyPlane)
         

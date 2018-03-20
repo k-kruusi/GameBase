@@ -22,31 +22,36 @@ enum EnemyPlaneType: UInt32{
     var speed: CGFloat{
         switch self{
         case .normal:
-            return 10.0
+            return 50.0
         case .kamikaze:
-            return 20.0
+            return 200.0
         case .smarter:
-            return 5.0
+            return 100.0
         }
     }
 }
 
-
-
-class EnemyPlane: SKSpriteNode{
+class EnemyPlane: GameObject
+{
     let type: EnemyPlaneType
     var vel : CGPoint?
     
-    var deltaTime: TimeInterval = 0.0
-    private var lastUpdatedTime: TimeInterval?
+    var canShoot: Bool = true
     
     
-    init(type: EnemyPlaneType, imageName: String)
+    init(type: EnemyPlaneType)
     {
         self.type = type
         
-        let texture = SKTexture(imageNamed: imageName)
-        super.init(texture: texture, color: .clear, size:texture.size())
+        if type == EnemyPlaneType.normal
+        {
+            super.init(imageName: "Bullet")
+        }
+        else
+        {
+            super.init(imageName: "enemyPlane-1")
+            size = CGSize(width: size.width/4, height: size.width/4)
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -54,24 +59,15 @@ class EnemyPlane: SKSpriteNode{
     }
     
     //update loop
-    func update(_ currentTime: TimeInterval)
+    override func update(_ currentTime: TimeInterval)
     {
-        guard let lastUpdatedTime = lastUpdatedTime else
-        {
-            self.lastUpdatedTime = currentTime
+        super.update(currentTime)
+        
+        guard let direction = vel?.asUnitVector else {
             return
         }
-        
-        deltaTime = currentTime - lastUpdatedTime
-        
-        self.lastUpdatedTime = currentTime
-        
-        guard var direction = vel?.asUnitVector else {
-            return
-        }
-        direction = CGPoint(x: direction.x * -1, y: direction.y)
+        //direction = CGPoint(x: direction.x * -1, y: direction.y)
         
         position = position.travel(inDirection: direction, atVelocity: type.speed, for: deltaTime)
     }
-    
 }

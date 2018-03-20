@@ -4,6 +4,7 @@
 //
 //  Created by Su Haifeng on 3/12/18.
 //  Copyright © 2018 Su Haifeng. All rights reserved.
+// Example taken from kevin's in class lav
 //
 
 import Foundation
