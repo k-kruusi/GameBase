@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  freefall
-//
-//  Created by Nahas Joseph on 2/28/18.
-//  Copyright © 2018 Nahas Joseph. All rights reserved.
-//
 
 import UIKit
 
