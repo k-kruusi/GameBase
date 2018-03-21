@@ -50,6 +50,7 @@ class Player : Entity {
             moveTo()
         }
         
+        // Flip sprite based on direction
         if(direction.x > 0) {
             xScale = -5
         }
@@ -59,6 +60,24 @@ class Player : Entity {
         
         position.x -= velocity * direction.x * CGFloat(deltaTime)
         position.y += velocity * direction.y * CGFloat(deltaTime)
+        
+        // Keep player within level bounds
+        if(position.y < 600)
+        {
+            position.y = CGFloat(600)
+        }
+        if(position.x < 0)
+        {
+            position.x = CGFloat(0)
+        }
+        if(position.y > (scene?.size.height)! - 200)
+        {
+            position.y = CGFloat((scene?.size.height)! - 200)
+        }
+        if(position.x > (scene?.size.width)!)
+        {
+            position.x = CGFloat((scene?.size.width)!)
+        }
         
         //If it is animating, increment the animTimer until it has reached the total duration of the SKAction's animation time
         //Once the time has exceeded the duration, is is no longer animating

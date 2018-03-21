@@ -25,11 +25,9 @@ class Joystick {
     
     func start(size:CGSize) {
         //Set alpha of the base to 0 so that only the joystick ball is visible
-        scene?.addChild(joystickBase)
         joystickBase.position = CGPoint(x: 400, y: 400)
         joystickBase.alpha = 0
         
-        scene?.addChild(joystick)
         joystick.position = joystickBase.position
         joystick.alpha = 0.5
         joystickBase.zPosition = CGFloat(10)

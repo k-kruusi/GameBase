@@ -15,7 +15,7 @@ class Enemy : Entity {
     private var velocity: CGFloat = 50
     
     // Position of target to chase
-    private var targetPosition: CGPoint = CGPoint(x: 0, y: 0)
+    var targetPosition: CGPoint = CGPoint(x: 0, y: 0)
     
     init() {
         super.init(imageName: "slime_idle_01")
@@ -24,11 +24,7 @@ class Enemy : Entity {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    func setTarget(_ position: CGPoint) {
-        targetPosition = position
-    }
-    
+
     func moveToTarget() {
         let direction = CGPoint(x: targetPosition.x - position.x, y: targetPosition.y - position.y)
         

@@ -9,24 +9,28 @@
 import Foundation
 import SpriteKit
 
-class AttackButton {
+class AttackButton: SKSpriteNode {
     
-    //Sprite of the button
-    let buttonSprite = SKSpriteNode(imageNamed: "attack_button")
-    //Weak ref to scene
-    weak var scene: GameScene?
+    init() {
+        let texture = SKTexture(imageNamed: "attack_button")
+        super.init(texture: texture, color: .clear, size: texture.size())
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     func start(size:CGSize) {
-        scene?.addChild(buttonSprite)
-        buttonSprite.position = CGPoint(x: size.width - 400, y: 400)
-        buttonSprite.alpha = 0.5
-        buttonSprite.zPosition = CGFloat(10)
+        position = CGPoint(x: size.width - 400, y: 400)
+        alpha = 0.5
+        zPosition = CGFloat(10)
     }
     
     func onClick(loc:CGPoint) -> Bool {
-        if (buttonSprite.frame.contains(loc)) {
+        if (frame.contains(loc)) {
                 return true
         }
         return false
     }
+    
 }

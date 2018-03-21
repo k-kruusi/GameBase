@@ -12,7 +12,7 @@ import GameKit
 class GameManager {
     
     // Map
-    private let map = Map()
+    private let map = Map(imageNamed: "map")
     
     // Entities
     let player = Player()
@@ -37,21 +37,20 @@ class GameManager {
         map.setScale(2.5)
         
         // Make Player
-        scene?.addChild(map)
         player.zPosition = 1
         player.position = map.playerSpawn
         player.setScale(5)
-        scene?.addChild(player)
         
         //Init the Joystick
         joystick = Joystick()
-        joystick?.scene = scene
         joystick?.start(size: size)
         
         //Init the Attack Button
         attackButton = AttackButton()
-        attackButton?.scene = scene
         attackButton?.start(size: size)
+        
+        // Add children to scene
+        populateLevel()
         
         // Populate level with enemies
         populateEnemies()
@@ -63,24 +62,6 @@ class GameManager {
         player.update(currentTime)
         player.setDirection(dir: (joystick?.dirVector)!)
         
-        // Keep player within level bounds
-        if(player.position.y < 600)
-        {
-            player.position.y = CGFloat(600)
-        }
-        if(player.position.x < 0)
-        {
-            player.position.x = CGFloat(0)
-        }
-        if(player.position.y > (scene?.size.height)! - 200)
-        {
-            player.position.y = CGFloat((scene?.size.height)! - 200)
-        }
-        if(player.position.x > (scene?.size.width)!)
-        {
-            player.position.x = CGFloat((scene?.size.width)!)
-        }
-        
         // Update Enemies and check for collisions
         var enemiesToBeDeleted: [Int] = []
         
@@ -88,7 +69,7 @@ class GameManager {
             if(!loading) {
                 enemy.update(currentTime)
             }
-            enemy.setTarget(player.position)
+            enemy.targetPosition = player.position
             
             let playerCollision = enemy.collision(items: [player]).first
             
@@ -125,20 +106,26 @@ class GameManager {
                 self.scene?.view?.alpha = 1.0
                 
                 // Set properties and add children when screen is faded
-                self.scene?.removeAllChildren()
-                self.enemies.removeAll()
-                
-                self.player.position = self.map.playerSpawn
-                
-                self.scene?.addChild(self.map)
-                self.scene?.addChild(self.player)
-                self.scene?.addChild((self.joystick?.joystick)!)
-                self.scene?.addChild((self.joystick?.joystickBase)!)
-                self.scene?.addChild((self.attackButton?.buttonSprite)!)
-                
+                self.resetLevel()
+                self.populateLevel()
                 self.populateEnemies()
+                
             }, completion: nil)
         })
+    }
+    
+    private func resetLevel() {
+        scene?.removeAllChildren()
+        enemies.removeAll()
+        player.position = self.map.playerSpawn
+    }
+    
+    private func populateLevel() {
+        scene?.addChild(map)
+        scene?.addChild(player)
+        scene?.addChild((joystick?.joystick)!)
+        scene?.addChild((joystick?.joystickBase)!)
+        scene?.addChild((attackButton)!)
     }
     
     private func populateEnemies() {
