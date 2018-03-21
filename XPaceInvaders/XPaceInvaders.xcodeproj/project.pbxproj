@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1AA15585206291650001B1A7 /* l1.doc in Resources */ = {isa = PBXBuildFile; fileRef = 1AA15584206291650001B1A7 /* l1.doc */; };
+		1A32D5BC2062A23B00372E76 /* level.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1A32D5BB2062A23B00372E76 /* level.txt */; };
 		30A9AF5720489B13005F3D6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9AF5620489B13005F3D6F /* AppDelegate.swift */; };
 		30A9AF5D20489B13005F3D6F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9AF5C20489B13005F3D6F /* GameScene.swift */; };
 		30A9AF5F20489B13005F3D6F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9AF5E20489B13005F3D6F /* GameViewController.swift */; };
@@ -41,7 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1AA15584206291650001B1A7 /* l1.doc */ = {isa = PBXFileReference; lastKnownFileType = file; path = l1.doc; sourceTree = "<group>"; };
+		1A32D5BB2062A23B00372E76 /* level.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level.txt; sourceTree = "<group>"; };
 		30A9AF5320489B13005F3D6F /* XPaceInvaders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XPaceInvaders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A9AF5620489B13005F3D6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30A9AF5C20489B13005F3D6F /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 		30A9AF5520489B13005F3D6F /* XPaceInvaders */ = {
 			isa = PBXGroup;
 			children = (
-				1AA15584206291650001B1A7 /* l1.doc */,
+				1A32D5BB2062A23B00372E76 /* level.txt */,
 				30A9AF5620489B13005F3D6F /* AppDelegate.swift */,
 				30A9AF5C20489B13005F3D6F /* GameScene.swift */,
 				F87362972051E19A003CBCA7 /* BaseGameObject.swift */,
@@ -236,7 +236,7 @@
 				30A9AF6220489B13005F3D6F /* Main.storyboard in Resources */,
 				30A9AF6420489B13005F3D6F /* Assets.xcassets in Resources */,
 				30A9AF6720489B13005F3D6F /* LaunchScreen.storyboard in Resources */,
-				1AA15585206291650001B1A7 /* l1.doc in Resources */,
+				1A32D5BC2062A23B00372E76 /* level.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
