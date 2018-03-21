@@ -17,7 +17,7 @@ extension GameScene {
         chopper.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
         //add physics body to object
         chopper.physicsBody = SKPhysicsBody(circleOfRadius: chopper.size.width / 2)
-        chopper.physicsBody?.angularDamping = 1.0
+        chopper.physicsBody?.linearDamping = 1.0
         chopper.physicsBody?.restitution = 0
         //check for collisions in the game
         chopper.physicsBody?.categoryBitMask = CollisionBitMask.chopperCategory
