@@ -15,7 +15,16 @@ import GameplayKit
 class GridGameScene: SKScene
 {
     func touchDown(atPoint pos : CGPoint) {
-        print(pos.x)
+        if let path = Bundle.main.path(forResource: "l1", ofType: "doc")
+        {
+            // trying to read from the file. I can't call the following function for some reason
+            //let text = String.init(contentsOfFile: path, usedEncoding: nil)
+            print(path)
+        }
+        
+        //contentsOf: path., usedEncoding: &NSUTF8StringEncoding)
+        //print (text)
+        //print(pos.x)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
