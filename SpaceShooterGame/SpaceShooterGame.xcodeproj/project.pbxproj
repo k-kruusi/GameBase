@@ -16,6 +16,8 @@
 		CB79DBBD2050553D0054B067 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB79DBBB2050553D0054B067 /* Main.storyboard */; };
 		CB79DBBF2050553D0054B067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB79DBBE2050553D0054B067 /* Assets.xcassets */; };
 		CB79DBC22050553D0054B067 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB79DBC02050553D0054B067 /* LaunchScreen.storyboard */; };
+		CBBD21C620624B7600614BC3 /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = CBBD21C520624B7600614BC3 /* MyParticle.sks */; };
+		CBBD21C820624BBD00614BC3 /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = CBBD21C720624BBD00614BC3 /* Explosion.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		CB79DBBE2050553D0054B067 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB79DBC12050553D0054B067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB79DBC32050553D0054B067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBBD21C520624B7600614BC3 /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
+		CBBD21C720624BBD00614BC3 /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = Explosion.sks; path = "../../../Desktop/SpaceGameReloaded-master/SpacegameReloaded/Explosion.sks"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,10 +70,12 @@
 				CB79DBB32050553D0054B067 /* GameScene.sks */,
 				CB79DBB52050553D0054B067 /* Actions.sks */,
 				CB17D95020589F9600DFBCC9 /* Background.sks */,
+				CBBD21C720624BBD00614BC3 /* Explosion.sks */,
 				CB79DBB72050553D0054B067 /* GameScene.swift */,
 				CB79DBB92050553D0054B067 /* GameViewController.swift */,
 				CB79DBBB2050553D0054B067 /* Main.storyboard */,
 				CB79DBBE2050553D0054B067 /* Assets.xcassets */,
+				CBBD21C520624B7600614BC3 /* MyParticle.sks */,
 				CB79DBC02050553D0054B067 /* LaunchScreen.storyboard */,
 				CB79DBC32050553D0054B067 /* Info.plist */,
 			);
@@ -139,6 +145,8 @@
 				CB79DBB42050553D0054B067 /* GameScene.sks in Resources */,
 				CB79DBBF2050553D0054B067 /* Assets.xcassets in Resources */,
 				CB17D95120589F9600DFBCC9 /* Background.sks in Resources */,
+				CBBD21C620624B7600614BC3 /* MyParticle.sks in Resources */,
+				CBBD21C820624BBD00614BC3 /* Explosion.sks in Resources */,
 				CB79DBC22050553D0054B067 /* LaunchScreen.storyboard in Resources */,
 				CB79DBB62050553D0054B067 /* Actions.sks in Resources */,
 			);
