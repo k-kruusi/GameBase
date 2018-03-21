@@ -17,18 +17,21 @@ class PlayerEntity : CharacterEntity
         case SHOOT
     }
     
+    var scene: SKScene?
     var cameraComponent: CameraComponent?
     var facingRight = true
     var playerSpeed = 300.0
     var playerFrames: [[SKTexture]] = []
     var playerState: PlayerStates = PlayerStates.SPIN
-    var playerStateHasChanged: Bool = false
     var playerSpinFrameSpeed = 0.2
     var playerJumpFrameSpeed = 0.35
+    var playerShootFrameSpeed = 0.2
     
-    convenience init(imageName: String, scale: CGFloat, background: SKNode, camera: SKCameraNode, view: SKView) {
+    convenience init(imageName: String, scale: CGFloat, background: SKNode, camera: SKCameraNode, view: SKView, scene: SKScene) {
+
         self.init(imageName: imageName)
         
+        self.scene = scene
         // Configure sprite and physics
         spriteComponent?.node.xScale = scale
         spriteComponent?.node.yScale = scale
@@ -78,6 +81,12 @@ class PlayerEntity : CharacterEntity
         }
     }
     
+    func shoot() {
+        playerState = PlayerStates.SHOOT
+        spawnBullet()
+    }
+    
+    // Animation state in here
     override func update(deltaTime seconds: TimeInterval) {
         super.update(deltaTime: seconds)
         
@@ -90,8 +99,10 @@ class PlayerEntity : CharacterEntity
             if let _ = spriteComponent?.node.action(forKey: "animation1") { } else {
                 animateOnceThenSpin(index: 1, animSpeed: playerJumpFrameSpeed)
             }
-        default:
-            print("unknown state")
+        case PlayerStates.SHOOT:
+            if let _ = spriteComponent?.node.action(forKey: "animation2") { } else {
+                animateOnceThenSpin(index: 2, animSpeed: playerShootFrameSpeed)
+            }
         }
     }
 
@@ -118,6 +129,17 @@ class PlayerEntity : CharacterEntity
             jumpFrames.append(jumpAnimatedAtlas.textureNamed(jumpTextureName))
         }
         playerFrames.append(jumpFrames)
+        
+        // Add shoot animation (2 index)
+        let shootAnimatedAtlas = SKTextureAtlas(named: "PShoot")
+        var shootFrames: [SKTexture] = []
+        
+        let numShootImages = shootAnimatedAtlas.textureNames.count
+        for i in 1...numShootImages {
+            let shootTextureName = "shoot\(i)"
+            shootFrames.append(shootAnimatedAtlas.textureNamed(shootTextureName))
+        }
+        playerFrames.append(shootFrames)
     }
     
     func animatePlayerLoop(index: Int, animSpeed: TimeInterval) {
@@ -129,11 +151,24 @@ class PlayerEntity : CharacterEntity
     func animateOnceThenSpin(index: Int, animSpeed: TimeInterval) {
         self.spriteComponent?.node.removeAllActions()
         let animateAction = SKAction.animate(with: playerFrames[index], timePerFrame: animSpeed, resize: false, restore: true)
-        let spinAction = SKAction.animate(with: playerFrames[0], timePerFrame: playerSpinFrameSpeed, resize: false, restore: true)
-        let spinRepeat = SKAction.repeatForever(spinAction);
+        let backToSpinState = SKAction.run {
+            self.playerState = PlayerStates.SPIN
+        }
         
-        let sequence = SKAction.sequence([animateAction, spinRepeat])
+        let sequence = SKAction.sequence([animateAction, backToSpinState])
         self.spriteComponent?.node.run(sequence, withKey:"animation\(index)")
     }
     
+    func spawnBullet() {
+        let bullet = BulletEntity(shootRight: facingRight)
+        
+        if let sc = bullet.component(ofType: SpriteComponent.self) {
+            if (facingRight) {
+                sc.node.position = CGPoint(x: (spriteComponent?.node.position.x)! + 30, y: (spriteComponent?.node.position.y)!)
+            } else {
+                sc.node.position = CGPoint(x: (spriteComponent?.node.position.x)! - 30, y: (spriteComponent?.node.position.y)!)
+            }
+        }
+        scene?.addChild((bullet.component(ofType: SpriteComponent.self)?.node)!)
+    }
 }

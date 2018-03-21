@@ -30,19 +30,18 @@ class EntityManager {
     
     func remove(_ entity: GKEntity) {
         if let spriteNode = entity.component(ofType: SpriteComponent.self)?.node {
+            print("deleeeting!")
             spriteNode.removeAllActions()
             spriteNode.removeFromParent()
         }
-        
         entities.remove(entity)
     }
     
-    func removeEmpties() {
-
+    func remove(_ node: SKNode) {
         for ent in entities {
             let spriteNode = ent.component(ofType: SpriteComponent.self)?.node
-            if (spriteNode == nil) {
-                entities.remove(ent)
+            if (spriteNode == node) {
+                self.remove(ent)
             }
         }
         print(entities.count)
@@ -53,12 +52,13 @@ class EntityManager {
         
         if let spriteComponent = bullet.component(ofType: SpriteComponent.self) {
             if (shootRight) {
-            spriteComponent.node.position = CGPoint(x: shooter.spriteComponent!.node.position.x + 70, y: shooter.spriteComponent!.node.position.y)
+            spriteComponent.node.position = CGPoint(x: shooter.spriteComponent!.node.position.x + 30, y: shooter.spriteComponent!.node.position.y)
             } else {
-                spriteComponent.node.position = CGPoint(x: shooter.spriteComponent!.node.position.x - 70, y: shooter.spriteComponent!.node.position.y)
+                spriteComponent.node.position = CGPoint(x: shooter.spriteComponent!.node.position.x - 30, y: shooter.spriteComponent!.node.position.y)
             }
         }
-        scene.addChild((bullet.component(ofType: SpriteComponent.self)?.node)!)
+     //   scene.addChild((bullet.component(ofType: SpriteComponent.self)?.node)!)
+        add(bullet)
     }
     
     func spawnEnemy(ptarget: PlayerEntity)
@@ -67,7 +67,7 @@ class EntityManager {
         if let spriteComponent = blob.component(ofType: SpriteComponent.self) {
             spriteComponent.node.position = CGPoint(x: CGFloat.random(min: -450.0, max: 450.0), y: 100.0)
         }
-        add(blob)
+        self.add(blob)
     }
     
 }

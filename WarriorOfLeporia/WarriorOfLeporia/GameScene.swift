@@ -82,7 +82,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Initialize player entity and manager
         entityManager = EntityManager(scene: self)
         
-        player = PlayerEntity(imageName: "idle1-s", scale: 1, background: background!, camera: camera!, view: view)
+        player = PlayerEntity(imageName: "idle1-s", scale: 1, background: background!, camera: camera!, view: view, scene: scene!)
         if let spriteComponent = player?.component(ofType: SpriteComponent.self) {
             spriteComponent.node.position = CGPoint(x: spriteComponent.node.size.width/2, y: size.height/2)
         }
@@ -123,32 +123,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             print("You collided with enemy!")
         } else if (collision == PhysicsMasks.Enemy | PhysicsMasks.Bullet) {
             print("you shot an enemy!")
+            // Remove from scene
             contact.bodyA.node?.removeFromParent()
             contact.bodyB.node?.removeFromParent()
             score = score + 1
-            // TODO: find way to remove from Set
-            entityManager?.removeEmpties() // does not work atm
+            // Remove from entity list
+            entityManager?.remove(contact.bodyA.node!) // remove enemy which is also in entity list
+            entityManager?.remove(contact.bodyB.node!)
         }
     }
 
     func leftPressed() {
-        print("Left pressed!")
         player?.moveLeft()
     }
     
     func rightPressed() {
-        print("Right pressed!")
         player?.moveRight()
     }
     
     func jumpPressed() {
-        print("Jump pressed!")
         player?.jump()
     }
     
     func shootPressed() {
-        print("Shoot pressed!")
-        entityManager?.spawnBullet(shootRight: (player?.facingRight)!, shooter: player!)
+        player?.shoot()
     }
     
     func spawnEnemyOverTime(time: Double) {

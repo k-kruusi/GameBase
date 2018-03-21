@@ -12,6 +12,7 @@
 		B5028C032061A24F00FD8EFD /* Slime.atlas in Resources */ = {isa = PBXBuildFile; fileRef = B5028BFE2061A24F00FD8EFD /* Slime.atlas */; };
 		B5028C052061C7E800FD8EFD /* CameraComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5028C042061C7E800FD8EFD /* CameraComponent.swift */; };
 		B5028C072061CBD800FD8EFD /* AIComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5028C062061CBD800FD8EFD /* AIComponent.swift */; };
+		B531E6742062EA5000D14B4E /* PShoot.atlas in Resources */ = {isa = PBXBuildFile; fileRef = B531E6732062EA5000D14B4E /* PShoot.atlas */; };
 		B5D1CCF62060566A0030E2DE /* PlayerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1CCF52060566A0030E2DE /* PlayerEntity.swift */; };
 		B5D1CCF8206059BE0030E2DE /* BulletEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1CCF7206059BE0030E2DE /* BulletEntity.swift */; };
 		B5D1CCFA206067C00030E2DE /* BlobEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1CCF9206067C00030E2DE /* BlobEntity.swift */; };
@@ -36,6 +37,7 @@
 		B5028BFE2061A24F00FD8EFD /* Slime.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Slime.atlas; sourceTree = "<group>"; };
 		B5028C042061C7E800FD8EFD /* CameraComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraComponent.swift; sourceTree = "<group>"; };
 		B5028C062061CBD800FD8EFD /* AIComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIComponent.swift; sourceTree = "<group>"; };
+		B531E6732062EA5000D14B4E /* PShoot.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PShoot.atlas; sourceTree = "<group>"; };
 		B5D1CCF52060566A0030E2DE /* PlayerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerEntity.swift; sourceTree = "<group>"; };
 		B5D1CCF7206059BE0030E2DE /* BulletEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletEntity.swift; sourceTree = "<group>"; };
 		B5D1CCF9206067C00030E2DE /* BlobEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobEntity.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		B5028BF92061A11200FD8EFD /* Atlases */ = {
 			isa = PBXGroup;
 			children = (
+				B531E6732062EA5000D14B4E /* PShoot.atlas */,
 				B5028BFD2061A24E00FD8EFD /* PJump.atlas */,
 				B5028BFC2061A24E00FD8EFD /* PSpin.atlas */,
 				B5028BFE2061A24F00FD8EFD /* Slime.atlas */,
@@ -219,6 +222,7 @@
 				B5D58E8920475D570012DBFB /* Assets.xcassets in Resources */,
 				B5D58E8C20475D570012DBFB /* LaunchScreen.storyboard in Resources */,
 				B5D58E8020475D570012DBFB /* Actions.sks in Resources */,
+				B531E6742062EA5000D14B4E /* PShoot.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
