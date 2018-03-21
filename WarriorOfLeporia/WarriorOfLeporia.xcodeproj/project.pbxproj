@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D7361742055A0B400B44744 /* BRabbit-Run.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 9D7361732055A0B400B44744 /* BRabbit-Run.atlas */; };
-		9D7361762055A10200B44744 /* BRabbit-Run2.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 9D7361752055A10200B44744 /* BRabbit-Run2.atlas */; };
+		B5028C012061A24F00FD8EFD /* PSpin.atlas in Resources */ = {isa = PBXBuildFile; fileRef = B5028BFC2061A24E00FD8EFD /* PSpin.atlas */; };
+		B5028C022061A24F00FD8EFD /* PJump.atlas in Resources */ = {isa = PBXBuildFile; fileRef = B5028BFD2061A24E00FD8EFD /* PJump.atlas */; };
+		B5028C032061A24F00FD8EFD /* Slime.atlas in Resources */ = {isa = PBXBuildFile; fileRef = B5028BFE2061A24F00FD8EFD /* Slime.atlas */; };
+		B5028C052061C7E800FD8EFD /* CameraComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5028C042061C7E800FD8EFD /* CameraComponent.swift */; };
+		B5028C072061CBD800FD8EFD /* AIComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5028C062061CBD800FD8EFD /* AIComponent.swift */; };
 		B5D1CCF62060566A0030E2DE /* PlayerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1CCF52060566A0030E2DE /* PlayerEntity.swift */; };
 		B5D1CCF8206059BE0030E2DE /* BulletEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1CCF7206059BE0030E2DE /* BulletEntity.swift */; };
 		B5D1CCFA206067C00030E2DE /* BlobEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1CCF9206067C00030E2DE /* BlobEntity.swift */; };
@@ -22,16 +25,17 @@
 		B5D58E8920475D570012DBFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5D58E8820475D570012DBFB /* Assets.xcassets */; };
 		B5D58E8C20475D570012DBFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D58E8A20475D570012DBFB /* LaunchScreen.storyboard */; };
 		B5D92AF520600FE9003B1DE7 /* CharacterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D92AF420600FE9003B1DE7 /* CharacterEntity.swift */; };
-		B5D92AF920601171003B1DE7 /* IdleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D92AF820601171003B1DE7 /* IdleState.swift */; };
-		B5D92AFB206012F7003B1DE7 /* RunState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D92AFA206012F7003B1DE7 /* RunState.swift */; };
 		B5D92B0720603329003B1DE7 /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D92B0620603329003B1DE7 /* SpriteComponent.swift */; };
 		B5D92B0920603443003B1DE7 /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D92B0820603443003B1DE7 /* EntityManager.swift */; };
 		B5D92B0C20603827003B1DE7 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D92B0B20603827003B1DE7 /* ButtonNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9D7361732055A0B400B44744 /* BRabbit-Run.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = "BRabbit-Run.atlas"; sourceTree = "<group>"; };
-		9D7361752055A10200B44744 /* BRabbit-Run2.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = "BRabbit-Run2.atlas"; sourceTree = "<group>"; };
+		B5028BFC2061A24E00FD8EFD /* PSpin.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PSpin.atlas; sourceTree = "<group>"; };
+		B5028BFD2061A24E00FD8EFD /* PJump.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PJump.atlas; sourceTree = "<group>"; };
+		B5028BFE2061A24F00FD8EFD /* Slime.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Slime.atlas; sourceTree = "<group>"; };
+		B5028C042061C7E800FD8EFD /* CameraComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraComponent.swift; sourceTree = "<group>"; };
+		B5028C062061CBD800FD8EFD /* AIComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIComponent.swift; sourceTree = "<group>"; };
 		B5D1CCF52060566A0030E2DE /* PlayerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerEntity.swift; sourceTree = "<group>"; };
 		B5D1CCF7206059BE0030E2DE /* BulletEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletEntity.swift; sourceTree = "<group>"; };
 		B5D1CCF9206067C00030E2DE /* BlobEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobEntity.swift; sourceTree = "<group>"; };
@@ -47,8 +51,6 @@
 		B5D58E8B20475D570012DBFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5D58E8D20475D570012DBFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5D92AF420600FE9003B1DE7 /* CharacterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEntity.swift; sourceTree = "<group>"; };
-		B5D92AF820601171003B1DE7 /* IdleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleState.swift; sourceTree = "<group>"; };
-		B5D92AFA206012F7003B1DE7 /* RunState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunState.swift; sourceTree = "<group>"; };
 		B5D92B0620603329003B1DE7 /* SpriteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
 		B5D92B0820603443003B1DE7 /* EntityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
 		B5D92B0B20603827003B1DE7 /* ButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
@@ -74,6 +76,16 @@
 			path = SKSStuff;
 			sourceTree = "<group>";
 		};
+		B5028BF92061A11200FD8EFD /* Atlases */ = {
+			isa = PBXGroup;
+			children = (
+				B5028BFD2061A24E00FD8EFD /* PJump.atlas */,
+				B5028BFC2061A24E00FD8EFD /* PSpin.atlas */,
+				B5028BFE2061A24F00FD8EFD /* Slime.atlas */,
+			);
+			path = Atlases;
+			sourceTree = "<group>";
+		};
 		B5D58E6F20475D570012DBFB = {
 			isa = PBXGroup;
 			children = (
@@ -93,13 +105,11 @@
 		B5D58E7A20475D570012DBFB /* WarriorOfLeporia */ = {
 			isa = PBXGroup;
 			children = (
+				B5028BF92061A11200FD8EFD /* Atlases */,
 				B5D92B0A2060380D003B1DE7 /* Utilities */,
-				B5D92AF72060114A003B1DE7 /* AnimStates */,
 				B5D92AF62060113C003B1DE7 /* Components */,
 				B5D92AF320600FD2003B1DE7 /* Entities */,
 				9DCCABFF205F58870070FC88 /* SKSStuff */,
-				9D7361752055A10200B44744 /* BRabbit-Run2.atlas */,
-				9D7361732055A0B400B44744 /* BRabbit-Run.atlas */,
 				B5D58E7B20475D570012DBFB /* AppDelegate.swift */,
 				B5D58E8120475D570012DBFB /* GameScene.swift */,
 				B5D58E8320475D570012DBFB /* GameViewController.swift */,
@@ -127,17 +137,10 @@
 			isa = PBXGroup;
 			children = (
 				B5D92B0620603329003B1DE7 /* SpriteComponent.swift */,
+				B5028C042061C7E800FD8EFD /* CameraComponent.swift */,
+				B5028C062061CBD800FD8EFD /* AIComponent.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		B5D92AF72060114A003B1DE7 /* AnimStates */ = {
-			isa = PBXGroup;
-			children = (
-				B5D92AF820601171003B1DE7 /* IdleState.swift */,
-				B5D92AFA206012F7003B1DE7 /* RunState.swift */,
-			);
-			path = AnimStates;
 			sourceTree = "<group>";
 		};
 		B5D92B0A2060380D003B1DE7 /* Utilities */ = {
@@ -208,11 +211,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5028C012061A24F00FD8EFD /* PSpin.atlas in Resources */,
+				B5028C022061A24F00FD8EFD /* PJump.atlas in Resources */,
 				B5D58E8720475D570012DBFB /* Main.storyboard in Resources */,
+				B5028C032061A24F00FD8EFD /* Slime.atlas in Resources */,
 				B5D58E7E20475D570012DBFB /* GameScene.sks in Resources */,
-				9D7361742055A0B400B44744 /* BRabbit-Run.atlas in Resources */,
 				B5D58E8920475D570012DBFB /* Assets.xcassets in Resources */,
-				9D7361762055A10200B44744 /* BRabbit-Run2.atlas in Resources */,
 				B5D58E8C20475D570012DBFB /* LaunchScreen.storyboard in Resources */,
 				B5D58E8020475D570012DBFB /* Actions.sks in Resources */,
 			);
@@ -231,10 +235,10 @@
 				B5D92B0720603329003B1DE7 /* SpriteComponent.swift in Sources */,
 				B5D58E8420475D570012DBFB /* GameViewController.swift in Sources */,
 				B5D1CCF62060566A0030E2DE /* PlayerEntity.swift in Sources */,
-				B5D92AF920601171003B1DE7 /* IdleState.swift in Sources */,
+				B5028C072061CBD800FD8EFD /* AIComponent.swift in Sources */,
 				B5D1CCF8206059BE0030E2DE /* BulletEntity.swift in Sources */,
-				B5D92AFB206012F7003B1DE7 /* RunState.swift in Sources */,
 				B5D58E7C20475D570012DBFB /* AppDelegate.swift in Sources */,
+				B5028C052061C7E800FD8EFD /* CameraComponent.swift in Sources */,
 				B5D1CCFC20606A530030E2DE /* UsefulMathStuff.swift in Sources */,
 				B5D92B0C20603827003B1DE7 /* ButtonNode.swift in Sources */,
 				B5D1CCFA206067C00030E2DE /* BlobEntity.swift in Sources */,

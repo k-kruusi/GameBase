@@ -16,8 +16,7 @@ class BulletEntity : GKEntity {
     init(shootRight: Bool) {
         super.init()
         
-        let texture = SKTexture(imageNamed: "run1")
-        let spriteComponent = SpriteComponent(texture: SKTexture(imageNamed: "idle1"))
+        let spriteComponent = SpriteComponent(texture: SKTexture(imageNamed: "bullet-s"))
         
         
         // Add a physics body

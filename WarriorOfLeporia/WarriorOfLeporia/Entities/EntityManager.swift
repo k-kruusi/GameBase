@@ -30,6 +30,7 @@ class EntityManager {
     
     func remove(_ entity: GKEntity) {
         if let spriteNode = entity.component(ofType: SpriteComponent.self)?.node {
+            spriteNode.removeAllActions()
             spriteNode.removeFromParent()
         }
         
@@ -60,11 +61,11 @@ class EntityManager {
         scene.addChild((bullet.component(ofType: SpriteComponent.self)?.node)!)
     }
     
-    func spawnEnemy()
+    func spawnEnemy(ptarget: PlayerEntity)
     {
-        let blob = BlobEntity(imageName: "run1", scale: 1)
+        let blob = BlobEntity(imageName: "slime1-s", scale: 1, target: ptarget)
         if let spriteComponent = blob.component(ofType: SpriteComponent.self) {
-            spriteComponent.node.position = CGPoint(x: CGFloat.random(min: scene.size.width * 0.25, max: scene.size.width * 0.75), y: scene.size.height * 0.80)
+            spriteComponent.node.position = CGPoint(x: CGFloat.random(min: -450.0, max: 450.0), y: 100.0)
         }
         add(blob)
     }

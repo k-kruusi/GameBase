@@ -24,7 +24,7 @@ class CharacterEntity : GKEntity {
         body?.affectedByGravity = true
         body?.isDynamic = true
         body?.allowsRotation = false
-        body?.restitution = -1.0
+        body?.restitution = 0.0
         spriteComponent?.node.physicsBody = body
 
         addComponent(spriteComponent!)
