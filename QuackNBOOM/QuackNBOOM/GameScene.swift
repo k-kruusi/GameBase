@@ -13,6 +13,7 @@ import AVFoundation
 class GameScene: SKScene {
     private var lastUpdateTime: TimeInterval?
     var isGameOver = false
+    var playedGameOverSound = false
     
     ///just setting up the scene
     
@@ -22,7 +23,7 @@ class GameScene: SKScene {
     let gameManager = GameManager()
     let gameOver = GameObject(imagePath: "GameOver")
     
-    //;w; audio components
+    //audio components
     var gameOverSFX = AVAudioPlayer()
     let gameOverSound = Bundle.main.path(forResource: "GameOverSound", ofType: "wav")
     
@@ -51,7 +52,7 @@ class GameScene: SKScene {
         gameOver.position = CGPoint(x: size.width/2, y: size.height/2)
         gameOver.isHidden = true
         
-        //;w; initialize the audio components
+        //initialize the audio components for the game scene
         do{
             try gameOverSFX = AVAudioPlayer(contentsOf: URL(fileURLWithPath: gameOverSound!))
             gameOverSFX.numberOfLoops = 0;
@@ -77,7 +78,11 @@ class GameScene: SKScene {
         if(gameManager.isGameOver()){
             isGameOver = true
             gameOver.isHidden = false
-            gameOverSFX.play(); //;w; change this up? we need to make it so that it only plays once when it's game over
+            
+            if(!playedGameOverSound){
+                gameOverSFX.play();
+                playedGameOverSound = true
+            }
         }
     }
     
@@ -93,6 +98,7 @@ class GameScene: SKScene {
         else{
             gameManager.duckController.resetDucks()
             isGameOver = false
+            playedGameOverSound = false
             gameOver.isHidden = true
         }
     }

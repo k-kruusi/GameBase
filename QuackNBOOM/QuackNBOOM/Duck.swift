@@ -57,6 +57,7 @@ class Duck: GameObject {
     // Update is called every frame and holds the main functionality of the duck
     override func update(_ deltaTime: TimeInterval) {
         super.update(deltaTime)
+        playQuackSound()
         //check if the duck is killed
         checkDead(deltaTime)
     }
@@ -84,5 +85,23 @@ class Duck: GameObject {
     public func killDuck(){
         //just sets the status of the duck to true, meaning DEAD
         isDead = true
+    }
+    fileprivate func playQuackSound(){
+        if(!gameOver){ //as long as the game is not over, it will pplay the audio sounds for the duck under these conditions
+            if(position.y < 1750 && position.y > 1600){
+                // Play an explosion sound effect at random
+                let rand = Int(arc4random_uniform(2))
+                switch rand {
+                case 0:
+                    quackSFX1.play()
+                    break
+                case 1:
+                    quackSFX2.play()
+                    break
+                default:
+                    print("Major error in Duck.swift for randomizing sound effects")
+                }
+            }
+        }
     }
 }

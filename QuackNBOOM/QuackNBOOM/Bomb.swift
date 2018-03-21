@@ -138,6 +138,25 @@ class Bomb: GameObject {
             explosionSprite.isHidden = false
             explodeCountdown = CGFloat(-100.0) // Setting to -100 so visibility isn't set every frame
             bombRemovalCountdown = CGFloat(startBombRemovalCountdown)   // Reset the countdown for bomb removal
+            
+            // Play an explosion sound effect at random
+            let rand = Int(arc4random_uniform(4))
+            switch rand {
+            case 0:
+                bombSFX1.play()
+                break
+            case 1:
+                bombSFX2.play()
+                break
+            case 2:
+                bombSFX3.play()
+                break
+            case 3:
+                bombSFX4.play()
+                break
+            default:
+                print("Major error in Bomb.swift for randomizing sound effects")
+            }
         }
     }
     

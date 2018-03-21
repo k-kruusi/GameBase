@@ -36,10 +36,6 @@ class GameManager {
                             && duck.position.x <= bomb.position.x + bomb.explosionRange
                             && duck.position.y <= bomb.position.y + bomb.explosionRange){
                         duck.killDuck()
-                        //;w; play the demonic quack and the bomb explosion
-                        //make it so that the audio doesn't play at the very start of the game
-                        bomb.bombSFX1.play()
-                        duck.quackSFX1.play() //;w; randomize
                     }
                 }
             }
