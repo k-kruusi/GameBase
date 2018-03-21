@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		554BE724205C6B4D00ABFBAD /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 554BE722205C6B4D00ABFBAD /* explosion.mp3 */; };
+		554BE725205C6B4D00ABFBAD /* torpedo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 554BE723205C6B4D00ABFBAD /* torpedo.mp3 */; };
+		554BE72A205C6B9900ABFBAD /* Starfield.sks in Resources */ = {isa = PBXBuildFile; fileRef = 554BE728205C6B9900ABFBAD /* Starfield.sks */; };
+		554BE72B205C6B9900ABFBAD /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 554BE729205C6B9900ABFBAD /* Explosion.sks */; };
 		5574CA9320475B8700681B57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5574CA9220475B8700681B57 /* AppDelegate.swift */; };
 		5574CA9520475B8700681B57 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5574CA9420475B8700681B57 /* GameScene.sks */; };
 		5574CA9720475B8700681B57 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5574CA9620475B8700681B57 /* Actions.sks */; };
@@ -15,9 +19,15 @@
 		5574CA9E20475B8700681B57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5574CA9C20475B8700681B57 /* Main.storyboard */; };
 		5574CAA020475B8700681B57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5574CA9F20475B8700681B57 /* Assets.xcassets */; };
 		5574CAA320475B8700681B57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5574CAA120475B8700681B57 /* LaunchScreen.storyboard */; };
+		55B5EAE72062E8DE002BEAEC /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 55B5EAE62062E8DE002BEAEC /* MenuScene.sks */; };
+		55B5EAE92062EAA6002BEAEC /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B5EAE82062EAA6002BEAEC /* MenuScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		554BE722205C6B4D00ABFBAD /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
+		554BE723205C6B4D00ABFBAD /* torpedo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = torpedo.mp3; sourceTree = "<group>"; };
+		554BE728205C6B9900ABFBAD /* Starfield.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Starfield.sks; sourceTree = "<group>"; };
+		554BE729205C6B9900ABFBAD /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
 		5574CA8F20475B8700681B57 /* Search For The Light.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Search For The Light.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5574CA9220475B8700681B57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5574CA9420475B8700681B57 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -28,6 +38,8 @@
 		5574CA9F20475B8700681B57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5574CAA220475B8700681B57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5574CAA420475B8700681B57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55B5EAE62062E8DE002BEAEC /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
+		55B5EAE82062EAA6002BEAEC /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,13 +72,19 @@
 		5574CA9120475B8700681B57 /* Search For The Light */ = {
 			isa = PBXGroup;
 			children = (
+				554BE729205C6B9900ABFBAD /* Explosion.sks */,
+				554BE728205C6B9900ABFBAD /* Starfield.sks */,
 				5574CA9220475B8700681B57 /* AppDelegate.swift */,
 				5574CA9420475B8700681B57 /* GameScene.sks */,
 				5574CA9620475B8700681B57 /* Actions.sks */,
 				5574CA9820475B8700681B57 /* GameScene.swift */,
 				5574CA9A20475B8700681B57 /* GameViewController.swift */,
 				5574CA9C20475B8700681B57 /* Main.storyboard */,
+				554BE722205C6B4D00ABFBAD /* explosion.mp3 */,
+				554BE723205C6B4D00ABFBAD /* torpedo.mp3 */,
 				5574CA9F20475B8700681B57 /* Assets.xcassets */,
+				55B5EAE62062E8DE002BEAEC /* MenuScene.sks */,
+				55B5EAE82062EAA6002BEAEC /* MenuScene.swift */,
 				5574CAA120475B8700681B57 /* LaunchScreen.storyboard */,
 				5574CAA420475B8700681B57 /* Info.plist */,
 			);
@@ -132,11 +150,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				554BE725205C6B4D00ABFBAD /* torpedo.mp3 in Resources */,
+				554BE724205C6B4D00ABFBAD /* explosion.mp3 in Resources */,
+				554BE72A205C6B9900ABFBAD /* Starfield.sks in Resources */,
+				55B5EAE72062E8DE002BEAEC /* MenuScene.sks in Resources */,
 				5574CA9E20475B8700681B57 /* Main.storyboard in Resources */,
 				5574CA9520475B8700681B57 /* GameScene.sks in Resources */,
 				5574CAA020475B8700681B57 /* Assets.xcassets in Resources */,
 				5574CAA320475B8700681B57 /* LaunchScreen.storyboard in Resources */,
 				5574CA9720475B8700681B57 /* Actions.sks in Resources */,
+				554BE72B205C6B9900ABFBAD /* Explosion.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5574CA9920475B8700681B57 /* GameScene.swift in Sources */,
+				55B5EAE92062EAA6002BEAEC /* MenuScene.swift in Sources */,
 				5574CA9B20475B8700681B57 /* GameViewController.swift in Sources */,
 				5574CA9320475B8700681B57 /* AppDelegate.swift in Sources */,
 			);
@@ -290,6 +314,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Search For The Light/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "J.N.K.Search-For-The-Light.Search-For-The-Light";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -307,6 +332,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Search For The Light/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "J.N.K.Search-For-The-Light.Search-For-The-Light";
 				PRODUCT_NAME = "$(TARGET_NAME)";
