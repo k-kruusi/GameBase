@@ -63,7 +63,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Lives
     var livesArray:[SKSpriteNode]!
     
-    
+    var backgroundMusic: SKAudioNode!
     
     //
     
@@ -129,6 +129,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let acceleration = acclerometerData.acceleration
                 self.xAcceleration = CGFloat(acceleration.x) * 0.75 + self.xAcceleration * 0.25
             }
+        }
+        
+        //Background Music
+        if let musicURL = Bundle.main.url(forResource: "backgroundmusic", withExtension: "mp3"){
+            backgroundMusic = SKAudioNode(url: musicURL)
+            addChild(backgroundMusic)
         }
     }
     
