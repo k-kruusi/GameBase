@@ -14,8 +14,8 @@
 		CB79DBB82050553D0054B067 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB79DBB72050553D0054B067 /* GameScene.swift */; };
 		CB79DBBA2050553D0054B067 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB79DBB92050553D0054B067 /* GameViewController.swift */; };
 		CB79DBBD2050553D0054B067 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB79DBBB2050553D0054B067 /* Main.storyboard */; };
-		CB79DBBF2050553D0054B067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB79DBBE2050553D0054B067 /* Assets.xcassets */; };
 		CB79DBC22050553D0054B067 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB79DBC02050553D0054B067 /* LaunchScreen.storyboard */; };
+		CB7B01F22062E31D00E80ED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB79DBBE2050553D0054B067 /* Assets.xcassets */; };
 		CBBD21C620624B7600614BC3 /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = CBBD21C520624B7600614BC3 /* MyParticle.sks */; };
 		CBBD21C820624BBD00614BC3 /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = CBBD21C720624BBD00614BC3 /* Explosion.sks */; };
 /* End PBXBuildFile section */
@@ -143,11 +143,11 @@
 			files = (
 				CB79DBBD2050553D0054B067 /* Main.storyboard in Resources */,
 				CB79DBB42050553D0054B067 /* GameScene.sks in Resources */,
-				CB79DBBF2050553D0054B067 /* Assets.xcassets in Resources */,
 				CB17D95120589F9600DFBCC9 /* Background.sks in Resources */,
 				CBBD21C620624B7600614BC3 /* MyParticle.sks in Resources */,
 				CBBD21C820624BBD00614BC3 /* Explosion.sks in Resources */,
 				CB79DBC22050553D0054B067 /* LaunchScreen.storyboard in Resources */,
+				CB7B01F22062E31D00E80ED0 /* Assets.xcassets in Resources */,
 				CB79DBB62050553D0054B067 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

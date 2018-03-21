@@ -13,6 +13,7 @@ import SpriteKit
 import GameplayKit
 import CoreMotion
 
+
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Background
@@ -55,13 +56,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let nEnemiesCategory:UInt32 = 0x1 << 1
     let gunShooter:UInt32 = 0x1 << 0
     
+    //Controlled with Gyroscope
     let motionManger = CMMotionManager()
     var xAcceleration:CGFloat = 0
+    
+    
+    //Lives
+    var livesArray:[SKSpriteNode]!
+    
     
     
     //
     
     override func didMove(to view: SKView) {
+        
+        addLives()
         
         //Background (File, Position, Time)
         gbackground = SKEmitterNode(fileNamed: "Background")
@@ -111,8 +120,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(secondsLabel)
         
         //Enemy Spawn Timer
-        gameTimer = Timer.scheduledTimer(timeInterval: 0.75, target: self, selector: #selector(addEnemy), userInfo: nil, repeats: true)
+        gameTimer = Timer.scheduledTimer(timeInterval: 0.6, target: self, selector: #selector(addEnemy), userInfo: nil, repeats: true)
         
+        
+        //Motion with gyroscope
         motionManger.accelerometerUpdateInterval = 0.2
         motionManger.startAccelerometerUpdates(to: OperationQueue.current!) { (data:CMAccelerometerData?, error:Error?) in
             if let acclerometerData = data {
@@ -120,10 +131,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self.xAcceleration = CGFloat(acceleration.x) * 0.75 + self.xAcceleration * 0.25
             }
         }
-       
-        
-        
     }
+    
+    func addLives() {
+       livesArray = [SKSpriteNode]()
+    }
+    
     
     //Add Enemy Func
     @objc func addEnemy () {
@@ -131,9 +144,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         let enemies = SKSpriteNode(imageNamed: nEnemies[0])
         
-        let randomEnemiesPosition = GKRandomDistribution(lowestValue: 0, highestValue: 414)
+        let randomEnemiesPosition = GKRandomDistribution(lowestValue: -310, highestValue: 310)
         let position = CGFloat(randomEnemiesPosition.nextInt())
-        
+
         enemies.position = CGPoint(x: position, y: self.frame.size.height + enemies.size.height)
         enemies.physicsBody = SKPhysicsBody(rectangleOf: enemies.size)
         enemies.physicsBody?.isDynamic = true
@@ -150,7 +163,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         var actionArray = [SKAction]()
 
-        actionArray.append(SKAction.move(to: CGPoint(x: position, y: -enemies.size.height), duration: animationDuration))
+        actionArray.append(SKAction.move(to: CGPoint(x: position, y: -enemies.size.height - 550), duration: animationDuration))
         actionArray.append(SKAction.removeFromParent())
         
         enemies.run(SKAction.sequence(actionArray))
@@ -164,8 +177,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Add Shoot func
     func shootGun() {
-        //If I end up finding an audio file it goes here
-       // self.run(SKAction.playSoundFileNamed("soundfilegoeshere", waitForCompletion: false))
+        
+        var enemyCollisionSound: SKAction {
+            return SKAction.playSoundFileNamed("lasersound.mp3", waitForCompletion: false)
+        }
+        
         
         let shootNode = SKSpriteNode(imageNamed: "blast-harrier-laser-1")
         shootNode.position = player.position
@@ -194,7 +210,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
-    //Restart Timer Func *Testing*
+    //Restart Timer Func
     func restartTimer(){
         let wait:SKAction = SKAction.wait(forDuration: 1)
         let finishTimer:SKAction = SKAction.run {
@@ -226,14 +242,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+    
+    //Explosion Func
     func shootCollideWithEnemy (shootNode:SKSpriteNode, enemiesNode:SKSpriteNode) {
         
         let explosion = SKEmitterNode(fileNamed: "Explosion")!
         explosion.position = enemiesNode.position
         self.addChild(explosion)
         
-        //Explosion SFX goes herer
-      //  self.run(SKAction.playSoundFileNamed("song goes here", waitForCompletion: false))
+        //Explosion SFX goes here
+        
+        var enemyExplosionSound: SKAction {
+            return SKAction.playSoundFileNamed("explosionsfx.mp3", waitForCompletion: false)
+        }
+        
         
         shootNode.removeFromParent()
         enemiesNode.removeFromParent()
@@ -245,6 +267,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         score += 5
     }
     
+    //Movement with Gyroscope
     override func didSimulatePhysics() {
         player.position.x += xAcceleration * 50
         
@@ -254,7 +277,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             player.position = CGPoint(x: -20, y: player.position.y)
         }
     }
- 
 
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
