@@ -1,2 +1,2 @@
-Fabio Sacchitiello
-My game idea is to create a Flappy Bird style endless side scroller game where you as the player will control the character by tapping to make it avoid obstacles that appear on screen. The game will have a scrolling background as you keep moving along in the game. Along with avoiding obstacles it will include the player collecting something to increase their points in the game.
+Fabio Sacchitiello - Get to the Chopper
+A flappy bird style game where the player must tap the screen to keep theit chopper flying. The game is an endless side-scroller where you will try and beat the highscore. You as the chopper must fly in the misterious area you are in to pick up troops that have landed in but got stuck between the mesterious ruins.
