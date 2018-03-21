@@ -37,15 +37,13 @@ class Player: GameObject {
     
     override func update(_ currentTime: TimeInterval) {
         
-        // in order to use the functionality provided in GameObject we need to call super here
-        // since we will want to use the calculation of delta time
+        
         super.update(currentTime)
         
         
         
         
-        // move to target
-        //self.position = position.travel(inDirection: dVector.asUnitVector, atVelocity: velocity, for: deltaTime)
+        
     }
     
     

@@ -20,7 +20,8 @@ class Projectile: GameObject {
     
     /// create the projectiles
     init() {
-        super.init(imageName: "Bullet")
+        //super.init(imageName: "Bullet")
+        super.init(imageName: "Rocket")
         self.zPosition = Projectile.projectileZPositionOffset
         
     }
@@ -33,8 +34,6 @@ class Projectile: GameObject {
     /// - Parameter currentTime: the current time
     override func update(_ currentTime: TimeInterval) {
         
-        // in order to use the functionality provided in GameObject we need to call super here
-        // since we will want to use the calculation of delta time
         super.update(currentTime)
         
         

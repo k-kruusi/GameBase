@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		672806C420618F81000B1F5D /* Maths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672806C320618F81000B1F5D /* Maths.swift */; };
+		672806C620619C81000B1F5D /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672806C520619C81000B1F5D /* Rocket.swift */; };
+		672806C82061BE7F000B1F5D /* Starship.wav in Resources */ = {isa = PBXBuildFile; fileRef = 672806C72061BE7F000B1F5D /* Starship.wav */; };
+		672806CD2061C2DB000B1F5D /* fire.wav in Resources */ = {isa = PBXBuildFile; fileRef = 672806CC2061C2DB000B1F5D /* fire.wav */; };
 		672CDCCA20602FC90009B88F /* StructValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672CDCC920602FC90009B88F /* StructValues.swift */; };
-		672CDCCC20603BE80009B88F /* CGPoint+VectorMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672CDCCB20603BE80009B88F /* CGPoint+VectorMath.swift */; };
 		67366C2220508AA200A0E87D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67366C2120508AA200A0E87D /* AppDelegate.swift */; };
 		67366C2820508AA200A0E87D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67366C2720508AA200A0E87D /* GameScene.swift */; };
 		67366C2A20508AA200A0E87D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67366C2920508AA200A0E87D /* GameViewController.swift */; };
@@ -40,8 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		672806C320618F81000B1F5D /* Maths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maths.swift; sourceTree = "<group>"; };
+		672806C520619C81000B1F5D /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
+		672806C72061BE7F000B1F5D /* Starship.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Starship.wav; sourceTree = "<group>"; };
+		672806CC2061C2DB000B1F5D /* fire.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = fire.wav; path = ../../../Desktop/fire.wav; sourceTree = "<group>"; };
 		672CDCC920602FC90009B88F /* StructValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructValues.swift; sourceTree = "<group>"; };
-		672CDCCB20603BE80009B88F /* CGPoint+VectorMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+VectorMath.swift"; sourceTree = "<group>"; };
 		67366C1E20508AA200A0E87D /* Space-X Defense Program.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Space-X Defense Program.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67366C2120508AA200A0E87D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67366C2720508AA200A0E87D /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -86,9 +92,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		672806CB2061BF35000B1F5D /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				672806CC2061C2DB000B1F5D /* fire.wav */,
+				672806C72061BE7F000B1F5D /* Starship.wav */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
 		67366C1520508AA200A0E87D = {
 			isa = PBXGroup;
 			children = (
+				672806CB2061BF35000B1F5D /* Audio */,
 				67366C2020508AA200A0E87D /* Space-X Defense Program */,
 				67366C3B20508AA200A0E87D /* Space-X Defense ProgramTests */,
 				67366C4620508AA200A0E87D /* Space-X Defense ProgramUITests */,
@@ -120,7 +136,8 @@
 				67405B392057032100CB5CB1 /* Player.swift */,
 				67405B3D2057380700CB5CB1 /* Projectile.swift */,
 				672CDCC920602FC90009B88F /* StructValues.swift */,
-				672CDCCB20603BE80009B88F /* CGPoint+VectorMath.swift */,
+				672806C320618F81000B1F5D /* Maths.swift */,
+				672806C520619C81000B1F5D /* Rocket.swift */,
 			);
 			path = "Space-X Defense Program";
 			sourceTree = "<group>";
@@ -250,8 +267,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				672806CD2061C2DB000B1F5D /* fire.wav in Resources */,
 				67366C2D20508AA200A0E87D /* Main.storyboard in Resources */,
 				67366C2F20508AA200A0E87D /* Assets.xcassets in Resources */,
+				672806C82061BE7F000B1F5D /* Starship.wav in Resources */,
 				67366C3220508AA200A0E87D /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,14 +296,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				672806C620619C81000B1F5D /* Rocket.swift in Sources */,
 				67405B3E2057380700CB5CB1 /* Projectile.swift in Sources */,
 				672CDCCA20602FC90009B88F /* StructValues.swift in Sources */,
 				67405B3A2057032100CB5CB1 /* Player.swift in Sources */,
+				672806C420618F81000B1F5D /* Maths.swift in Sources */,
 				67366C2820508AA200A0E87D /* GameScene.swift in Sources */,
 				67366C2A20508AA200A0E87D /* GameViewController.swift in Sources */,
 				67366C2220508AA200A0E87D /* AppDelegate.swift in Sources */,
 				67405B3C205704B500CB5CB1 /* GameObject.swift in Sources */,
-				672CDCCC20603BE80009B88F /* CGPoint+VectorMath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
