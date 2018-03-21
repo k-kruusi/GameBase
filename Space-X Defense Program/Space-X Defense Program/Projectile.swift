@@ -17,7 +17,7 @@ fileprivate extension Projectile{
 struct EnemyValues {
     
     //Slow and Big
-    static let enemy1Scale : CGFloat = 2
+    static let enemy1Scale : CGFloat = 0.5
     static let enemy1Speed : CGFloat = 400.0
     
     //Medium and shoots
@@ -42,19 +42,23 @@ class Projectile: GameObject {
     init(type: ProjectileType) {
         self.type = type
         
-        super.init(imageName: "Bullet")
-        self.zPosition = Projectile.projectileZPositionOffset
         
         switch type {
         case .enemy:
+            super.init(imageName: "Bullet")
             moveSpeed = EnemyValues.enemy1Speed
             scale = EnemyValues.enemy1Scale
         case .player:
+            super.init(imageName: "Rocket")
             moveSpeed = EnemyValues.playerSpeed
             scale = EnemyValues.playerScale
         default:
+            super.init(imageName: "Bullet")
             moveSpeed = 0
             scale = 1        }
+        
+        self.setScale(scale)
+        self.zPosition = Projectile.projectileZPositionOffset
         
     }
     

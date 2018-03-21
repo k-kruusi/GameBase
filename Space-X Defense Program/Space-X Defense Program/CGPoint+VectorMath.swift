@@ -13,14 +13,14 @@ import SpriteKit
 extension CGPoint {
     
     // get the length of self
-    var length: CGFloat {
-        return sqrt( x * x + y * y)
-    }
+//    var length: CGFloat {
+//        return sqrt( x * x + y * y)
+//    }
     
-    /// get the unit vector of self
-    var asUnitVector: CGPoint {
-       return divide(by: length)
-    }
+    // get the unit vector of self
+//    var asUnitVector: CGPoint {
+//       return divide(by: length)
+//    }
     
     /// divide self by a scalar
     ///
@@ -47,13 +47,13 @@ extension CGPoint {
     ///   - left: the left side of the addition
     ///   - right: the right side of the addition
     /// - Returns: the result
-    static func + (left: CGPoint, right: CGPoint) -> CGPoint {
-        return CGPoint(x: left.x + right.x, y: left.y + right.y)
-    }
-    
-    static func * (left: CGPoint, right: CGFloat) -> CGPoint {
-        return CGPoint(x: left.x * right, y: left.y * right)
-    }
+//    static func + (left: CGPoint, right: CGPoint) -> CGPoint {
+//        return CGPoint(x: left.x + right.x, y: left.y + right.y)
+//    }
+//
+//    static func * (left: CGPoint, right: CGFloat) -> CGPoint {
+//        return CGPoint(x: left.x * right, y: left.y * right)
+//    }
   
     /// subtract one CGPoint from another
     ///
@@ -61,9 +61,9 @@ extension CGPoint {
     ///   - left: the left side of the subtraction
     ///   - right: the right side of the subtraction
     /// - Returns: the result
-    static func - (left: CGPoint, right: CGPoint) -> CGPoint {
-        return CGPoint(x: left.x - right.x, y: left.y - right.y)
-    }
+//    static func - (left: CGPoint, right: CGPoint) -> CGPoint {
+//        return CGPoint(x: left.x - right.x, y: left.y - right.y)
+//    }
   
     /// A simple check to see if you have reached your target by compairing direction vectors
     ///
@@ -80,7 +80,7 @@ extension CGPoint {
     ///
     /// - Parameter direction: the direction you wish to point
     /// - Returns: the angel in radians
-    static func facingAngle(_ direction: CGPoint) -> CGFloat {
-        return CGFloat( atan2( Double(direction.y), Double(direction.x)))
-    }
+//    static func facingAngle(_ direction: CGPoint) -> CGFloat {
+//        return CGFloat( atan2( Double(direction.y), Double(direction.x)))
+//    }
 }
