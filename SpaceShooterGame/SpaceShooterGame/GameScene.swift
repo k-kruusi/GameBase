@@ -14,12 +14,11 @@ import GameplayKit
 import CoreMotion
 
 
+
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
-    //Background
-    var gbackground:SKEmitterNode!
     
-    //Player
+    var gbackground:SKEmitterNode!
     var player:SKSpriteNode!
     
     //Score
@@ -70,8 +69,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func didMove(to view: SKView) {
         
-        addLives()
-        
         //Background (File, Position, Time)
         gbackground = SKEmitterNode(fileNamed: "Background")
         gbackground.position = CGPoint(x: 0, y: 1472)
@@ -81,7 +78,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         gbackground.zPosition = -1
         
         //Player (File, Scale, Position, Add)
-        player = SKSpriteNode (imageNamed: "redfighter0005")
+       // player = SKSpriteNode (imageNamed: "redfighter0005")
+        player = SKSpriteNode (imageNamed: "redfighter0006")
         player.setScale(0.4)
         player.position = CGPoint(x: self.frame.size.width / 40 - 20, y: player.size.height / 25 - 500)
         self.addChild(player)
@@ -99,6 +97,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         score = 0
         self.addChild(scoreLabel)
         
+
         //Lives *Testing* (Text, Position, Font, Size, Color, Default, Add)
         livesLabel = SKLabelNode(text: "Lives: 3")
         livesLabel.position = CGPoint(x: -150, y: -650)
@@ -278,7 +277,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
 
+        
+    
+
+
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
     }
+
 }

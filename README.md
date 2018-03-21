@@ -1,7 +1,10 @@
 # GameBase
 Start your Game by branching off this project.
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/tristansBranch2
 Creator: Tristan Garzon
 
 High Concept Statement:
