@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13F8D9D32063385B00ABF120 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F8D9D22063385B00ABF120 /* Updatable.swift */; };
-		13F8D9D5206345B600ABF120 /* Touchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F8D9D4206345B600ABF120 /* Touchable.swift */; };
-		13F8D9D720634A2D00ABF120 /* Projectile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F8D9D620634A2D00ABF120 /* Projectile.swift */; };
+		1A32D5BC2062A23B00372E76 /* level.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1A32D5BB2062A23B00372E76 /* level.txt */; };
 		30A9AF5720489B13005F3D6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9AF5620489B13005F3D6F /* AppDelegate.swift */; };
 		30A9AF5D20489B13005F3D6F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9AF5C20489B13005F3D6F /* GameScene.swift */; };
 		30A9AF5F20489B13005F3D6F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9AF5E20489B13005F3D6F /* GameViewController.swift */; };
@@ -43,9 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		13F8D9D22063385B00ABF120 /* Updatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
-		13F8D9D4206345B600ABF120 /* Touchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Touchable.swift; sourceTree = "<group>"; };
-		13F8D9D620634A2D00ABF120 /* Projectile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projectile.swift; sourceTree = "<group>"; };
+		1A32D5BB2062A23B00372E76 /* level.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level.txt; sourceTree = "<group>"; };
 		30A9AF5320489B13005F3D6F /* XPaceInvaders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XPaceInvaders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A9AF5620489B13005F3D6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30A9AF5C20489B13005F3D6F /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -111,6 +107,7 @@
 		30A9AF5520489B13005F3D6F /* XPaceInvaders */ = {
 			isa = PBXGroup;
 			children = (
+				1A32D5BB2062A23B00372E76 /* level.txt */,
 				30A9AF5620489B13005F3D6F /* AppDelegate.swift */,
 				30A9AF5C20489B13005F3D6F /* GameScene.swift */,
 				F87362972051E19A003CBCA7 /* BaseGameObject.swift */,
@@ -125,9 +122,6 @@
 				30A9AF6820489B13005F3D6F /* Info.plist */,
 				30F226B92051DE8900AE32BC /* MainMenuViewController.swift */,
 				30F226BB2051EB7A00AE32BC /* GridGameScene.swift */,
-				13F8D9D22063385B00ABF120 /* Updatable.swift */,
-				13F8D9D4206345B600ABF120 /* Touchable.swift */,
-				13F8D9D620634A2D00ABF120 /* Projectile.swift */,
 			);
 			path = XPaceInvaders;
 			sourceTree = "<group>";
@@ -242,6 +236,7 @@
 				30A9AF6220489B13005F3D6F /* Main.storyboard in Resources */,
 				30A9AF6420489B13005F3D6F /* Assets.xcassets in Resources */,
 				30A9AF6720489B13005F3D6F /* LaunchScreen.storyboard in Resources */,
+				1A32D5BC2062A23B00372E76 /* level.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,10 +264,7 @@
 				30F226BA2051DE8900AE32BC /* MainMenuViewController.swift in Sources */,
 				30A9AF5D20489B13005F3D6F /* GameScene.swift in Sources */,
 				30A9AF5F20489B13005F3D6F /* GameViewController.swift in Sources */,
-				13F8D9D720634A2D00ABF120 /* Projectile.swift in Sources */,
 				F873629C2051E259003CBCA7 /* Tower.swift in Sources */,
-				13F8D9D32063385B00ABF120 /* Updatable.swift in Sources */,
-				13F8D9D5206345B600ABF120 /* Touchable.swift in Sources */,
 				30A9AF5720489B13005F3D6F /* AppDelegate.swift in Sources */,
 				F873629A2051E235003CBCA7 /* Enemy.swift in Sources */,
 				F873629E2051E2D0003CBCA7 /* Base.swift in Sources */,

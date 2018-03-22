@@ -15,7 +15,37 @@ import GameplayKit
 class GridGameScene: SKScene
 {
     func touchDown(atPoint pos : CGPoint) {
-        print(pos.x)
+        if let path = Bundle.main.path(forResource: "level", ofType: "txt")
+        {
+            var readStringProject = ""
+            do {
+                readStringProject = try String(contentsOfFile: path, encoding: String.Encoding.utf8)
+                var result: [String] = []
+                readStringProject.enumerateLines {
+                    (line, _) -> () in
+                        result.append(line)
+                }
+                
+                let levelName = result[0]
+                let rowsColsArray = result[1].split(separator: " ")
+                let rows : Int = Int(rowsColsArray[0])!
+                let cols : Int = Int(rowsColsArray[1])!
+                
+                print(levelName)
+                print(rows)
+                print(cols)
+                print(rows + cols)
+            } catch let error as NSError {
+                print("Failed reading from URL: \(path), Error: " + error.localizedDescription)
+            }
+            // trying to read from the file. I can't call the following function for some reason
+            //let text = String.init(contentsOfFile: path, usedEncoding: nil)
+            //print(readStringProject)
+        }
+        
+        //contentsOf: path., usedEncoding: &NSUTF8StringEncoding)
+        //print (text)
+        //print(pos.x)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
