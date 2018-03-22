@@ -59,7 +59,7 @@ class GameViewController: UIViewController {
         return true
     }
     @objc func update() {
-        if let accelerometerData = motionManager.accelerometerData {
+        /*if let accelerometerData = motionManager.accelerometerData {
             //prints out the latest information from the accelerometer
             print(accelerometerData)
             //all these do is detect accelerometer data for a large change and then move the balls physics body
@@ -79,6 +79,6 @@ class GameViewController: UIViewController {
                 // Apply force to the moving object
                 //ball.physicsBody!.applyForce(CGVectorMake(40.0 * CGFloat(accelerometerData.acceleration.x), 0))
         }
-    }
+    }*/
 }
 }

@@ -13,7 +13,14 @@ class GameScene: SKScene {
     
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
+    override init() {
+        super.init()
+    }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    private let Ball = BallObject()
     override func didMove(to view: SKView) {
         
         // Get label node from scene and store it for use later

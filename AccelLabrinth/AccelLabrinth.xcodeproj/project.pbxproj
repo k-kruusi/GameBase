@@ -15,6 +15,8 @@
 		0EAFB00D2048ABAC00E7067A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EAFB00B2048ABAC00E7067A /* Main.storyboard */; };
 		0EAFB00F2048ABAC00E7067A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EAFB00E2048ABAC00E7067A /* Assets.xcassets */; };
 		0EAFB0122048ABAC00E7067A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EAFB0102048ABAC00E7067A /* LaunchScreen.storyboard */; };
+		EFCD0E6B2064337E00254EC6 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCD0E6A2064337E00254EC6 /* GameObject.swift */; };
+		EFCD0E6D2064350600254EC6 /* VectorMath+CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCD0E6C2064350600254EC6 /* VectorMath+CGPoint.swift */; };
 		EFCEBB3D2051F5C20078C7E1 /* BallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCEBB3C2051F5C20078C7E1 /* BallController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		0EAFB00E2048ABAC00E7067A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EAFB0112048ABAC00E7067A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0EAFB0132048ABAC00E7067A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFCD0E6A2064337E00254EC6 /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
+		EFCD0E6C2064350600254EC6 /* VectorMath+CGPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VectorMath+CGPoint.swift"; sourceTree = "<group>"; };
 		EFCEBB3C2051F5C20078C7E1 /* BallController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +76,8 @@
 				0EAFB0102048ABAC00E7067A /* LaunchScreen.storyboard */,
 				0EAFB0132048ABAC00E7067A /* Info.plist */,
 				EFCEBB3C2051F5C20078C7E1 /* BallController.swift */,
+				EFCD0E6A2064337E00254EC6 /* GameObject.swift */,
+				EFCD0E6C2064350600254EC6 /* VectorMath+CGPoint.swift */,
 			);
 			path = AccelLabrinth;
 			sourceTree = "<group>";
@@ -154,6 +160,8 @@
 				0EAFB00A2048ABAC00E7067A /* GameViewController.swift in Sources */,
 				EFCEBB3D2051F5C20078C7E1 /* BallController.swift in Sources */,
 				0EAFB0022048ABAC00E7067A /* AppDelegate.swift in Sources */,
+				EFCD0E6B2064337E00254EC6 /* GameObject.swift in Sources */,
+				EFCD0E6D2064350600254EC6 /* VectorMath+CGPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
