@@ -15,7 +15,7 @@ class GameScene: SKScene {
     private var spinnyNode : SKShapeNode?
 
     private let ball = BallObject()
-    
+    private let goal = GoalObject()
     override func didMove(to view: SKView) {
         
         // Get label node from scene and store it for use later
@@ -29,7 +29,9 @@ class GameScene: SKScene {
         let w = (self.size.width + self.size.height) * 0.05
         self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
         addChild(ball)
-        ball.position=CGPoint(x: 100, y: 100)
+        ball.position=CGPoint(x: -265, y: 550)
+        addChild(goal)
+        ball.position=CGPoint(x: -290, y: -560)
         if let spinnyNode = self.spinnyNode {
             spinnyNode.lineWidth = 2.5
             
@@ -88,5 +90,22 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+        //getting all objects
+        let gameObjects: [GameObject?] = self.children.flatMap { node in
+            guard let gameObject = node as? GameObject else {
+                return nil
+            }
+            return gameObject
+        }
+        
+        // calling update on all of them
+        for gameObject in gameObjects {
+            gameObject?.update(currentTime)
+        }
+        //cheking if ball=end
+        if(ball.position==goal.position)
+        {
+            goal.Victory()
+        }
     }
 }

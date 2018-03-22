@@ -18,6 +18,7 @@
 		EFCD0E6B2064337E00254EC6 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCD0E6A2064337E00254EC6 /* GameObject.swift */; };
 		EFCD0E6D2064350600254EC6 /* VectorMath+CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCD0E6C2064350600254EC6 /* VectorMath+CGPoint.swift */; };
 		EFCD0E6F2064456400254EC6 /* GoalNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCD0E6E2064456400254EC6 /* GoalNode.swift */; };
+		EFCD10952064540E00AE4A09 /* Victory.sks in Resources */ = {isa = PBXBuildFile; fileRef = EFCD10942064540E00AE4A09 /* Victory.sks */; };
 		EFCEBB3D2051F5C20078C7E1 /* BallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCEBB3C2051F5C20078C7E1 /* BallController.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		EFCD0E6A2064337E00254EC6 /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		EFCD0E6C2064350600254EC6 /* VectorMath+CGPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VectorMath+CGPoint.swift"; sourceTree = "<group>"; };
 		EFCD0E6E2064456400254EC6 /* GoalNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalNode.swift; sourceTree = "<group>"; };
+		EFCD10942064540E00AE4A09 /* Victory.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Victory.sks; sourceTree = "<group>"; };
 		EFCEBB3C2051F5C20078C7E1 /* BallController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 				EFCD0E6A2064337E00254EC6 /* GameObject.swift */,
 				EFCD0E6C2064350600254EC6 /* VectorMath+CGPoint.swift */,
 				EFCD0E6E2064456400254EC6 /* GoalNode.swift */,
+				EFCD10942064540E00AE4A09 /* Victory.sks */,
 			);
 			path = AccelLabrinth;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			files = (
 				0EAFB00D2048ABAC00E7067A /* Main.storyboard in Resources */,
 				0EAFB0042048ABAC00E7067A /* GameScene.sks in Resources */,
+				EFCD10952064540E00AE4A09 /* Victory.sks in Resources */,
 				0EAFB00F2048ABAC00E7067A /* Assets.xcassets in Resources */,
 				0EAFB0122048ABAC00E7067A /* LaunchScreen.storyboard in Resources */,
 				0EAFB0062048ABAC00E7067A /* Actions.sks in Resources */,
