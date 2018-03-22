@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A32D5BC2062A23B00372E76 /* level.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1A32D5BB2062A23B00372E76 /* level.txt */; };
+		3027808C20646B4600AC2AE7 /* GraphNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3027808B20646B4600AC2AE7 /* GraphNode.swift */; };
 		30A9AF5720489B13005F3D6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9AF5620489B13005F3D6F /* AppDelegate.swift */; };
 		30A9AF5D20489B13005F3D6F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9AF5C20489B13005F3D6F /* GameScene.swift */; };
 		30A9AF5F20489B13005F3D6F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9AF5E20489B13005F3D6F /* GameViewController.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		1A32D5BB2062A23B00372E76 /* level.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level.txt; sourceTree = "<group>"; };
+		3027808B20646B4600AC2AE7 /* GraphNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphNode.swift; sourceTree = "<group>"; };
 		30A9AF5320489B13005F3D6F /* XPaceInvaders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XPaceInvaders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A9AF5620489B13005F3D6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30A9AF5C20489B13005F3D6F /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				30A9AF6820489B13005F3D6F /* Info.plist */,
 				30F226B92051DE8900AE32BC /* MainMenuViewController.swift */,
 				30F226BB2051EB7A00AE32BC /* GridGameScene.swift */,
+				3027808B20646B4600AC2AE7 /* GraphNode.swift */,
 			);
 			path = XPaceInvaders;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				30B5D8B5206444CC00C63044 /* TowerButton.swift in Sources */,
 				30A9AF5720489B13005F3D6F /* AppDelegate.swift in Sources */,
 				F873629A2051E235003CBCA7 /* Enemy.swift in Sources */,
+				3027808C20646B4600AC2AE7 /* GraphNode.swift in Sources */,
 				F873629E2051E2D0003CBCA7 /* Base.swift in Sources */,
 				F87362A02051E321003CBCA7 /* Level.swift in Sources */,
 				30F226BC2051EB7A00AE32BC /* GridGameScene.swift in Sources */,
