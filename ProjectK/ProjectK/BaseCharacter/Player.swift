@@ -10,36 +10,22 @@ import Foundation
 import SpriteKit
 
 class Player : GameObject{
-    enum EType {
-        case Big
-        case Medium
-        case Small
-    }
-    
-    var myType : EType?
-    
     init(){
-        super.init(imageName: "alienYellow", pos: CGPoint(x: 150,y: 450))
-        self.SetEType(newType: EType.Small)
+        super.init(imageName: "bow", pos: CGPoint(x: 450,y: 450))
     }
     
     func RotateTowards(){
         
         var rotateToPos = CGPoint(x: position.x - rotateToTarget.x, y: position.y - rotateToTarget.y)
         //let length = sqrt(moveToPos.x * moveToPos.x + moveToPos.y * moveToPos.y)
-        let angle = atan2(rotateToPos.x, rotateToPos.y)
+        let angle = atan2(-rotateToPos.x, rotateToPos.y)
         
-        if (abs(position.x - moveToTarget.x) > moveSpeed + 1){
-            zRotation = angle - 90 * CGFloat(Double.pi/180.0)
-            NSLog("%f", zRotation);
-        }
+        zRotation = (angle - 90 * CGFloat(Double.pi/180.0)) + 135
+        NSLog("%f", zRotation * CGFloat(180.0 / Double.pi));
+        
+        //if moving
+        //if (abs(position.x - moveToTarget.x) > moveSpeed + 1)
     }
-    
-    
-    func SetEType(newType : EType){
-        myType = newType
-    }
-    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("asdf")
