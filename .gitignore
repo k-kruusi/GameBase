@@ -17,6 +17,16 @@ DerivedData/
 !default.perspectivev3
 xcuserdata/
 
+## macOS meta files
+.DS_Store
+
+## Large files
+*.jpg
+*.jpeg
+*.png
+*.wav
+*.mp3
+
 ## Other
 *.moved-aside
 *.xccheckout
