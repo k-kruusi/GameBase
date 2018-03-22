@@ -102,7 +102,7 @@ class GameScene: SKScene {
         for gameObject in gameObjects {
             gameObject?.update(currentTime)
         }
-        //cheking if ball=end
+        //cheking if ball and end is at the same place
         if(ball.position==goal.position)
         {
             goal.Victory()
