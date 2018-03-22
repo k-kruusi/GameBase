@@ -13,7 +13,8 @@ class BallObject: GameObject {
     /// a static offset value to add to any Ball so it appears on top of other sprites
     private static let BallZPosition: CGFloat = 1000
     
-    
+
+
     /// the target of the user input the ball should walk to or nil
     var target: CGPoint?
     

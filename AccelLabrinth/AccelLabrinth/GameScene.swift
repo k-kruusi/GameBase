@@ -13,14 +13,9 @@ class GameScene: SKScene {
     
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
-    override init() {
-        super.init()
-    }
+
+    private let ball = BallObject()
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    private let Ball = BallObject()
     override func didMove(to view: SKView) {
         
         // Get label node from scene and store it for use later
@@ -33,7 +28,8 @@ class GameScene: SKScene {
         // Create shape node to use during mouse interaction
         let w = (self.size.width + self.size.height) * 0.05
         self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
-        
+        addChild(ball)
+        ball.position=CGPoint(x: 100, y: 100)
         if let spinnyNode = self.spinnyNode {
             spinnyNode.lineWidth = 2.5
             
