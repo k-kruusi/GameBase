@@ -14,6 +14,8 @@ import GameplayKit
 
 class GridGameScene: SKScene
 {
+    var arr: [[Int]] = []
+    
     func touchDown(atPoint pos : CGPoint) {
         if let path = Bundle.main.path(forResource: "level", ofType: "txt")
         {
@@ -35,6 +37,19 @@ class GridGameScene: SKScene
                 print(rows)
                 print(cols)
                 print(rows + cols)
+                
+                for i in 0...rows
+                {
+                    arr.append([])
+                    
+                    for j in 0...cols
+                    {
+                        arr[i].append(i+j)
+                    }
+                }
+                
+                print (arr)
+                
             } catch let error as NSError {
                 print("Failed reading from URL: \(path), Error: " + error.localizedDescription)
             }
@@ -42,6 +57,9 @@ class GridGameScene: SKScene
             //let text = String.init(contentsOfFile: path, usedEncoding: nil)
             //print(readStringProject)
         }
+        
+        
+        
         
         //contentsOf: path., usedEncoding: &NSUTF8StringEncoding)
         //print (text)

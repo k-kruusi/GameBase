@@ -14,12 +14,13 @@ class GameScene: SKScene {
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
     
-    var testTower = Tower(imagedName: "enemyBlack1")
+    var testTowerButton = TowerButton(imagedName: "buttonGreen")
     var testEnemy = Enemy(imagedName: "meteorGrey_small2")
     var towerArray = [Tower]()
     var updatables = [Updatable]()
     
     let background = BaseGameObject(imagedName: "purple")
+    var bDraggingTower = Bool(false)
     
     override func didMove(to view: SKView) {
         
@@ -31,13 +32,11 @@ class GameScene: SKScene {
         
         
         //testtower
-        testTower.isUserInteractionEnabled = false
-        background.addChild(testTower)
-        towerArray.append(testTower)
-        updatables.append(testTower)
+        testTowerButton.isUserInteractionEnabled = false
+        background.addChild(testTowerButton)
         
-        testTower.zPosition = 1
-        testTower.position = CGPoint(x: 0, y: 0)
+        testTowerButton.zPosition = 1
+        testTowerButton.position = CGPoint(x: 0, y: -175)
         
         //testenemy
         background.addChild(testEnemy)
@@ -73,7 +72,11 @@ class GameScene: SKScene {
     
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        testTower.Fire()
+        //testing fire
+        for x in towerArray{
+            x.currentTarget = testEnemy
+            x.Fire()
+        }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -83,24 +86,28 @@ class GameScene: SKScene {
             let positionInScene = t.location(in: self)
             let touchedNode = self.atPoint(positionInScene)
             
+            if touchedNode is TowerButton && bDraggingTower == false{
+                let newTower = Tower(imagedName: "enemyBlack1")
+                newTower.isUserInteractionEnabled = false
+                background.addChild(newTower)
+                
+                newTower.zPosition = 1
+                newTower.position = CGPoint(x: 0, y: 0)
+                
+                towerArray.append(newTower)
+            }
+            
             if touchedNode is Tower{
-            //    let newTower = BaseGameObject(imagedName: "enemyBlack1")
-            //    newTower.isUserInteractionEnabled = false
-            //    background.addChild(newTower)
-                
-            //    newTower.zPosition = 1
-            //    newTower.position = CGPoint(x: 0, y: 0)
-                
-            //    towerArray.append(newTower)
-                
-                touchedNode.position.x = positionInScene.x
-                touchedNode.position.y = positionInScene.y
+                bDraggingTower = true
+                touchedNode.position = positionInScene
             }
         }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
+        for t in touches { self.touchUp(atPoint: t.location(in: self))
+            bDraggingTower = false
+        }
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {

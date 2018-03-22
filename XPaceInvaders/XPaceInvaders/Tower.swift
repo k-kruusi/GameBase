@@ -20,27 +20,56 @@ class Tower : BaseGameObject{
     }
     
     func Fire(){
-        if(currentTarget == nil){
-            FindTarget()
+        
+        guard let currentTarget = currentTarget else{
+            return
         }
         
+        print("firing")
+        let moveAction = SKAction.move(to: currentTarget.position, duration: 0.2)
         let projectile = Projectile(imagedName: "laserGreen05")
-        projectile.move(toParent: currentTarget!)
+        projectile.position = self.position
+        projectile.zPosition = 1
+
+        projectile.run(moveAction)
     }
     
     func FindTarget(){
         //if cant find target, return? else call fire again?
-        
-        var closest = currentTarget
-        
-        for child in (self.scene?.children)!{
-            if child is Enemy{
-                currentTarget = child as! Enemy
-            }
-        }
+
+        currentTarget = GetClosestEnemy()
+        Fire()
+
     }
     
-    func GetClosest(){
-        
+    func GetClosestEnemy() -> Enemy{
+
+        var nearestEnemy : Enemy?
+        var distanceA : CGFloat
+        var distanceB : CGFloat
+
+        for child in (self.scene?.children)!{
+            if child is Enemy{
+                if(nearestEnemy == nil){
+                    nearestEnemy = child as! Enemy
+                }
+
+                else{
+                    distanceA = self.position.distance(point: (nearestEnemy?.position)!)
+                    distanceB = self.position.distance(point: (child.position))
+
+                    if(distanceA >= distanceB){
+                        nearestEnemy = child as! Enemy
+                    }
+                }
+            }
+        }
+        return nearestEnemy!
+    }
+}
+
+extension CGPoint {
+    func distance(point: CGPoint) -> CGFloat {
+        return abs(CGFloat(hypotf(Float(point.x - x), Float(point.y - y))))
     }
 }

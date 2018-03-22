@@ -1,13 +1,14 @@
 //
-//  BaseEnemy.swift
+//  TowerButton.swift
 //  XPaceInvaders
 //
-//  Created by Mazza Matthew J. on 3/8/18.
+//  Created by Matthew Mazza on 2018-03-22.
 //  Copyright © 2018 Fonseca Barbalho Talis. All rights reserved.
 //
 
 import Foundation
 
-class Enemy : BaseGameObject {
-    //put stuff here
+class TowerButton: BaseGameObject{
+    
+    
 }
