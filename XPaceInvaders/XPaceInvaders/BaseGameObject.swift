@@ -9,7 +9,7 @@
 import SpriteKit
 import GameplayKit
 
-class BaseGameObject : SKSpriteNode {
+class BaseGameObject : SKSpriteNode, Updatable {
     
     init(imagedName name: String)
     {
@@ -23,8 +23,7 @@ class BaseGameObject : SKSpriteNode {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func update(_ currentTime: TimeInterval){
-        
+    func update(currentTime: TimeInterval){
+        // update logic here
     }
-    
 }

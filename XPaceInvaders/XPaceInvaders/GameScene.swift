@@ -14,24 +14,38 @@ class GameScene: SKScene {
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
     
+    var testTower = Tower(imagedName: "enemyBlack1")
+    var testEnemy = Enemy(imagedName: "meteorGrey_small2")
+    var towerArray = [Tower]()
+    var updatables = [Updatable]()
+    
+    let background = BaseGameObject(imagedName: "purple")
+    
     override func didMove(to view: SKView) {
         
+        self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        
         //background
-        let background = BaseGameObject(imagedName: "purple")
         background.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         addChild(background)
         
         
-        //testobj
-        let testObj = BaseGameObject(imagedName: "enemyBlack1")
-        testObj.name = "tower"
-        testObj.isUserInteractionEnabled = false
-        background.addChild(testObj)
+        //testtower
+        testTower.isUserInteractionEnabled = false
+        background.addChild(testTower)
+        towerArray.append(testTower)
+        updatables.append(testTower)
         
-        testObj.zPosition = 1
-        testObj.position = CGPoint(x: 0, y: 0)
+        testTower.zPosition = 1
+        testTower.position = CGPoint(x: 0, y: 0)
+        
+        //testenemy
+        background.addChild(testEnemy)
+        updatables.append(testEnemy)
+        
+        testEnemy.zPosition = 1
+        testEnemy.position = CGPoint(x: 50, y: 50)
     }
-    
     
     func touchDown(atPoint pos : CGPoint) {
         if let n = self.spinnyNode?.copy() as! SKShapeNode? {
@@ -59,22 +73,30 @@ class GameScene: SKScene {
     
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        //testing object touching here, move into individual classes later on
-        
-        let touch:UITouch = touches.first!
-        let positionInScene = touch.location(in: self)
-        let touchedNode = self.atPoint(positionInScene)
-        
-        if let name = touchedNode.name{
-            if name == "tower"{
-                print("touched")
-            }
-        }
+        testTower.Fire()
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchMoved(toPoint: t.location(in: self)) }
+        for t in touches { self.touchMoved(toPoint: t.location(in: self))
+            
+            let t:UITouch = touches.first!
+            let positionInScene = t.location(in: self)
+            let touchedNode = self.atPoint(positionInScene)
+            
+            if touchedNode is Tower{
+            //    let newTower = BaseGameObject(imagedName: "enemyBlack1")
+            //    newTower.isUserInteractionEnabled = false
+            //    background.addChild(newTower)
+                
+            //    newTower.zPosition = 1
+            //    newTower.position = CGPoint(x: 0, y: 0)
+                
+            //    towerArray.append(newTower)
+                
+                touchedNode.position.x = positionInScene.x
+                touchedNode.position.y = positionInScene.y
+            }
+        }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -87,6 +109,8 @@ class GameScene: SKScene {
     
     
     override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
+        for obj in updatables{
+            obj.update(currentTime: currentTime)
+        }
     }
 }
