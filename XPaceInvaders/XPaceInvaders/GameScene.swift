@@ -47,11 +47,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         background.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         addChild(background)
         
-        
-        //testtower
+        //UI buttons
         testTowerButton.isUserInteractionEnabled = false
         background.addChild(testTowerButton)
-        
         testTowerButton.zPosition = 1
         testTowerButton.position = CGPoint(x: 0, y: -175)
         
@@ -109,14 +107,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-//        if(!enemyArray.isEmpty){
-//            for i in 0...(enemyArray.count - 1){
-//                enemyArray[i].takeDamage(damageTaken: 5)
-//            }
-//
-//            enemyArray = enemyArray.filter{ !$0.bIsDead }
-//            print(enemyArray.count)
-//        }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -162,9 +152,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func projectileDidCollideWithEnemy(projectile: SKSpriteNode, enemy: SKSpriteNode){
-        print("hit")
+        (enemy as! Enemy).takeDamage(damageTaken: 5)
         projectile.removeFromParent()
-        enemy.removeFromParent()
+        
+        enemyArray = enemyArray.filter{ !$0.bIsDead }
     }
     
     func didBegin(_ contact: SKPhysicsContact) {

@@ -15,7 +15,7 @@ class Projectile : BaseGameObject{
         super.init(imagedName: name)
         self.name = "projectile"
         
-        self.physicsBody? = SKPhysicsBody(circleOfRadius: self.size.width/2)
+        self.physicsBody = SKPhysicsBody(circleOfRadius: self.size.width/2)
         self.physicsBody?.isDynamic = true
         self.physicsBody?.categoryBitMask = PhysicsCategory.Projectile
         self.physicsBody?.contactTestBitMask = PhysicsCategory.Enemy
