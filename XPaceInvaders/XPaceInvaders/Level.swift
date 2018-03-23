@@ -13,14 +13,28 @@ class Level {
     let myGraph = GKGraph()
     
     var arr: [[GraphNode?]] = []
-    //var
+    var startNode : GraphNode?
+    var endNode : GraphNode?
+    
+    var scaleX : CGFloat = 0.0
+    var scaleY : CGFloat = 0.0
+    
+    var resultPath: [GKGraphNode] = []
+    
+    var actions : [SKAction] = []
+    
+    func getActionsPath() -> [SKAction]
+    {
+        return actions;
+    }
 
     //put stuff here
     //this is for the grid
-    func testLevelCreation()
+    init(levelName: String)
     {
-        if let path = Bundle.main.path(forResource: "level", ofType: "txt")
+        if let path = Bundle.main.path(forResource: levelName, ofType: "txt")
         {
+            
             var readStringProject = ""
             do {
                 readStringProject = try String(contentsOfFile: path, encoding: String.Encoding.utf8)
@@ -34,9 +48,13 @@ class Level {
                 // let levelName = result[0]
                 
                 // parsing the number of rows and colums
-                // let rowsColsArray = result[1].split(separator: " ")
-                // let rows : Int = Int(rowsColsArray[0])!
-                // let cols : Int = Int(rowsColsArray[1])!
+                let rowsColsArray = result[1].split(separator: " ")
+                let rows : Int = Int(rowsColsArray[0])!
+                let cols : Int = Int(rowsColsArray[1])!
+                scaleX = UIScreen.main.bounds.width/CGFloat(rows)
+                scaleY = UIScreen.main.bounds.height/CGFloat(cols)
+                print(scaleX)
+                print(scaleY)
                 
                 // getting the information to create each node
                 for i in 2...(result.count-1)
@@ -55,7 +73,14 @@ class Level {
                             let currentNode = GraphNode(row: i-1,col: j)
                             arr[i - 2].append(currentNode)
                             myGraph.add([currentNode])
-                            
+                            if currentValue == 100
+                            {
+                                startNode = currentNode
+                            }
+                            if currentValue == 101
+                            {
+                                endNode = currentNode
+                            }
                         } else
                         {
                             arr[i - 2].append(nil)
@@ -149,19 +174,18 @@ class Level {
                     }
                 }
                 
-                let path: [GKGraphNode] = myGraph.findPath(from: arr[0][1]!, to: arr[4][4]!)
-                print(path)
+                resultPath = myGraph.findPath(from: startNode!, to: endNode!)
+                for i in 0...resultPath.count-1
+                {
+                    let g: GraphNode = (resultPath[i] as! GraphNode)
+                    actions.append(SKAction.move(to: CGPoint(x: CGFloat(g.row+1) * scaleX, y: CGFloat(g.col+1) * scaleY), duration: 3.0))
+                }
+                
+                print(resultPath)
                 
             } catch let error as NSError {
                 print("Failed reading from URL: \(path), Error: " + error.localizedDescription)
             }
-            // trying to read from the file. I can't call the following function for some reason
-            //let text = String.init(contentsOfFile: path, usedEncoding: nil)
-            //print(readStringProject)
         }
-        
-        //contentsOf: path., usedEncoding: &NSUTF8StringEncoding)
-        //print (text)
-        //print(pos.x)
     }
 }
