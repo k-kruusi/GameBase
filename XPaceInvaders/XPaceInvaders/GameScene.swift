@@ -26,8 +26,7 @@ class GameScene: SKScene {
         
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         
-        let testing : Level = Level()
-        testing.testLevelCreation()
+        let testing : Level = Level(levelName: "level")
         
         //background
         background.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
