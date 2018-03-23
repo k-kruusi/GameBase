@@ -177,11 +177,9 @@ class Level {
                 for i in 0...resultPath.count-1
                 {
                     let g: GraphNode = (resultPath[i] as! GraphNode)
-                    print(CGFloat(g.row) * scaleX)
+                    
                     actions.append(SKAction.move(to: CGPoint(x: CGFloat(g.row+1) * scaleX, y: CGFloat(g.col+1) * scaleY), duration: 1.0))
                 }
-                
-                print(resultPath)
                 
             } catch let error as NSError {
                 print("Failed reading from URL: \(path), Error: " + error.localizedDescription)

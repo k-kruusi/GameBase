@@ -22,15 +22,14 @@ class Spawner : BaseGameObject {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc func spawnEnemy(bg: BaseGameObject, arrayToAppend: [Enemy]){
+    func spawnEnemy(level: Level, arrayToAppend: inout [Enemy]){
         
-        print("spawn!")
-        
-        let newEnemy = Enemy(imagedName: "meteorGrey_small2")
-        bg.addChild(newEnemy)
+        let newEnemy = Enemy(imagedName: "meteorGrey_small2", level: level)
+        self.scene?.addChild(newEnemy)
         
         newEnemy.zPosition = 1
         newEnemy.position = self.position
-//        arrayToAppend.append(newEnemy)
+        newEnemy.activate()
+        arrayToAppend.append(newEnemy)
     }
 }

@@ -15,9 +15,14 @@ class Enemy : BaseGameObject {
     var health = 10
     var bIsDead = false
     
-    override init(imagedName name: String) {
+    let level : Level
+    
+    init(imagedName name: String, level: Level) {
+        self.level = level
         super.init(imagedName: name)
         self.name = "enemy"
+        
+        
         
         self.physicsBody = SKPhysicsBody(rectangleOf: self.size)
         self.physicsBody?.isDynamic = true
@@ -46,6 +51,11 @@ class Enemy : BaseGameObject {
     
     override func update(currentTime: TimeInterval) {
         
+    }
+    
+    func activate()
+    {
+        self.run(SKAction.sequence(level.getActionsPath()))
     }
     
 }

@@ -38,11 +38,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var towerFireTimer : Timer!
     var spawnTimer : Timer!
     
+    let level = Level(levelName: "level")
+    
     override func didMove(to view: SKView) {
         
         self.anchorPoint = CGPoint(x: 0.0, y: 0.0)
-        
-        let testing : Level = Level(levelName: "level")
         
         //background
         background.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
@@ -58,7 +58,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         testTowerButton.position = CGPoint(x: UIScreen.main.bounds.width/2.0, y: 70)
         
         //testenemy
-        let testEnemy = Enemy(imagedName: "meteorGrey_small2")
+        /*let testEnemy = Enemy(coder: "meteorGrey_small2")
         //background.addChild(testEnemy)
         self.addChild(testEnemy)
         updatables.append(testEnemy)
@@ -67,24 +67,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         testEnemy.position = CGPoint(x: 0, y: UIScreen.main.bounds.height/2.0)
         testEnemy.run(SKAction.sequence(testing.getActionsPath()))
         enemyArray.append(testEnemy)
-        
-        //test enemy2
-        let testEnemy2 = Enemy(imagedName: "meteorGrey_small2")
-        //background.addChild(testEnemy2)
-        self.addChild(testEnemy2)
-        updatables.append(testEnemy2)
-        
-        //
-        
-        testEnemy2.zPosition = 1
-        testEnemy2.position = CGPoint(x: 250, y: 50)
-        enemyArray.append(testEnemy2)
-        
+        */
         //spawner
         let spawner = Spawner(imagedName: "meteorGrey_small1", spawnRate: 2.0)
-        background.addChild(spawner)
+        self.addChild(spawner)
         spawner.zPosition = 1
-        spawner.position = CGPoint(x: 100, y: 50)
+        spawner.position = CGPoint(x: 0, y: UIScreen.main.bounds.height/2.0)
         spawnerArray.append(spawner)
         
         //timer for the towers firing
@@ -136,10 +124,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if touchedNode is TowerButton && bDraggingTower == false{
                 let newTower = Tower(imagedName: "enemyBlack1")
                 newTower.isUserInteractionEnabled = false
-                background.addChild(newTower)
+                self.addChild(newTower)
                 
                 newTower.zPosition = 1
-                newTower.position = CGPoint(x: 0, y: 0)
+                newTower.position = CGPoint(x: UIScreen.main.bounds.width/2.0, y: UIScreen.main.bounds.height/2.0 - 100)
                 
                 towerArray.append(newTower)
             }
@@ -169,7 +157,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func projectileDidCollideWithEnemy(projectile: SKSpriteNode, enemy: SKSpriteNode){
-        (enemy as! Enemy).takeDamage(damageTaken: 5)
+        (enemy as! Enemy).takeDamage(damageTaken: 10)
         projectile.removeFromParent()
         
         enemyArray = enemyArray.filter{ !$0.bIsDead }
@@ -214,7 +202,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     @objc func ActivateSpawners(){
         for s in spawnerArray{
-            s.spawnEnemy(bg: background, arrayToAppend: enemyArray)
+            s.spawnEnemy(level: level, arrayToAppend: &enemyArray)
         }
     }
 }
