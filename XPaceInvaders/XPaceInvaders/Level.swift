@@ -53,8 +53,7 @@ class Level {
                 let cols : Int = Int(rowsColsArray[1])!
                 scaleX = UIScreen.main.bounds.width/CGFloat(rows)
                 scaleY = UIScreen.main.bounds.height/CGFloat(cols)
-                print(scaleX)
-                print(scaleY)
+
                 
                 // getting the information to create each node
                 for i in 2...(result.count-1)
@@ -70,7 +69,7 @@ class Level {
                         
                         if(currentValue > 0)
                         {
-                            let currentNode = GraphNode(row: i-1,col: j)
+                            let currentNode = GraphNode(row: j,col: i-2)
                             arr[i - 2].append(currentNode)
                             myGraph.add([currentNode])
                             if currentValue == 100
@@ -178,7 +177,8 @@ class Level {
                 for i in 0...resultPath.count-1
                 {
                     let g: GraphNode = (resultPath[i] as! GraphNode)
-                    actions.append(SKAction.move(to: CGPoint(x: CGFloat(g.row+1) * scaleX, y: CGFloat(g.col+1) * scaleY), duration: 3.0))
+                    print(CGFloat(g.row) * scaleX)
+                    actions.append(SKAction.move(to: CGPoint(x: CGFloat(g.row+1) * scaleX, y: CGFloat(g.col+1) * scaleY), duration: 1.0))
                 }
                 
                 print(resultPath)

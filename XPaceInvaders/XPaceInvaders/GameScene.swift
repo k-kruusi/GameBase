@@ -38,33 +38,41 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func didMove(to view: SKView) {
         
-        self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        self.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         
         let testing : Level = Level(levelName: "level")
         
         //background
         background.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        background.position = CGPoint(x: UIScreen.main.bounds.width/2.0, y: UIScreen.main.bounds.height/2.0)
+        //background.position = CGPointMake(UIScreen.main.bounds.width/2.0, UIScreen.main.bounds.height/2.0)
+        background.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         addChild(background)
         
         //UI buttons
         testTowerButton.isUserInteractionEnabled = false
-        background.addChild(testTowerButton)
+        self.addChild(testTowerButton)
         testTowerButton.zPosition = 1
-        testTowerButton.position = CGPoint(x: 0, y: -175)
+        testTowerButton.position = CGPoint(x: UIScreen.main.bounds.width/2.0, y: 70)
         
         //testenemy
         let testEnemy = Enemy(imagedName: "meteorGrey_small2")
-        background.addChild(testEnemy)
+        //background.addChild(testEnemy)
+        self.addChild(testEnemy)
         updatables.append(testEnemy)
         
         testEnemy.zPosition = 1
-        testEnemy.position = CGPoint(x: 50, y: 50)
+        testEnemy.position = CGPoint(x: 0, y: UIScreen.main.bounds.height/2.0)
+        testEnemy.run(SKAction.sequence(testing.getActionsPath()))
         enemyArray.append(testEnemy)
         
         //test enemy2
         let testEnemy2 = Enemy(imagedName: "meteorGrey_small2")
-        background.addChild(testEnemy2)
+        //background.addChild(testEnemy2)
+        self.addChild(testEnemy2)
         updatables.append(testEnemy2)
+        
+        //
         
         testEnemy2.zPosition = 1
         testEnemy2.position = CGPoint(x: 250, y: 50)
