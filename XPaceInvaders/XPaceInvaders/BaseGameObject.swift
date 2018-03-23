@@ -16,7 +16,6 @@ class BaseGameObject : SKSpriteNode, Updatable {
         let tex = SKTexture(imageNamed: name)
         super.init(texture: tex, color: UIColor.clear, size: tex.size())
         
-        
     }
     
     required init?(coder aDecoder: NSCoder) {

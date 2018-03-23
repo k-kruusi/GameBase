@@ -6,21 +6,35 @@
 //  Copyright © 2018 Fonseca Barbalho Talis. All rights reserved.
 //
 
+import UIKit
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+struct PhysicsCategory{
+    static let None         : UInt32 = 0
+    static let All          : UInt32 = UInt32.max
+    static let Enemy        : UInt32 = 0b1  //1
+    static let Projectile   : UInt32 = 0b10 //2
+}
+
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
+    //UI
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
-    
     var testTowerButton = TowerButton(imagedName: "buttonGreen")
-    var testEnemy = Enemy(imagedName: "meteorGrey_small2")
+    
+    //arrays
     var towerArray = [Tower]()
     var updatables = [Updatable]()
+    var enemyArray = [Enemy]()
     
+    //scene
     let background = BaseGameObject(imagedName: "purple")
+    
+    //misc
     var bDraggingTower = Bool(false)
+    var towerFireTimer : Timer!
     
     override func didMove(to view: SKView) {
         
@@ -32,20 +46,37 @@ class GameScene: SKScene {
         background.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         addChild(background)
         
-        
-        //testtower
+        //UI buttons
         testTowerButton.isUserInteractionEnabled = false
         background.addChild(testTowerButton)
-        
         testTowerButton.zPosition = 1
         testTowerButton.position = CGPoint(x: 0, y: -175)
         
         //testenemy
+        let testEnemy = Enemy(imagedName: "meteorGrey_small2")
         background.addChild(testEnemy)
         updatables.append(testEnemy)
         
         testEnemy.zPosition = 1
         testEnemy.position = CGPoint(x: 50, y: 50)
+        enemyArray.append(testEnemy)
+        
+        //test enemy2
+        let testEnemy2 = Enemy(imagedName: "meteorGrey_small2")
+        background.addChild(testEnemy2)
+        updatables.append(testEnemy2)
+        
+        testEnemy2.zPosition = 1
+        testEnemy2.position = CGPoint(x: 250, y: 50)
+        enemyArray.append(testEnemy2)
+        
+        //timer for the towers firing
+        towerFireTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ActivateTowers), userInfo: nil, repeats: true)
+
+        
+        physicsWorld.gravity = CGVector.zero
+        physicsWorld.contactDelegate = self
+
     }
     
     func touchDown(atPoint pos : CGPoint) {
@@ -74,11 +105,7 @@ class GameScene: SKScene {
     
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        //testing fire
-        for x in towerArray{
-            x.currentTarget = testEnemy
-            x.Fire()
-        }
+        
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -120,6 +147,50 @@ class GameScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         for obj in updatables{
             obj.update(currentTime: currentTime)
+        }
+    }
+    
+    func projectileDidCollideWithEnemy(projectile: SKSpriteNode, enemy: SKSpriteNode){
+        (enemy as! Enemy).takeDamage(damageTaken: 5)
+        projectile.removeFromParent()
+        
+        enemyArray = enemyArray.filter{ !$0.bIsDead }
+    }
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        var firstBody: SKPhysicsBody
+        var secondBody: SKPhysicsBody
+        
+        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask{
+            firstBody = contact.bodyA
+            secondBody = contact.bodyB
+        }
+        
+        else{
+            firstBody = contact.bodyB
+            secondBody = contact.bodyA
+        }
+        
+        if((firstBody.categoryBitMask & PhysicsCategory.Enemy != 0) &&
+            (secondBody.categoryBitMask & PhysicsCategory.Projectile != 0)){
+            if let enemy = firstBody.node as? SKSpriteNode, let
+                projectile = secondBody.node as? SKSpriteNode {
+                projectileDidCollideWithEnemy(projectile: projectile, enemy: enemy)
+            }
+        }
+    }
+    
+    @objc func ActivateTowers(){
+        //if enemies exist
+        if(!enemyArray.isEmpty){
+            
+            //for each tower that exists
+            for x in towerArray{
+                
+                //find closest enemy and fire
+                x.GetClosestEnemy(enemyArray: enemyArray)
+                x.Fire(background: background)
+            }
         }
     }
 }

@@ -11,60 +11,72 @@ import SpriteKit
 
 class Tower : BaseGameObject{
     
-    var rateOfFire = Int(1.0)
-    var bIsFiring = Bool(false)
+    var rateOfFire : Float
+    var fireSpeed : Float
+    var bIsFiring : Bool
     var currentTarget : BaseGameObject?
+    
+    override init(imagedName name: String) {
+        rateOfFire = 1.0
+        bIsFiring = false
+        fireSpeed = 0.5
+        
+        super.init(imagedName: name)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func update(currentTime: TimeInterval){
         print(position.x)
     }
     
-    func Fire(){
+    func Fire(background: SKNode){
         
-        guard let currentTarget = currentTarget else{
+        if(currentTarget == nil){
             return
         }
         
-        print("firing")
-        let moveAction = SKAction.move(to: currentTarget.position, duration: 0.2)
+        //print("firing")
         let projectile = Projectile(imagedName: "laserGreen05")
+        let fireAction = SKAction.move(to: currentTarget!.position, duration: TimeInterval(fireSpeed))
+        background.addChild(projectile)
         projectile.position = self.position
         projectile.zPosition = 1
 
-        projectile.run(moveAction)
+        projectile.run(fireAction)
     }
     
-    func FindTarget(){
-        //if cant find target, return? else call fire again?
-
-        currentTarget = GetClosestEnemy()
-        Fire()
-
-    }
-    
-    func GetClosestEnemy() -> Enemy{
-
+    func GetClosestEnemy(enemyArray : [Enemy]){
         var nearestEnemy : Enemy?
         var distanceA : CGFloat
         var distanceB : CGFloat
-
-        for child in (self.scene?.children)!{
-            if child is Enemy{
-                if(nearestEnemy == nil){
-                    nearestEnemy = child as! Enemy
-                }
-
-                else{
-                    distanceA = self.position.distance(point: (nearestEnemy?.position)!)
-                    distanceB = self.position.distance(point: (child.position))
-
-                    if(distanceA >= distanceB){
-                        nearestEnemy = child as! Enemy
-                    }
-                }
+        
+        for e in enemyArray{
+            //print("enemy found!")
+            
+            //if no enemy, set nearest to first in array
+            if(nearestEnemy == nil){
+                nearestEnemy = e
+            }
+            
+            //check closest
+            distanceA = self.position.distance(point: (nearestEnemy?.position)!)
+            distanceB = self.position.distance(point: (e.position))
+            
+            //set new enemy if new enemy is closer
+            if(distanceA >= distanceB){
+                nearestEnemy = e
             }
         }
-        return nearestEnemy!
+        
+        if(nearestEnemy == nil){
+            return
+        }
+        
+        currentTarget = nearestEnemy
+        
     }
 }
 
