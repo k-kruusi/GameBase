@@ -41,7 +41,7 @@ class Tower : BaseGameObject{
         //print("firing")
         let projectile = Projectile(imagedName: "laserGreen05")
         let fireAction = SKAction.move(to: currentTarget!.position, duration: TimeInterval(fireSpeed))
-        background.addChild(projectile)
+        self.scene?.addChild(projectile)
         projectile.position = self.position
         projectile.zPosition = 1
 
