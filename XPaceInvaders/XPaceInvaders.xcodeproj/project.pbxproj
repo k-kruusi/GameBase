@@ -26,6 +26,7 @@
 		F873629C2051E259003CBCA7 /* Tower.swift in Sources */ = {isa = PBXBuildFile; fileRef = F873629B2051E259003CBCA7 /* Tower.swift */; };
 		F873629E2051E2D0003CBCA7 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = F873629D2051E2D0003CBCA7 /* Base.swift */; };
 		F87362A02051E321003CBCA7 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = F873629F2051E321003CBCA7 /* Level.swift */; };
+		F8B6360A20647AFF00ADDC59 /* Spawner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B6360920647AFF00ADDC59 /* Spawner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		F873629B2051E259003CBCA7 /* Tower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tower.swift; sourceTree = "<group>"; };
 		F873629D2051E2D0003CBCA7 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		F873629F2051E321003CBCA7 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		F8B6360920647AFF00ADDC59 /* Spawner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spawner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				30F226B92051DE8900AE32BC /* MainMenuViewController.swift */,
 				30F226BB2051EB7A00AE32BC /* GridGameScene.swift */,
 				3027808B20646B4600AC2AE7 /* GraphNode.swift */,
+				F8B6360920647AFF00ADDC59 /* Spawner.swift */,
 			);
 			path = XPaceInvaders;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				F873629C2051E259003CBCA7 /* Tower.swift in Sources */,
 				30B5D8B3206444CC00C63044 /* Touchable.swift in Sources */,
 				30B5D8B5206444CC00C63044 /* TowerButton.swift in Sources */,
+				F8B6360A20647AFF00ADDC59 /* Spawner.swift in Sources */,
 				30A9AF5720489B13005F3D6F /* AppDelegate.swift in Sources */,
 				F873629A2051E235003CBCA7 /* Enemy.swift in Sources */,
 				3027808C20646B4600AC2AE7 /* GraphNode.swift in Sources */,

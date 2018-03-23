@@ -28,6 +28,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var towerArray = [Tower]()
     var updatables = [Updatable]()
     var enemyArray = [Enemy]()
+    var spawnerArray = [Spawner]()
     
     //scene
     let background = BaseGameObject(imagedName: "purple")
@@ -35,6 +36,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //misc
     var bDraggingTower = Bool(false)
     var towerFireTimer : Timer!
+    var spawnTimer : Timer!
     
     override func didMove(to view: SKView) {
         
@@ -78,8 +80,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         testEnemy2.position = CGPoint(x: 250, y: 50)
         enemyArray.append(testEnemy2)
         
+        //spawner
+        let spawner = Spawner(imagedName: "meteorGrey_small1", spawnRate: 2.0)
+        background.addChild(spawner)
+        spawner.zPosition = 1
+        spawner.position = CGPoint(x: 100, y: 50)
+        spawnerArray.append(spawner)
+        
         //timer for the towers firing
         towerFireTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ActivateTowers), userInfo: nil, repeats: true)
+        spawnTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(ActivateSpawners), userInfo: nil, repeats: true)
 
         
         physicsWorld.gravity = CGVector.zero
@@ -199,6 +209,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 x.GetClosestEnemy(enemyArray: enemyArray)
                 x.Fire(background: background)
             }
+        }
+    }
+    
+    @objc func ActivateSpawners(){
+        for s in spawnerArray{
+            s.spawnEnemy(bg: background, arrayToAppend: enemyArray)
         }
     }
 }
