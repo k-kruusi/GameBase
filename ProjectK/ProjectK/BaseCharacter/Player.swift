@@ -12,6 +12,8 @@ import SpriteKit
 class Player : GameObject{
     init(){
         super.init(imageName: "bow", pos: CGPoint(x: 450,y: 450))
+        
+        SetInitPosition(newPos: CGPoint(x: size.width / 2, y: size.height / 2 ))
     }
     
     func RotateTowards(){
@@ -21,7 +23,7 @@ class Player : GameObject{
         let angle = atan2(-rotateToPos.x, rotateToPos.y)
         
         zRotation = (angle - 90 * CGFloat(Double.pi/180.0)) + 135
-        NSLog("%f", zRotation * CGFloat(180.0 / Double.pi));
+        //NSLog("%f", zRotation * CGFloat(180.0 / Double.pi));
         
         //if moving
         //if (abs(position.x - moveToTarget.x) > moveSpeed + 1)

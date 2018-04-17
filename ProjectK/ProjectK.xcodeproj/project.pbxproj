@@ -13,7 +13,7 @@
 		120695CD2061B32B008948B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 120695CB2061B32B008948B7 /* Main.storyboard */; };
 		120695CF2061B32B008948B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 120695CE2061B32B008948B7 /* Assets.xcassets */; };
 		120695D22061B32B008948B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 120695D02061B32B008948B7 /* LaunchScreen.storyboard */; };
-		120695DB2061B37A008948B7 /* BaseCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120695DA2061B37A008948B7 /* BaseCharacter.swift */; };
+		120695DB2061B37A008948B7 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120695DA2061B37A008948B7 /* GameObject.swift */; };
 		120695DD2061BC62008948B7 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120695DC2061BC62008948B7 /* Player.swift */; };
 		120695DF2061C7CD008948B7 /* Projectile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120695DE2061C7CD008948B7 /* Projectile.swift */; };
 		12FFA3072064545A00BFD178 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FFA3062064545A00BFD178 /* Enemy.swift */; };
@@ -28,7 +28,7 @@
 		120695CE2061B32B008948B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		120695D12061B32B008948B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		120695D32061B32B008948B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		120695DA2061B37A008948B7 /* BaseCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCharacter.swift; sourceTree = "<group>"; };
+		120695DA2061B37A008948B7 /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		120695DC2061BC62008948B7 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		120695DE2061C7CD008948B7 /* Projectile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projectile.swift; sourceTree = "<group>"; };
 		12FFA3062064545A00BFD178 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 		120695D92061B35F008948B7 /* BaseCharacter */ = {
 			isa = PBXGroup;
 			children = (
-				120695DA2061B37A008948B7 /* BaseCharacter.swift */,
+				120695DA2061B37A008948B7 /* GameObject.swift */,
 				120695DC2061BC62008948B7 /* Player.swift */,
 				120695DE2061C7CD008948B7 /* Projectile.swift */,
 				12FFA3062064545A00BFD178 /* Enemy.swift */,
@@ -163,7 +163,7 @@
 				120695DF2061C7CD008948B7 /* Projectile.swift in Sources */,
 				120695C82061B32B008948B7 /* GameScene.swift in Sources */,
 				120695CA2061B32B008948B7 /* GameViewController.swift in Sources */,
-				120695DB2061B37A008948B7 /* BaseCharacter.swift in Sources */,
+				120695DB2061B37A008948B7 /* GameObject.swift in Sources */,
 				120695DD2061BC62008948B7 /* Player.swift in Sources */,
 				120695C22061B32B008948B7 /* AppDelegate.swift in Sources */,
 			);

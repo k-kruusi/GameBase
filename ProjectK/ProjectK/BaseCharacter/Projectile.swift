@@ -18,9 +18,13 @@ class Projectile : GameObject{
     
     var myState : EState?
     
+    var shootTime : Double = 1
+    var gameTime : TimeInterval = 0
+    
     //Parameters
     var damage : CGFloat = 10.0
     var shootForce : CGFloat = 25.0
+    var reloadSpeed : Double = 2
     
     //touch locations
     var startShootPos = CGPoint(x: 0, y: 0)
@@ -31,14 +35,19 @@ class Projectile : GameObject{
         
         //Create circular Physics body
         physicsBody = SKPhysicsBody(circleOfRadius: max(self.size.width/2,self.size.height/2))
+        SetInitPosition(newPos: CGPoint(x: size.width / 2, y: size.height / 2 ))
         
         //Arrow in dormant state
         ResetArrow()
     }
     
-    func Update(){
-        //If Arrow falls out of screen, reset it
-        if (position.y < -0){ //change to background height later
+    func Update(currentTime: TimeInterval){
+        //update game time
+        gameTime = currentTime
+        
+        //reload after reload speed is done
+        if (myState == EState.Reloading && currentTime >= shootTime)
+        {
             ResetArrow()
         }
     }
@@ -67,6 +76,8 @@ class Projectile : GameObject{
         //Shoot arrow if not in air
         if (myState == EState.Dormant){
             Shoot(shootForce : CGVector(dx: shootForce * shootDir.x, dy: shootForce * shootDir.y))
+            SetState(myState: EState.Reloading)
+            shootTime = gameTime + reloadSpeed
         }
     }
     

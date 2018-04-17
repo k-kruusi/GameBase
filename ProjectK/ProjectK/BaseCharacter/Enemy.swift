@@ -19,14 +19,17 @@ class Enemy : GameObject{
         physicsBody = SKPhysicsBody(circleOfRadius: max(self.size.width/2,self.size.height/2))
         physicsBody?.affectedByGravity = false
         
+        SetInitPosition(newPos: CGPoint(x: size.width / 2, y: 800 / 1.25 ))
+        
     }
     
     func Update(){
         //move left or right
-        physicsBody?.velocity = CGVector(dx: 150, dy: 0)
+        physicsBody?.velocity = CGVector(dx: 550, dy: 0)
         
         if (position.x > screenSize.x){
-            SetTarget(newTarget: CGPoint(x: -screenSize.x,y: screenSize.y / 1.25)) //change later
+            //SetTarget(newTarget: CGPoint(x: -screenSize.x,y: screenSize.y / 1.25)) //change later
+            physicsBody?.velocity = CGVector(dx: -350, dy: 0)
         }
     }
 

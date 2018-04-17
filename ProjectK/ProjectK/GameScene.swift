@@ -15,43 +15,34 @@ class GameScene: SKScene {
     let enemy = Enemy()
     let background = SKSpriteNode(imageNamed: "background2")
     
+    var baseObjects ? [GameObject()]
+    
     override func didMove(to view: SKView) {
         //test background
         backgroundColor = SKColor.white
         
+        //Init background
         background.position = CGPoint(x: size.width / 2, y: size.height / 2 )
         addChild(background)
         background.zPosition = -1
         
-        //addChild(zombie)
+        baseObjects = [player,arrow,enemy]
         
-        //player
-        addChild(player)
-        player.SetInitPosition(newPos: CGPoint(x: size.width / 2, y: size.height / 2 ))
-        
-        //Arrow
-        addChild(arrow)
-        arrow.SetInitPosition(newPos: CGPoint(x: size.width / 2, y: size.height / 2 ))
-        
-        //Enemy //Change to a factory of enemies later
-        addChild(enemy)
-        enemy.SetInitPosition(newPos: CGPoint(x: enemy.size.width / 2, y: size.height / 1.25 ))
-        //enemy.GetScreenSize(screenSize: CGPoint(x: size.point)
+        //init all game objects
+        for objects in baseObjects{
+            addChild(objects)
+            objects.SetInitPosition(newPos: CGPoint(x: size.width / 2, y: size.height / 2 ))
+        }
     }
     
     override func update(_ currentTime: TimeInterval) {
         super.update(currentTime)
         
-        arrow.Update()
+        arrow.Update(currentTime: currentTime)
         
-        enemy.SetTarget(newTarget: CGPoint(x:size.width,y: size.height/1.25))
+        //enemy.SetTarget(newTarget: CGPoint(x:size.width,y: size.height/1.25))
         enemy.Update()
         
-        //player.MoveTo() //moves player towards target destination
-        
-        //zombie test
-        //zombie.SetTarget(newTarget: player.position)
-        //zombie.MoveTo()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
