@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:SwiftGame.xcodeproj">
+      location = "self:FloatBlasters.xcodeproj">
    </FileRef>
 </Workspace>

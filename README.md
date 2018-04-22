@@ -1,15 +1,16 @@
 # Eric's Game
 ## Mobile Programming
 
-This is going to be the *greatest* game of all time! It will feature:
+This is a simple space shooter that uses the accelerometer to steer. It features:
 
-* Pixels
 * Sprites
-* Touch gestures
-* Physics
+* Accelerometer control
+* Menu progression
 * And much more!
 
-In all seriousness, I'm still flushing out some game ideas, so I'll take the -1 mark for the proposal. :)
+The goal of the game is to get as high a score as you can before 3 aliens pass the player ship. Once you run out of lives, you can reset the game.
+
+The game has two difficulty modes: Easy and Hard. They are both the same in terms of gameplay, except enemies spawn more frequently on hard mode.
 
 ```
 Eric Thompson

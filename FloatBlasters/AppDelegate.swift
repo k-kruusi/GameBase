@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  SwiftGame
+//  FloatBlasters
 //
-//  Created by Thompson Eric R. on 3/1/18.
-//  Copyright © 2018 Dead Battery Games. All rights reserved.
+//  Created by Eric Thompson on 2018-04-18.
+//  Copyright © 2018 Eric Thompson. All rights reserved.
 //
 
 import UIKit
