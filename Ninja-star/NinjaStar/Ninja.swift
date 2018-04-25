@@ -22,10 +22,29 @@ import SpriteKit
 
 
 
-class Ninja: SKSpriteNode {
+final class Ninja: SKSpriteNode {
+    
+    //Singleton Pattern; works only if all inits are private
+    static let ninjaInstance = Ninja()
+    
    //the ninja animations
    var NinjaFrames: [SKTexture]?
    
+   // bool that keeps track of weather the player jumped
+    var isJumping = false
+    
+    //Linked list of shurikens
+    var ShurikenList = LinkedList<Shuriken>()
+   
+    //the latest shuriken
+    var latestShuriken : Shuriken?
+    
+    //Max Screen Size
+    var maxScreenWidth = UIScreen.main.bounds.maxX
+    
+    //Min Screen Size
+    var maxScreenHeight = UIScreen.main.bounds.maxY
+    
    //animation enumerator
    enum ninjaAnimation {
       case IDLE
@@ -55,7 +74,7 @@ class Ninja: SKSpriteNode {
    
    
    //default init override
-   init() {
+   private init() {
       let texture = SKTexture(imageNamed: "Idle__000")
       //GameObject.zCounter = GameObject.zCounter + 1
       run = true
@@ -64,23 +83,22 @@ class Ninja: SKSpriteNode {
       playerPos = CGVector(dx: 1.0, dy: 1.0)
       let boxSize: CGSize = CGSize(width: texture.size().width/5, height: texture.size().height/5)
       super.init(texture: texture, color: .clear, size: boxSize)
-      
       //Set Up the Physics for the Player.
       self.physicsBody = SKPhysicsBody(rectangleOf: boxSize)
       self.physicsBody?.affectedByGravity = true
       if let physics = physicsBody {
+         physics.mass = 1
          physics.affectedByGravity = true
          physics.allowsRotation = false
          physics.isDynamic = true
          physics.usesPreciseCollisionDetection = true
-         physics.linearDamping = 0.8
-         physics.angularDamping = 0.8
+        
       }
       
    }
    
    //init the variables
-   override init(texture: SKTexture!, color: SKColor!, size: CGSize) {
+   private override init(texture: SKTexture!, color: SKColor!, size: CGSize) {
       
       sprint = false
       run = true
@@ -96,6 +114,7 @@ class Ninja: SKSpriteNode {
       
    }
    
+   
    //Update
    func update(_ currentTime: TimeInterval) {
       guard let lastUpdateTime = lastUpdateTime else {
@@ -110,7 +129,7 @@ class Ninja: SKSpriteNode {
    }
    
    //run animation
-   func animateNinja(playAnim: ninjaAnimation){
+   func SetNinjaAnimations(playAnim: ninjaAnimation){
       let text: String?
       switch playAnim{
       case .ATTACK:
@@ -154,8 +173,8 @@ class Ninja: SKSpriteNode {
       
       let ninjaAtlas = SKTextureAtlas(named: "Ninja")
       
-      for index in indexStart ... indexStart {
-         let textureName = "\(text)\(index)"
+      for index in indexStart ... indexEnd {
+        let textureName = text! + (String(index))
          let texture = ninjaAtlas.textureNamed(textureName)
          frames.append(texture)
       }
@@ -165,18 +184,26 @@ class Ninja: SKSpriteNode {
       //default frame
       texture = self.NinjaFrames![0]
       //set sprite size
-      size = CGSize(width: 140, height: 140)
-      let yPosition = 100
-      let xPosition = 100
+    var width = 129
+    if(playAnim == .IDLE){
+        width = 80
+    }
+      size = CGSize(width: width, height: 140)
+      let yPosition = -55
+      let xPosition = 0
       
       if(position != nil){
       position = CGPoint(x: xPosition, y: yPosition)
       }
       
-      run(SKAction.repeatForever(SKAction.animate(with: self.NinjaFrames!, timePerFrame: 0.05, resize: false, restore: true)))
+    
    }
+    
+    func animateNinja(){
+        run(SKAction.repeatForever(SKAction.animate(with: self.NinjaFrames!, timePerFrame: 0.1, resize: false, restore: true)), withKey: "RunAnimation")
+    }
    
-   init(skspritenode: SKSpriteNode) {
+   private init(skspritenode: SKSpriteNode) {
       sprint = false
       
       run = true
@@ -197,20 +224,8 @@ class Ninja: SKSpriteNode {
                                                             height: skspritenode.size.height))
       physicsBody?.isDynamic = false
       
-      
-      //set the player to the sprite
-//      if let somPLayer:SKSpriteNode = self.childNode(withName: "Player") as? SKSpriteNode
-//      {
-//         thePlayer = somPLayer
-//         thePlayer.physicsBody?.isDynamic = false
-//
-//         print("that worked")
-//      }else{
-//         print ("That failed")
-//      }
-      //run = true
+    
    }
-   
    
    
    convenience init(color: SKColor, length: CGFloat = 10) {
@@ -250,52 +265,47 @@ class Ninja: SKSpriteNode {
    }
    
    //animate running
-   func animateRunning(){
-      
+   func update(){
+    if(ShurikenList.size > 0){
+        var i = 0
+        while (i < ShurikenList.size) {
+            ShurikenList.nodeAt(index: i)?.value.UpdateShuriken()
+            //remove the shuriken once it is outside the screen
+            if(!(((ShurikenList.nodeAt(index: i)?.value.position.x)! < maxScreenWidth) && (ShurikenList.nodeAt(index: i)?.value.position.x)! >
+                (0.0 - maxScreenWidth))){
+                ShurikenList.nodeAt(index: i)?.value.texture = nil
+                ShurikenList.remove(node: ShurikenList.nodeAt(index: i)!)
+            }
+            else if(!(((ShurikenList.nodeAt(index: i)?.value.position.y)! < maxScreenHeight) && (ShurikenList.nodeAt(index: i)?.value.position.y)! >
+                (0.0 - maxScreenHeight))){
+                ShurikenList.nodeAt(index: i)?.value.texture = nil
+                ShurikenList.remove(node: ShurikenList.nodeAt(index: i)!)
+            }
+            i += 1
+        }
+    }
    }
    
    //if player taps the right side of the screen, then jump
    
-   func jump(){
-      
-      // move up 20
-      
-      let jumpUpAction = SKAction.moveBy(x: 0, y: 20, duration: 0.2)
-      
-      // move down 20
-      
-      let jumpDownAction = SKAction.moveBy(x: 0, y:-20, duration:0.2)
-      
-      // sequence of move yup then down
-      
-      let jumpSequence = SKAction.sequence([jumpUpAction, jumpDownAction])
-      
-      
-      
-      // make player run sequence
-      
-      //player.runAction(jumpSequence)
-      
+   static func Jump(){
+    if !ninjaInstance.isJumping {
+      let force = CGVector(dx: 0, dy: 20000)
+      ninjaInstance.physicsBody?.applyForce(force)
+      ninjaInstance.isJumping = true
+    }
       
       
    }
    
    //if player swipes, then shoot shurikens. pass by reference
    
-   func shoot(point: CGPoint){
-      
-      
-      
-      
-      
-      print(NSStringFromCGPoint(point))
-      
-      //calculate direction of shuriken
-      
-      
-      
-      
-      
+   func shoot(shurknOrgn: CGPoint, shurknDir: CGPoint){
+    latestShuriken = Shuriken(playerPos: position)
+    latestShuriken?.shoot(shurikenOrgn: shurknOrgn, shurikenDir: shurknDir)
+    //add shuriken to my shurikenlist
+    ShurikenList.append(value: latestShuriken!)
+    
    }
    
    
@@ -318,40 +328,40 @@ class Ninja: SKSpriteNode {
    
    //input handling
    
-   func HandleInput(gesture: UIGestureRecognizer){
-      
-      if let swipeGesture = gesture as? UISwipeGestureRecognizer {
-         
-         
-         
-         
-         
-         switch swipeGesture.direction {
-            
-         case UISwipeGestureRecognizerDirection.right:
-            
-            print("Swiped right")
-            
-         case UISwipeGestureRecognizerDirection.down:
-            
-            print("Swiped down")
-            
-         case UISwipeGestureRecognizerDirection.left:
-            
-            print("Swiped left")
-            
-         case UISwipeGestureRecognizerDirection.up:
-            
-            print("Swiped up")
-            
-         default:
-            
-            break
-            
-         }
-         
-      }
-      
-   }
+//   func HandleInput(gesture: UIGestureRecognizer){
+//      
+//      if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+//         
+//         
+//         
+//         
+//         
+//         switch swipeGesture.direction {
+//            
+//         case UISwipeGestureRecognizerDirection.right:
+//            
+//            print("Swiped right")
+//            
+//         case UISwipeGestureRecognizerDirection.down:
+//            
+//            print("Swiped down")
+//            
+//         case UISwipeGestureRecognizerDirection.left:
+//            
+//            print("Swiped left")
+//            
+//         case UISwipeGestureRecognizerDirection.up:
+//            
+//            print("Swiped up")
+//            
+//         default:
+//            
+//            break
+//            
+//         }
+//         
+//      }
+//      
+//   }
    
 }

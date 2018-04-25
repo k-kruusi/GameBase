@@ -17,8 +17,30 @@
 		90C209C620475B7700BAB05D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C209C420475B7700BAB05D /* LaunchScreen.storyboard */; };
 		90C209D120475B7700BAB05D /* NinjaStarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C209D020475B7700BAB05D /* NinjaStarTests.swift */; };
 		90C209DC20475B7700BAB05D /* NinjaStarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C209DB20475B7700BAB05D /* NinjaStarUITests.swift */; };
+		B4016A12208424CC002FDBDC /* shuriken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4016A11208424CC002FDBDC /* shuriken.swift */; };
+		B4016A14208467D9002FDBDC /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4016A13208467D9002FDBDC /* Node.swift */; };
+		B4016A162084692D002FDBDC /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4016A152084692D002FDBDC /* LinkedList.swift */; };
 		B409322220577617001C89BE /* GamePlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B409322120577617001C89BE /* GamePlayScene.swift */; };
 		B409322420577665001C89BE /* GamePlayScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B409322320577665001C89BE /* GamePlayScene.sks */; };
+		B43AE776208D924700A392DF /* EnemyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43AE775208D924700A392DF /* EnemyFactory.swift */; };
+		B43AE778208D929900A392DF /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43AE777208D929900A392DF /* Enemy.swift */; };
+		B43AE77A208D93A900A392DF /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43AE779208D93A900A392DF /* GameObject.swift */; };
+		B43AE77C208D98DE00A392DF /* SpawnManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43AE77B208D98DE00A392DF /* SpawnManager.swift */; };
+		B43AE783209000DB00A392DF /* UserScoreScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43AE782209000DB00A392DF /* UserScoreScene.swift */; };
+		B43AE7852090010E00A392DF /* UserScoreScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B43AE7842090010E00A392DF /* UserScoreScene.sks */; };
+		B455AA2D207FE7A100760D61 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B455AA26207FE79D00760D61 /* FirebaseInstanceID.framework */; };
+		B455AA2E207FE7A100760D61 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B455AA27207FE79D00760D61 /* GoogleToolboxForMac.framework */; };
+		B455AA2F207FE7A100760D61 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B455AA28207FE79F00760D61 /* FirebaseAnalytics.framework */; };
+		B455AA30207FE7A100760D61 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B455AA29207FE7A000760D61 /* FirebaseCore.framework */; };
+		B455AA31207FE7A100760D61 /* FirebaseNanoPB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B455AA2A207FE7A000760D61 /* FirebaseNanoPB.framework */; };
+		B455AA32207FE7A100760D61 /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B455AA2B207FE7A000760D61 /* FirebaseCoreDiagnostics.framework */; };
+		B455AA33207FE7A100760D61 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B455AA2C207FE7A000760D61 /* nanopb.framework */; };
+		B455AA36207FE7BB00760D61 /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B455AA34207FE7BA00760D61 /* FirebaseDatabase.framework */; };
+		B455AA37207FE7BB00760D61 /* leveldb-library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B455AA35207FE7BB00760D61 /* leveldb-library.framework */; };
+		B455AA3A207FE8AE00760D61 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B455AA39207FE8AE00760D61 /* libsqlite3.tbd */; };
+		B455AA3C207FE8B800760D61 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B455AA3B207FE8B800760D61 /* StoreKit.framework */; };
+		B455AA3E207FE8CF00760D61 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B455AA3D207FE8CF00760D61 /* libicucore.tbd */; };
+		B455AA40207FE8E300760D61 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B455AA3F207FE8E300760D61 /* GoogleService-Info.plist */; };
 		B4D3BF65204B232600054EAD /* Ninja.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D3BF64204B232600054EAD /* Ninja.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,8 +78,30 @@
 		90C209D720475B7700BAB05D /* NinjaStarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NinjaStarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C209DB20475B7700BAB05D /* NinjaStarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinjaStarUITests.swift; sourceTree = "<group>"; };
 		90C209DD20475B7700BAB05D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4016A11208424CC002FDBDC /* shuriken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shuriken.swift; sourceTree = "<group>"; };
+		B4016A13208467D9002FDBDC /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		B4016A152084692D002FDBDC /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		B409322120577617001C89BE /* GamePlayScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayScene.swift; sourceTree = "<group>"; };
 		B409322320577665001C89BE /* GamePlayScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GamePlayScene.sks; sourceTree = "<group>"; };
+		B43AE775208D924700A392DF /* EnemyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyFactory.swift; sourceTree = "<group>"; };
+		B43AE777208D929900A392DF /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
+		B43AE779208D93A900A392DF /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
+		B43AE77B208D98DE00A392DF /* SpawnManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpawnManager.swift; sourceTree = "<group>"; };
+		B43AE782209000DB00A392DF /* UserScoreScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScoreScene.swift; sourceTree = "<group>"; };
+		B43AE7842090010E00A392DF /* UserScoreScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = UserScoreScene.sks; sourceTree = "<group>"; };
+		B455AA26207FE79D00760D61 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		B455AA27207FE79D00760D61 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = "<group>"; };
+		B455AA28207FE79F00760D61 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		B455AA29207FE7A000760D61 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = "<group>"; };
+		B455AA2A207FE7A000760D61 /* FirebaseNanoPB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseNanoPB.framework; sourceTree = "<group>"; };
+		B455AA2B207FE7A000760D61 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
+		B455AA2C207FE7A000760D61 /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = nanopb.framework; sourceTree = "<group>"; };
+		B455AA34207FE7BA00760D61 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseDatabase.framework; sourceTree = "<group>"; };
+		B455AA35207FE7BB00760D61 /* leveldb-library.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "leveldb-library.framework"; sourceTree = "<group>"; };
+		B455AA39207FE8AE00760D61 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		B455AA3B207FE8B800760D61 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		B455AA3D207FE8CF00760D61 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		B455AA3F207FE8E300760D61 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B4D3BF64204B232600054EAD /* Ninja.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ninja.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +110,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B455AA3E207FE8CF00760D61 /* libicucore.tbd in Frameworks */,
+				B455AA3C207FE8B800760D61 /* StoreKit.framework in Frameworks */,
+				B455AA3A207FE8AE00760D61 /* libsqlite3.tbd in Frameworks */,
+				B455AA30207FE7A100760D61 /* FirebaseCore.framework in Frameworks */,
+				B455AA2D207FE7A100760D61 /* FirebaseInstanceID.framework in Frameworks */,
+				B455AA31207FE7A100760D61 /* FirebaseNanoPB.framework in Frameworks */,
+				B455AA33207FE7A100760D61 /* nanopb.framework in Frameworks */,
+				B455AA36207FE7BB00760D61 /* FirebaseDatabase.framework in Frameworks */,
+				B455AA37207FE7BB00760D61 /* leveldb-library.framework in Frameworks */,
+				B455AA32207FE7A100760D61 /* FirebaseCoreDiagnostics.framework in Frameworks */,
+				B455AA2E207FE7A100760D61 /* GoogleToolboxForMac.framework in Frameworks */,
+				B455AA2F207FE7A100760D61 /* FirebaseAnalytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +149,16 @@
 				90C209CF20475B7700BAB05D /* NinjaStarTests */,
 				90C209DA20475B7700BAB05D /* NinjaStarUITests */,
 				90C209B320475B7700BAB05D /* Products */,
+				B455AA34207FE7BA00760D61 /* FirebaseDatabase.framework */,
+				B455AA35207FE7BB00760D61 /* leveldb-library.framework */,
+				B455AA28207FE79F00760D61 /* FirebaseAnalytics.framework */,
+				B455AA29207FE7A000760D61 /* FirebaseCore.framework */,
+				B455AA2B207FE7A000760D61 /* FirebaseCoreDiagnostics.framework */,
+				B455AA26207FE79D00760D61 /* FirebaseInstanceID.framework */,
+				B455AA2A207FE7A000760D61 /* FirebaseNanoPB.framework */,
+				B455AA27207FE79D00760D61 /* GoogleToolboxForMac.framework */,
+				B455AA2C207FE7A000760D61 /* nanopb.framework */,
+				B455AA38207FE8AD00760D61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +187,15 @@
 				B4D3BF64204B232600054EAD /* Ninja.swift */,
 				B409322120577617001C89BE /* GamePlayScene.swift */,
 				B409322320577665001C89BE /* GamePlayScene.sks */,
+				B4016A11208424CC002FDBDC /* shuriken.swift */,
+				B4016A13208467D9002FDBDC /* Node.swift */,
+				B4016A152084692D002FDBDC /* LinkedList.swift */,
+				B43AE775208D924700A392DF /* EnemyFactory.swift */,
+				B43AE777208D929900A392DF /* Enemy.swift */,
+				B43AE779208D93A900A392DF /* GameObject.swift */,
+				B43AE77B208D98DE00A392DF /* SpawnManager.swift */,
+				B43AE782209000DB00A392DF /* UserScoreScene.swift */,
+				B43AE7842090010E00A392DF /* UserScoreScene.sks */,
 			);
 			path = NinjaStar;
 			sourceTree = "<group>";
@@ -141,6 +216,17 @@
 				90C209DD20475B7700BAB05D /* Info.plist */,
 			);
 			path = NinjaStarUITests;
+			sourceTree = "<group>";
+		};
+		B455AA38207FE8AD00760D61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B455AA3F207FE8E300760D61 /* GoogleService-Info.plist */,
+				B455AA3D207FE8CF00760D61 /* libicucore.tbd */,
+				B455AA3B207FE8B800760D61 /* StoreKit.framework */,
+				B455AA39207FE8AE00760D61 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,10 +338,12 @@
 			files = (
 				90C209C120475B7700BAB05D /* Main.storyboard in Resources */,
 				90C209B820475B7700BAB05D /* GameScene.sks in Resources */,
+				B43AE7852090010E00A392DF /* UserScoreScene.sks in Resources */,
 				B409322420577665001C89BE /* GamePlayScene.sks in Resources */,
 				90C209C320475B7700BAB05D /* Assets.xcassets in Resources */,
 				90C209C620475B7700BAB05D /* LaunchScreen.storyboard in Resources */,
 				90C209BA20475B7700BAB05D /* Actions.sks in Resources */,
+				B455AA40207FE8E300760D61 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,11 +368,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B43AE77A208D93A900A392DF /* GameObject.swift in Sources */,
+				B43AE77C208D98DE00A392DF /* SpawnManager.swift in Sources */,
 				90C209BC20475B7700BAB05D /* GameScene.swift in Sources */,
 				90C209BE20475B7700BAB05D /* GameViewController.swift in Sources */,
+				B4016A12208424CC002FDBDC /* shuriken.swift in Sources */,
 				B4D3BF65204B232600054EAD /* Ninja.swift in Sources */,
 				90C209B620475B7700BAB05D /* AppDelegate.swift in Sources */,
+				B43AE783209000DB00A392DF /* UserScoreScene.swift in Sources */,
+				B43AE776208D924700A392DF /* EnemyFactory.swift in Sources */,
+				B43AE778208D929900A392DF /* Enemy.swift in Sources */,
 				B409322220577617001C89BE /* GamePlayScene.swift in Sources */,
+				B4016A162084692D002FDBDC /* LinkedList.swift in Sources */,
+				B4016A14208467D9002FDBDC /* Node.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,8 +548,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = NinjaStar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Adid-Nissan.NinjaStar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -468,8 +572,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = NinjaStar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Adid-Nissan.NinjaStar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
