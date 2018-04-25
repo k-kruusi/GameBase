@@ -19,11 +19,11 @@ enum EnemyType: UInt32 {
     var speed: CGFloat {
         switch self {
         case .TimeBonusEnemy:
-            return 20.0
+            return 50.0
         case .HardEnemy:
-            return 15.0
+            return 30.0
         case .EasyEnemy:
-            return 10.0
+            return 20.0
         }
     }
 }

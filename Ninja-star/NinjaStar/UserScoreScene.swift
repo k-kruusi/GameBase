@@ -68,6 +68,14 @@ class UserScoreScene: SKScene {
             let location = touch.location(in: self)
             if UploadScore.contains(location){
                 //Set the player Score
+                
+//                ref.child("scoreList").observe(DataEventType.value, with: { (snapshot) in
+//                    var currentHighScores = snapshot.value as? [AnyHashable: Any]
+//                    
+//                    currentHighScores!["newName"] = self.myScore
+//                    self.ref.child("scoreList").updateChildValues(currentHighScores!)
+//                    
+//                })
                 ref.child("name").updateChildValues(["name": "Player"])
                 ref.child("score").updateChildValues(["score": myScore])
                 { (err, resp) in
